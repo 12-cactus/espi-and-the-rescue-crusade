@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://entities/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/World.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
-position = Vector2( 498.925, 345.818 )
+position = Vector2( 500, 345 )
+
+[node name="World" parent="." instance=ExtResource( 3 )]
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="Espi" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1039.4, 630.824 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/zelda.png-c3f1a08630101bd4aba154d2e4886842.stex"
+path="res://.import/Cosmic.png-f035e5acbfa908ad2b9129e67ccfdad2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/zelda.png"
-dest_files=[ "res://.import/zelda.png-c3f1a08630101bd4aba154d2e4886842.stex" ]
+source_file="res://assets/tiles/Cosmic.png"
+dest_files=[ "res://.import/Cosmic.png-f035e5acbfa908ad2b9129e67ccfdad2.stex" ]
 
 [params]
 
