@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
-[ext_resource path="res://entities/World.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/cactus/Markis.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 position = Vector2( 442.789, 317.454 )
@@ -23,4 +23,7 @@ __meta__ = {
 [node name="World" parent="." instance=ExtResource( 3 )]
 
 [node name="Espi" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1039.4, 630.824 )
+position = Vector2( 113.475, 331.037 )
+
+[node name="Markis" parent="." instance=ExtResource( 3 )]
+position = Vector2( 22.9039, 28.4922 )
