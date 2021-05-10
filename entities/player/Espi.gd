@@ -12,6 +12,7 @@ func _ready():
 	Bag.visible = false
 	body.animation = "idle"
 	body.frame = 0
+	name="espi"
 
 func _physics_process(delta):
 	get_movement_input()
