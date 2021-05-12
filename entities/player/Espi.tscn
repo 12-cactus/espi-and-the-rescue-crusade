@@ -49,17 +49,23 @@ shape = SubResource( 6 )
 current = true
 zoom = Vector2( 0.4, 0.4 )
 
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Bag" type="MarginContainer" parent="."]
+visible = false
+margin_left = -138.591
+margin_top = -100.794
+margin_right = 261.409
+margin_bottom = 199.206
+rect_scale = Vector2( 0.692919, 0.692919 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
-margin_left = -133.953
-margin_top = -99.3631
-margin_right = 266.047
-margin_bottom = 200.637
-rect_scale = Vector2( 0.640001, 0.640001 )
+[node name="Background" type="TextureRect" parent="Bag"]
+margin_right = 400.0
+margin_bottom = 300.0
 texture = ExtResource( 3 )
+
+[node name="Container" type="GridContainer" parent="Bag"]
+margin_right = 400.0
+margin_bottom = 300.0
+columns = 4
