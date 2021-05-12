@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Actors/Espi/SpriteSheet.png" type="Texture" id=1]
 [ext_resource path="res://entities/player/Espi.gd" type="Script" id=2]
 [ext_resource path="res://assets/Actors/bag.png" type="Texture" id=3]
+[ext_resource path="res://assets/Food/Fish.png" type="Texture" id=4]
+[ext_resource path="res://entities/player/Bag.gd" type="Script" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -35,7 +37,9 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 8.18965, 8.30194 )
 
-[node name="Espi" type="KinematicBody2D"]
+[node name="Espi" type="KinematicBody2D" groups=[
+"Player",
+]]
 script = ExtResource( 2 )
 
 [node name="Body" type="AnimatedSprite" parent="."]
@@ -56,6 +60,7 @@ margin_top = -100.794
 margin_right = 261.409
 margin_bottom = 199.206
 rect_scale = Vector2( 0.692919, 0.692919 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,3 +74,12 @@ texture = ExtResource( 3 )
 margin_right = 400.0
 margin_bottom = 300.0
 columns = 4
+
+[node name="Item" type="MarginContainer" parent="Bag/Container"]
+margin_right = 16.0
+margin_bottom = 16.0
+
+[node name="TextureRect" type="TextureRect" parent="Bag/Container/Item"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 4 )
