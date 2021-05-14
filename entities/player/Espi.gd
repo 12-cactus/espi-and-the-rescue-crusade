@@ -47,3 +47,6 @@ func get_events_input():
 func get_actions_input():
 	if Input.is_action_just_pressed("bag"):
 		Bag.visible = not Bag.visible
+
+func name():
+	return "Soy Espi"
