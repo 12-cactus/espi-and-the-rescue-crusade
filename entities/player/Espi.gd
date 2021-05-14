@@ -10,8 +10,12 @@ enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
 func _ready():
 	Bag.visible = false
-	body.animation = "idle"
+  body.animation = "idle"
 	body.frame = 0
+
+var speed: int = 200
+var velocity: Vector2 = Vector2.ZERO
+enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
 func _physics_process(delta):
 	get_movement_input()
@@ -23,7 +27,7 @@ func _physics_process(delta):
 	if item_picked != null:
 		Bag.add(item_picked)
 		item_picked = null
-	
+    
 	body.frame = Mov.UP + 2 * Mov.LEFT + 3 * Mov.RIGHT
 	
 	velocity = Vector2(Mov.RIGHT-Mov.LEFT, Mov.DOWN-Mov.UP)
@@ -47,3 +51,6 @@ func get_events_input():
 func get_actions_input():
 	if Input.is_action_just_pressed("bag"):
 		Bag.visible = not Bag.visible
+	
+func name():
+	return "Soy Espi"

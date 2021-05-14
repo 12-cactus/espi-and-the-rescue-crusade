@@ -9,21 +9,27 @@
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
+
 region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
+
 atlas = ExtResource( 1 )
 region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
+
 atlas = ExtResource( 1 )
+
 region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
+
 atlas = ExtResource( 1 )
+
 region = Rect2( 48, 0, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=5]
@@ -41,6 +47,7 @@ extents = Vector2( 8.18965, 8.30194 )
 "Player",
 ]]
 script = ExtResource( 2 )
+
 
 [node name="Body" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
