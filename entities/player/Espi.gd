@@ -50,3 +50,6 @@ func get_actions_input():
 
 func name():
 	return "Soy Espi"
+	
+func bag():
+	return Bag

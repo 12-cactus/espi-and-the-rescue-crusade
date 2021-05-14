@@ -9,9 +9,11 @@ func name():
 	return "soy Markis"
 
 func _on_Area2D_body_entered(body):
-	if body != self and timesVisited == 0:
-		timesVisited = 1
-		print(body.name())
-	else:
-		print(body.name() + " de nuevo")
+	if body != self:
+		if timesVisited == 0:
+			timesVisited = 1
+			print(body.name())
+		else:
+			print(body.name() + " de nuevo")
+			print(body.bag().items())
 		

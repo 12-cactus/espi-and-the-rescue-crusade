@@ -11,3 +11,10 @@ func add(item: Sprite):
 	new_item.add_child(texture)
 	container.add_child(new_item)
 	item.remove()
+
+func hasItem(item: Sprite):
+	for item in items:
+		pass
+
+func items():
+	return items
