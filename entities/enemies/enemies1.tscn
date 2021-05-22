@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entities/enemies/SeparateAnim/Walk.png" type="Texture" id=1]
 [ext_resource path="res://entities/enemies/enemies1.gd" type="Script" id=2]
+[ext_resource path="res://assets/sound/dragon-ball-gt-super-saiyan.ogg" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -35,7 +36,7 @@ animations = [ {
 radius = 8.72495
 
 [sub_resource type="CircleShape2D" id=7]
-radius = 33.5091
+radius = 136.862
 
 [node name="enemies1" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -51,6 +52,9 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 7 )
+
+[node name="Prueba" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

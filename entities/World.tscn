@@ -26,14 +26,12 @@ script = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Friends" type="Node2D" parent="."]
-visible = false
 
 [node name="Markis" parent="Friends" instance=ExtResource( 4 )]
-visible = false
 position = Vector2( 514.639, 318.488 )
 
 [node name="Enemies" type="Node2D" parent="."]
-position = Vector2( 828, 250 )
+position = Vector2( 907, 165 )
 
 [node name="enemies1" parent="Enemies" instance=ExtResource( 5 )]
 
