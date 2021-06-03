@@ -34,7 +34,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 8.18965, 8.30194 )
 
 [node name="Espi" type="KinematicBody2D" groups=[
@@ -47,7 +47,7 @@ frames = SubResource( 5 )
 animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true

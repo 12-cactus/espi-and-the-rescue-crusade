@@ -9,6 +9,9 @@ radius = 2.75665
 [node name="bottle" type="Area2D"]
 script = ExtResource( 2 )
 
+[node name="LifeTimer" type="Timer" parent="."]
+wait_time = 0.852
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -0.841906, 0.280612 )
 scale = Vector2( 0.0256233, 0.028135 )
