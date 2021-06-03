@@ -29,7 +29,6 @@ func _interact():
 func fire():
 	var bottle=load("res://entities/arms/bottle.tscn").instance()	
 	bottle.initialize(self, global_position, global_position.direction_to(enemy.global_position))
-	print("funca")
 	count= 200
 				
 func _on_Area2D_body_entered(body):
@@ -45,3 +44,10 @@ func _on_Area2D_body_exited(body):
 	dialog.visible = false
 	$AudioStreamPlayer2D.stop()
 
+func notify_hit():
+	
+	call_deferred("_remove")
+
+func _remove():
+	get_parent().remove_child(self)
+	queue_free()

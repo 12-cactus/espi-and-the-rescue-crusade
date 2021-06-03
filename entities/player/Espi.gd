@@ -3,6 +3,8 @@ extends KinematicBody2D
 onready var body: AnimatedSprite = $Body
 onready var Bag: MarginContainer = $Bag
 
+onready var dead_timer = $DeadTimer
+
 var speed: int = 200
 var velocity: Vector2 = Vector2.ZERO
 var item_picked: Sprite = null
@@ -69,9 +71,20 @@ func bag():
 	return Bag
 	
 func fire():
-	#var mouse_position:Vector2 = get_local_mouse_position()
-	#arm.rotation = mouse_position.normalized().angle()
 	if Input.is_action_just_pressed("fire"):
 		var arm=load("res://entities/arms/barrette.tscn").instance()	
 		arm.initialize(self, global_position, direction)
-	#count= 300
+
+	
+func notify_hit():
+	body.frame = 4
+	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
+	dead_timer.start()
+
+func _on_dead_timer_timeout():
+	call_deferred("_remove")
+
+func _remove():
+	set_physics_process(false)
+	hide()
+	collision_layer = 0

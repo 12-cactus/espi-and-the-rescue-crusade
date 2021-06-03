@@ -6,7 +6,7 @@
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 84, 0, 42, 37 )
+region = Rect2( 72, 0, 72, 33 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -17,18 +17,19 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=3]
-radius = 7.94054
-height = 0.0
 
-[node name="barrette" type="Area2D"]
+[node name="barrette" type="AnimatedSprite"]
+position = Vector2( -5.72205e-06, 1.90735e-06 )
+scale = Vector2( 0.308407, 0.357902 )
+frames = SubResource( 2 )
 script = ExtResource( 2 )
 
 [node name="LifeTimer" type="Timer" parent="."]
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0.132435, -0.264866 )
-scale = Vector2( 0.413512, 0.370049 )
-frames = SubResource( 2 )
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
