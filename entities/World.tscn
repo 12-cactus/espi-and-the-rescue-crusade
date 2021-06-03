@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Food/Calamari.png" type="Texture" id=2]
 [ext_resource path="res://entities/World/Dona.gd" type="Script" id=3]
+[ext_resource path="res://entities/cactus/Markis.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 16.7979
@@ -22,6 +23,11 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dona/Area2D"]
 shape = SubResource( 1 )
+
+[node name="Friends" type="Node2D" parent="."]
+
+[node name="Markis" parent="Friends" instance=ExtResource( 4 )]
+position = Vector2( 514.639, 318.488 )
 
 [connection signal="body_entered" from="Dona/Area2D" to="Dona" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Dona/Area2D" to="Dona" method="_on_Area2D_body_exited"]
