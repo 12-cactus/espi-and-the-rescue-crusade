@@ -36,7 +36,7 @@ animations = [ {
 radius = 11.5047
 
 [sub_resource type="CircleShape2D" id=7]
-radius = 16.3473
+radius = 28.8448
 
 [node name="Markis" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -54,6 +54,8 @@ scale = Vector2( 1.20221, 1.1756 )
 texture = ExtResource( 3 )
 hframes = 4
 vframes = 4
+
+[node name="TimeDialog" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.340576, 0.340561 )
