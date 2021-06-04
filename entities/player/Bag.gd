@@ -15,15 +15,14 @@ func add(item: Sprite):
 	item.remove()
 	
 func hasItems(anItemName, anAmountOfItems):
-	print(anItemName)
-	print(anAmountOfItems)
 	var counter = 0
 	for item in items:
 		print(item)
 		if item.get_name() == anItemName:
-			counter = counter +1
-			print(counter)
-	return anAmountOfItems == counter
+			counter += 1
+	print(anAmountOfItems)
+	print(items.size())
+	return anAmountOfItems <= items.size()
 	
 func items():
 	return items

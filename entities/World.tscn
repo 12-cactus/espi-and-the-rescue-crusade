@@ -115,6 +115,7 @@ position = Vector2( 907, 165 )
 
 [node name="enemies1" parent="Enemies" instance=ExtResource( 5 )]
 position = Vector2( 0.562683, 0.78035 )
+
 [connection signal="body_entered" from="Dona/Area2D" to="Dona" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Dona/Area2D" to="Dona" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Dona2/Area2D" to="Dona2" method="_on_Area2D_body_entered"]
