@@ -45,7 +45,7 @@ script = ExtResource( 1 )
 position = Vector2( 8.80417, -10.3283 )
 scale = Vector2( 0.705686, 0.691233 )
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -54,6 +54,8 @@ scale = Vector2( 1.20221, 1.1756 )
 texture = ExtResource( 3 )
 hframes = 4
 vframes = 4
+
+[node name="TimeDialog" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.340576, 0.340561 )

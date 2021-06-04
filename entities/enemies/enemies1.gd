@@ -3,11 +3,13 @@ extends KinematicBody2D
 onready var dialog = load("res://assets/dialog/Dialog.tscn").instance()
 onready var bodyy: AnimatedSprite = $Body
 onready var fire_timer = $FireTimer
+onready var dead_timer = $DeadTimer
 
 var count=0
 var enemy = null
 
 func _ready():
+	bodyy.frame = 0
 	dialog.visible = false
 	add_child(dialog)
 
@@ -18,7 +20,7 @@ func _process(delta):
 		count -=1
 	if enemy != null and count == 0:
 		fire()	
-	bodyy.frame = 0
+	
 		
 
 func _interact():
@@ -45,9 +47,13 @@ func _on_Area2D_body_exited(body):
 	$AudioStreamPlayer2D.stop()
 
 func notify_hit():
-	
-	call_deferred("_remove")
+	bodyy.frame = 4
+	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
+	dead_timer.start()
 
+func _on_dead_timer_timeout():
+	call_deferred("_remove")
+	
 func _remove():
 	get_parent().remove_child(self)
 	queue_free()

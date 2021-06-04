@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 onready var dialog_area = get_node("DialogArea")
 onready var dialog = load("res://assets/dialog/Dialog.tscn").instance()
-
+onready var timerDiag = $TimeDialog
 var dialog_finish = false
 var timesVisited = 0
 
