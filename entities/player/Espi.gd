@@ -5,8 +5,6 @@ signal hit(damage)
 onready var body: AnimatedSprite = $Body
 onready var Bag: MarginContainer = $Bag
 
-onready var dead_timer = $DeadTimer
-
 var speed: int = 200
 var velocity: Vector2 = Vector2.ZERO
 var item_picked: Sprite = null
@@ -31,7 +29,6 @@ func _physics_process(delta):
 	if item_picked != null:
 		Bag.add(item_picked)
 		item_picked = null
-	
 	
 	velocity = Vector2(Mov.RIGHT-Mov.LEFT, Mov.DOWN-Mov.UP)
 	velocity = velocity.normalized() * speed
@@ -77,12 +74,17 @@ func fire():
 		arm.initialize(self, global_position, direction)
 
 func notify_hit():
-	emit_signal("hit", 1)
+	emit_signal("hit", 2)
 
 func death():
-	body.frame = 4
-	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
-	dead_timer.start()
+	call_deferred("_remove")
+
+func revive():
+	position = Vector2(112, 330)
+	body.frame = 0
+	collision_layer = 1
+	show()
+	set_physics_process(true)
 
 func _on_dead_timer_timeout():
 	call_deferred("_remove")

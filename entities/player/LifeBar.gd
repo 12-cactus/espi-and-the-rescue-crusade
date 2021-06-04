@@ -1,6 +1,7 @@
 extends Control
 
 signal dead
+signal revive
 
 export var start_life = 12
 
@@ -12,12 +13,20 @@ const NBR_BY_HEART = 4.0
 onready var hearts = $Hearts
 onready var tween = $Tween
 
+func _physics_process(_delta):
+	if is_dead() && Input.is_action_pressed("restart"):
+		reset()
+		emit_signal("revive")
+
 func _ready():
 	self.max_life = 12
 	self.life = start_life
 
 func reset():
 	self.life = max_life
+
+func is_dead() -> bool:
+	return life <= 0
 
 func set_life(v):
 	life = v
@@ -34,7 +43,7 @@ func set_preview_life(v):
 		hearts.get_child(i).frame = 0
 	for i in range(ceil(life_preview/NBR_BY_HEART)):
 		var child = hearts.get_child(i)
-		var frame_target = clamp(remaining_life,0,4)
+		var frame_target = int(clamp(remaining_life,0,4))
 		remaining_life = clamp(remaining_life-4,0,INF)
 		child.frame = frame_target
 
