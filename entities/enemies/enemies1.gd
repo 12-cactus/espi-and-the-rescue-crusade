@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 onready var dialog = load("res://assets/dialog/Dialog.tscn").instance()
 onready var bodyy: AnimatedSprite = $Body
-onready var fire_timer = $FireTimer
 onready var dead_timer = $DeadTimer
+onready var Audio = $AudioStreamPlayer2D
 
 var count=0
 var enemy = null
@@ -19,9 +19,7 @@ func _process(delta):
 	if count != 0:
 		count -=1
 	if enemy != null and count == 0:
-		fire()	
-	
-		
+		fire()
 
 func _interact():
 	dialog.get_node("face").texture = load("res://assets/Actors/Espi/Faceset.png")
@@ -31,20 +29,20 @@ func _interact():
 func fire():
 	var bottle=load("res://entities/arms/bottle.tscn").instance()	
 	bottle.initialize(self, global_position, global_position.direction_to(enemy.global_position))
-	count= 200
-				
+	count = 200
+
 func _on_Area2D_body_entered(body):
-	if body.name == "espi":
+	if body.name == "Espi":
 		enemy=body
 		dialog.visible = true
 		dialog.get_node("face").texture = load("res://entities/enemies/Faceset.png")
 		dialog.get_node("text").set_text("Espi Entrega la morfi o te cabe el botellaso de quilmes gato ")
-		$AudioStreamPlayer2D.play()
+		Audio.play()
 
 func _on_Area2D_body_exited(body):
-	enemy=null
+	enemy = null
 	dialog.visible = false
-	$AudioStreamPlayer2D.stop()
+	Audio.stop()
 
 func notify_hit():
 	bodyy.frame = 4
