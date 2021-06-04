@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://entities/cactus/Markis.gd" type="Script" id=1]
 [ext_resource path="res://assets/dialog/DialogInfo.png" type="Texture" id=2]
-[ext_resource path="res://assets/Actors/Markis/SeparateAnim/Walk.png" type="Texture" id=3]
+[ext_resource path="res://assets/Actors/Markis/SeparateAnim/Idle.png" type="Texture" id=3]
+[ext_resource path="res://assets/Actors/Markis/SeparateAnim/Jump.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -32,6 +33,44 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 8 ) ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "dancing",
+"speed": 5.0
+} ]
+
 [sub_resource type="CircleShape2D" id=6]
 radius = 11.5047
 
@@ -45,17 +84,15 @@ script = ExtResource( 1 )
 position = Vector2( 8.80417, -10.3283 )
 scale = Vector2( 0.705686, 0.691233 )
 frames = SubResource( 5 )
-frame = 2
+frame = 3
 playing = true
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.340553, 0.170289 )
 scale = Vector2( 1.20221, 1.1756 )
-texture = ExtResource( 3 )
-hframes = 4
-vframes = 4
-
-[node name="TimeDialog" type="Timer" parent="."]
+frames = SubResource( 13 )
+animation = "dancing"
+frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.340576, 0.340561 )
