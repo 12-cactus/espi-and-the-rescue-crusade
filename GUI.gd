@@ -11,3 +11,6 @@ func show():
 	Start.visible = false
 	LifeBar.visible = true
 	WindowFrame.visible = true
+
+func on_player_hit(damage):
+	LifeBar.life -= damage

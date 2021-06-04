@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal hit(damage)
+
 onready var body: AnimatedSprite = $Body
 onready var Bag: MarginContainer = $Bag
 
@@ -12,6 +14,7 @@ var direction:Vector2 = Vector2.DOWN
 enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
 func _ready():
+	yield(get_tree().root, "ready")
 	Bag.visible = false
 	body.animation = "idle"
 	body.frame = 0
@@ -21,7 +24,7 @@ func _physics_process(delta):
 	get_movement_input()
 	get_events_input()
 	get_actions_input()
-	fire()	
+	fire()
 	if Bag.visible:
 		return
 	
@@ -47,18 +50,16 @@ func get_movement_input():
 		body.frame = 1
 	if Mov.DOWN:
 		self.direction = Vector2.DOWN
-		body.frame = 0		
+		body.frame = 0
 	if Mov.RIGHT:
 		self.direction = Vector2.RIGHT
-		body.frame = 3		
+		body.frame = 3
 	if Mov.LEFT:
 		self.direction = Vector2.LEFT
-		body.frame = 2		
+		body.frame = 2
 
 func get_events_input():
 	var collect_item: bool = Input.is_action_just_pressed("pick_up")
-	
-#	print(self.get_events_input())
 
 func get_actions_input():
 	if Input.is_action_just_pressed("bag"):
@@ -75,8 +76,10 @@ func fire():
 		var arm=load("res://entities/arms/barrette.tscn").instance()	
 		arm.initialize(self, global_position, direction)
 
-	
 func notify_hit():
+	emit_signal("hit", 1)
+
+func death():
 	body.frame = 4
 	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
 	dead_timer.start()
