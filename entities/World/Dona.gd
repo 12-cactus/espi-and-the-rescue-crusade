@@ -2,6 +2,9 @@ extends Sprite
 
 var player_over: KinematicBody2D = null
 
+func _ready():
+	self.set_name("Dona")
+
 func _physics_process(delta):
 	if player_over != null && Input.is_action_just_pressed("pick_up"):
 		player_over.picked(self)
