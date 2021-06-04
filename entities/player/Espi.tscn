@@ -5,7 +5,8 @@
 [ext_resource path="res://assets/Actors/bag.png" type="Texture" id=3]
 [ext_resource path="res://assets/Food/Fish.png" type="Texture" id=4]
 [ext_resource path="res://entities/player/Bag.gd" type="Script" id=5]
-[ext_resource path="res://assets/Actors/Espi/Dead.png" type="Texture" id=6]
+[ext_resource path="res://entities/player/Camera2D.gd" type="Script" id=6]
+[ext_resource path="res://assets/Actors/Espi/Dead.png" type="Texture" id=7]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -54,8 +55,19 @@ wait_time = 0.619
 shape = SubResource( 6 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+light_mask = 1025
 current = true
 zoom = Vector2( 0.4, 0.4 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+script = ExtResource( 6 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Camera2D"]
+visible = false
+z_index = 1
+enabled = true
+collision_mask = 1024
+collide_with_areas = true
 
 [node name="Bag" type="MarginContainer" parent="."]
 visible = false
