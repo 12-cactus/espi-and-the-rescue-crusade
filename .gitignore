@@ -391,3 +391,4 @@ gcov.css
 .clangd/
 .cache/
 .orig-files
+gh-pages/

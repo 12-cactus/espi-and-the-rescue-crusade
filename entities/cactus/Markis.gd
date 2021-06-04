@@ -1,43 +1,56 @@
 extends KinematicBody2D
 
-onready var dialog_area = get_node("DialogArea")
 onready var dialog = load("res://assets/dialog/Dialog.tscn").instance()
+onready var dialog_area = $DialogArea
+onready var sprite = $Sprite
+onready var stateMachine = $StateMachine
 
 var dialog_finish = false
-var timesVisited = 0
+var mainCharacter = "Espi"
+var neededItem = "Dona"
+var amountOfItemsNeeded = 3
+var textToShow
 
 
 func _ready():
-	dialog_area.visible = false
-	dialog.visible = false
+	stateMachine.initialize(self)
 	add_child(dialog)
+	dialog.visible = false
+	sprite.animation = "idle"
+	self.set_name("Markis")
 
 func _process(delta):
-	if Input.is_action_just_pressed("continue_dialog"):
-		_interact()
+	pass
+	
+func dialog_state():
+	dialog.visible = false
 
-func name():
-	return "soy Markis"
-
-func _interact():
-	dialog.get_node("face").texture = load("res://assets/Actors/Espi/Faceset.png")
-	dialog.get_node("text").set_text("dime que tiene ganas de comer")
+func textToShow(aTexToBeDisplayed):
+	textToShow = aTexToBeDisplayed
+	
+func neededItem():
+	return neededItem
+	
+func amountOfItemsNeeded():
+	return amountOfItemsNeeded
+	
+func animation():
+	return sprite
+	
+func dance():
+	sprite.animation = "dancing"
+	sprite.playing = true
 
 func _on_Area2D_body_entered(body):
-	if body.name == "espi":
+	if body.get_name() == mainCharacter:
+		stateMachine.handleEnterState(body)
 		dialog.visible = true
 		dialog.get_node("face").texture = load("res://assets/Actors/Markis/Faceset.png")
-		dialog.get_node("text").set_text("HOla Espi tengo hambre uto")
+		dialog.get_node("text").set_text(textToShow)
 		dialog_area.visible = false
 
-#	if body != self:
-#		if timesVisited == 0:
-#			timesVisited = 1
-#			print(body.name())
-#		else:
-#			print(body.name() + " de nuevo")
-#			print(body.bag().items())
-		
 func _on_Area2D_body_exited(body):
+	if body.get_name() == mainCharacter:
+		stateMachine.handleExitState(body)
 	dialog_area.visible = true
 	dialog.visible = false
