@@ -16,7 +16,7 @@ func _ready():
 	Bag.visible = false
 	body.animation = "idle"
 	body.frame = 0
-	name="espi"
+	self.set_name("Espi")
 
 func _physics_process(delta):
 	get_movement_input()
@@ -61,9 +61,6 @@ func get_events_input():
 func get_actions_input():
 	if Input.is_action_just_pressed("bag"):
 		Bag.visible = not Bag.visible
-
-func name():
-	return "Soy Espi"
 	
 func bag():
 	return Bag
@@ -93,3 +90,6 @@ func _remove():
 	set_physics_process(false)
 	hide()
 	collision_layer = 0
+
+func hasItems(anItemName, anAmountOfItems):
+	return Bag.hasItems(anItemName, anAmountOfItems) 
