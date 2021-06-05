@@ -392,3 +392,5 @@ gcov.css
 .cache/
 .orig-files
 gh-pages/
+linux/
+

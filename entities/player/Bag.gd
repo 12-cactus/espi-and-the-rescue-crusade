@@ -17,12 +17,9 @@ func add(item: Sprite):
 func hasItems(anItemName, anAmountOfItems):
 	var counter = 0
 	for item in items:
-		print(item)
-		if item.get_name() == anItemName:
-			counter += 1
-	print(anAmountOfItems)
-	print(items.size())
-	return anAmountOfItems <= items.size()
+		if item.get_name().begins_with(anItemName):
+			counter = counter + 1
+	return anAmountOfItems <= counter
 	
 func items():
 	return items

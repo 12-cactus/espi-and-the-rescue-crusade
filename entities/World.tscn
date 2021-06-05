@@ -17,7 +17,7 @@ position = Vector2( 1, 0 )
 [node name="Dona" type="Sprite" parent="." groups=[
 "collectables",
 ]]
-position = Vector2( 843.138, 477.411 )
+position = Vector2( 841.138, 503.411 )
 scale = Vector2( 0.0351376, 0.0351376 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
@@ -47,7 +47,7 @@ shape = SubResource( 1 )
 [node name="Dona3" type="Sprite" parent="." groups=[
 "collectables",
 ]]
-position = Vector2( 1582.38, 43.1073 )
+position = Vector2( 1476.38, 57.1073 )
 scale = Vector2( 0.0351376, 0.0351376 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
@@ -92,7 +92,7 @@ shape = SubResource( 1 )
 [node name="Dona6" type="Sprite" parent="." groups=[
 "collectables",
 ]]
-position = Vector2( 432.098, 560.802 )
+position = Vector2( 1146.1, 870.802 )
 scale = Vector2( 0.0351376, 0.0335126 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )

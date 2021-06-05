@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://entities/cactus/Markis.gd" type="Script" id=1]
-[ext_resource path="res://assets/dialog/DialogInfo.png" type="Texture" id=2]
+[ext_resource path="res://assets/GUI/DialogInfo.png" type="Texture" id=2]
 [ext_resource path="res://assets/Actors/Markis/SeparateAnim/Idle.png" type="Texture" id=3]
 [ext_resource path="res://assets/Actors/Markis/SeparateAnim/Jump.png" type="Texture" id=4]
 [ext_resource path="res://entities/cactus/NPCStateMachine.gd" type="Script" id=5]
@@ -85,6 +85,7 @@ script = ExtResource( 1 )
 position = Vector2( 8.80417, -10.3283 )
 scale = Vector2( 0.705686, 0.691233 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -105,5 +106,6 @@ shape = SubResource( 13 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 5 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
