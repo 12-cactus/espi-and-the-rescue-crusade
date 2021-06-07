@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Item.png-bfd28b128971db227409892f1c19ee7e.stex"
+path="res://.import/Attack.png-f601c601f4341d912022ad6f6aef6445.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/enemies/SeparateAnim/Item.png"
-dest_files=[ "res://.import/Item.png-bfd28b128971db227409892f1c19ee7e.stex" ]
+source_file="res://assets/enemies/SeparateAnim/Attack.png"
+dest_files=[ "res://.import/Attack.png-f601c601f4341d912022ad6f6aef6445.stex" ]
 
 [params]
 

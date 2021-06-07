@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botella.png-a4c37df1450606bd5d8026c48f60fe84.stex"
+path="res://.import/Jump.png-6c90ef4325655c0e73f047f07370eb94.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/enemies/botella.png"
-dest_files=[ "res://.import/botella.png-a4c37df1450606bd5d8026c48f60fe84.stex" ]
+source_file="res://assets/enemies/SeparateAnim/Jump.png"
+dest_files=[ "res://.import/Jump.png-6c90ef4325655c0e73f047f07370eb94.stex" ]
 
 [params]
 

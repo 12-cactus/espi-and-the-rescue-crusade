@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jump.png-d31572a3538f005e6fe6df054450bae0.stex"
+path="res://.import/Walk.png-e8113077f3be7a4a07370852833e2b47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/enemies/SeparateAnim/Jump.png"
-dest_files=[ "res://.import/Jump.png-d31572a3538f005e6fe6df054450bae0.stex" ]
+source_file="res://assets/enemies/SeparateAnim/Walk.png"
+dest_files=[ "res://.import/Walk.png-e8113077f3be7a4a07370852833e2b47.stex" ]
 
 [params]
 

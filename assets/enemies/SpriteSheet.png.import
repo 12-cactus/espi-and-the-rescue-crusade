@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Special2.png-a22c4dc9178881b5537391534493abc5.stex"
+path="res://.import/SpriteSheet.png-ab93f81369c4d89c40d3b56900042609.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/enemies/SeparateAnim/Special2.png"
-dest_files=[ "res://.import/Special2.png-a22c4dc9178881b5537391534493abc5.stex" ]
+source_file="res://assets/enemies/SpriteSheet.png"
+dest_files=[ "res://.import/SpriteSheet.png-ab93f81369c4d89c40d3b56900042609.stex" ]
 
 [params]
 

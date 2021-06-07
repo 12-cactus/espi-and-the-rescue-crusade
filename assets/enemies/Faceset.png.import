@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Faceset.png-4b7e5390c85d9f26bc3a72be6a6dad97.stex"
+path="res://.import/Faceset.png-2cce2d0d78ab50271be1f3e4c2d38e95.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/enemies/Faceset.png"
-dest_files=[ "res://.import/Faceset.png-4b7e5390c85d9f26bc3a72be6a6dad97.stex" ]
+source_file="res://assets/enemies/Faceset.png"
+dest_files=[ "res://.import/Faceset.png-2cce2d0d78ab50271be1f3e4c2d38e95.stex" ]
 
 [params]
 
