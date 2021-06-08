@@ -5,7 +5,7 @@ signal hit(damage)
 onready var body: AnimatedSprite = $Body
 onready var Bag: MarginContainer = $Bag
 
-var speed: int = 200
+var speed: int = 150
 var velocity: Vector2 = Vector2.ZERO
 var item_picked: Sprite = null
 var direction:Vector2 = Vector2.DOWN

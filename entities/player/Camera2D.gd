@@ -17,10 +17,10 @@ func _ready():
 	_right_raycast.set_cast_to(Vector2.RIGHT * 100)
 	
 	_bottom_raycast = raycast.duplicate()
-	_bottom_raycast.set_cast_to(Vector2.DOWN * 50)
+	_bottom_raycast.set_cast_to(Vector2.DOWN * 100)
 	
 	_up_raycast = raycast.duplicate()
-	_up_raycast.set_cast_to(Vector2.UP * 50)
+	_up_raycast.set_cast_to(Vector2.UP * 100)
 	
 	add_child(_left_raycast)
 	add_child(_right_raycast)
@@ -30,8 +30,8 @@ func _ready():
 	raycast.visible = false
 
 func _physics_process(delta):
-	drag_margin_left = 0.8 if _left_raycast.is_colliding() else lerp(0.2, drag_margin_left, 0.9)
-	drag_margin_right = 0.8 if _right_raycast.is_colliding() else lerp(0.2, drag_margin_right, 0.9)
+	drag_margin_left = 0.6 if _left_raycast.is_colliding() else lerp(0.6, drag_margin_left, 0.9)
+	drag_margin_right = 0.6 if _right_raycast.is_colliding() else lerp(0.6, drag_margin_right, 0.9)
 	drag_margin_bottom = 0.4 if _bottom_raycast.is_colliding() else lerp(0.4, drag_margin_bottom, 0.9)
 	drag_margin_top = 0.4 if _up_raycast.is_colliding() else lerp(0.4, drag_margin_top, 0.9)
 	
