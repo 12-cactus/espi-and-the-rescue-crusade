@@ -35,6 +35,13 @@ window/stretch/aspect="keep"
 
 Stretch=false
 
+[importer_defaults]
+
+texture={
+"detect_3d": false,
+"flags/filter": false
+}
+
 [input]
 
 left={

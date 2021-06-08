@@ -27,14 +27,14 @@ func handleEnterState(body):
 	if state == States.VISITED and not body.hasItems(parent.neededItem(), parent.amountOfItemsNeeded()):
 		parent.textToShow("No es suficiente para recuperarme.... arrrgh me muero")
 	
-	if state == States.VISITED and 	body.hasItems(parent.neededItem(), parent.amountOfItemsNeeded()):
+	if state == States.VISITED and body.hasItems(parent.neededItem(), parent.amountOfItemsNeeded()):
 		parent.textToShow("Gracias Espi, ¡Me salvaste!")
 		
 func handleExitState(body):
 	if state == States.IDLE:
 		state = States.VISITED
 		
-	if state == States.VISITED and 	body.hasItems(parent.neededItem(), parent.amountOfItemsNeeded()):
+	if state == States.VISITED and body.hasItems(parent.neededItem(), parent.amountOfItemsNeeded()):
 		state = States.RESCUED
 		
 	if state == States.RESCUED:

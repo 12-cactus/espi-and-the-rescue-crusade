@@ -29,9 +29,7 @@ func _remove():
 
 
 func _on_Hitbox_body_entered(body):
-	print(body)
 	if body.has_method("notify_hit"):
-		print("pepe")
 		body.notify_hit()
 	hitbox.collision_mask = 0
 	call_deferred("_remove")

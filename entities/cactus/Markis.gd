@@ -9,9 +9,9 @@ onready var faceset = load("res://assets/Actors/Markis/Faceset.png")
 
 var dialog_finish = false
 var mainCharacter = "Espi"
-var neededItem = "Dona"
-var amountOfItemsNeeded = 3
-var textToShow
+var itemNeeded = "Sandwich"
+var amountNeeded = 3
+var text
 
 func _ready():
 	stateMachine.initialize(self)
@@ -19,13 +19,13 @@ func _ready():
 	self.set_name("Markis")
 
 func textToShow(aTexToBeDisplayed):
-	textToShow = aTexToBeDisplayed
+	text = aTexToBeDisplayed
 	
 func neededItem():
-	return neededItem
+	return itemNeeded
 	
 func amountOfItemsNeeded():
-	return amountOfItemsNeeded
+	return amountNeeded
 	
 func animation():
 	return sprite
@@ -37,7 +37,7 @@ func dance():
 func _on_Area2D_body_entered(body):
 	if body.get_name() == mainCharacter:
 		stateMachine.handleEnterState(body)
-		emit_signal("show_dialog", faceset, textToShow)
+		emit_signal("show_dialog", faceset, text)
 
 func _on_Area2D_body_exited(body):
 	if body.get_name() == mainCharacter:

@@ -17,7 +17,7 @@ func _process(delta):
 		fire()
 
 func fire():
-	var bottle=load("res://entities/arms/bottle.tscn").instance()	
+	var bottle=load("res://entities/arms/bottle.tscn").instance()
 	bottle.initialize(self, global_position, global_position.direction_to(enemy.global_position))
 	count = 200
 

@@ -27,9 +27,7 @@ func _remove():
 	queue_free()
 
 func _on_bottle_body_entered(body):
-	print(body)
 	if body.has_method("notify_hit"):
-		print("pepe")
 		body.notify_hit()
 	self.collision_mask = 0
 	call_deferred("_remove")
