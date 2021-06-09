@@ -3,7 +3,7 @@ extends KinematicBody2D
 signal hit(damage)
 
 onready var body: AnimatedSprite = $Body
-onready var Bag: MarginContainer = $Bag
+onready var Bag: Node = $Bag
 
 var speed: int = 150
 var velocity: Vector2 = Vector2.ZERO
@@ -13,7 +13,6 @@ enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
 func _ready():
 	yield(get_tree().root, "ready")
-	Bag.visible = false
 	body.animation = "idle"
 	body.frame = 0
 	self.set_name("Espi")
@@ -23,8 +22,6 @@ func _physics_process(delta):
 	get_events_input()
 	get_actions_input()
 	fire()
-	if Bag.visible:
-		return
 	
 	if item_picked != null:
 		Bag.add(item_picked)

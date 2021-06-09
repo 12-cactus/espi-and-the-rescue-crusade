@@ -27,7 +27,7 @@ func _ready():
 	add_child(_bottom_raycast)
 	add_child(_up_raycast)
 	
-	raycast.visible = false
+	remove_child(raycast)
 
 func _physics_process(delta):
 	drag_margin_left = 0.6 if _left_raycast.is_colliding() else lerp(0.6, drag_margin_left, 0.9)
