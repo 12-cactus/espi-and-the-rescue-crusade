@@ -5,17 +5,20 @@ signal show_dialog(faceset, text)
 
 var state: int
 var visits: int = 0
-var parent: KinematicBody2D = null
 var text: String = ""
-var itemNeeded: String = "Sandwich"
+var faceset = null
 var amountNeeded: int = 3
-onready var faceset = load("res://assets/Actors/Markis/Faceset.png")
+var itemNeeded: String = ""
+var parent: KinematicBody2D = null
 
 enum States { WAITING, RESCUED }
 
-func initialize(parentNode: KinematicBody2D):
+func initialize(parentNode: KinematicBody2D, item: String, amount: int, facesetPath: String):
 	parent = parentNode
 	state = States.WAITING
+	itemNeeded = item
+	amountNeeded = amount
+	faceset = load(facesetPath)
 
 func hasAllItems(body: KinematicBody2D) -> bool:
 	return body.hasItems(itemNeeded, amountNeeded)
@@ -40,7 +43,7 @@ func handleEnterState(body: KinematicBody2D):
 	text = "No es suficiente para recuperarme.... arrrgh me muero"
 	emit_signal("show_dialog", faceset, text)
 
-func handleExitState(body: KinematicBody2D):
+func handleExitState(_body: KinematicBody2D):
 	emit_signal("leave_dialog")
 	if state == States.RESCUED:
 		parent.dance()
