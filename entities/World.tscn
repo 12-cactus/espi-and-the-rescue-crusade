@@ -4,7 +4,7 @@
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/cactus/CactusDefeated.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/cactus/MarkisController.gd" type="Script" id=4]
-[ext_resource path="res://entities/enemies/enemies1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://entities/enemies/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entities/cactus/FakeMarkisController.gd" type="Script" id=6]
 [ext_resource path="res://assets/Actors/Markis/SeparateAnim/Jump.png" type="Texture" id=7]
 [ext_resource path="res://assets/Actors/Markis/SpriteSheet.png" type="Texture" id=8]
@@ -26,7 +26,7 @@ region = Rect2( 0, 0, 16, 16 )
 atlas = ExtResource( 7 )
 region = Rect2( 48, 0, 16, 16 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ SubResource( 1 ) ],
 "loop": false,
@@ -39,13 +39,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 8 )
 region = Rect2( 16, 64, 16, 16 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ SubResource( 5 ) ],
+"frames": [ SubResource( 6 ) ],
 "loop": false,
 "name": "idle",
 "speed": 5.0
@@ -82,7 +82,7 @@ position = Vector2( 510.909, 325.701 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Cactus/Markis/MarkisBody"]
 scale = Vector2( 1.20221, 1.1756 )
-frames = SubResource( 7 )
+frames = SubResource( 5 )
 animation = "dancing"
 frame = 1
 
@@ -94,12 +94,12 @@ position = Vector2( 429, 388 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Cactus/FakeMarkis/FakeMarkisBody"]
 scale = Vector2( 1.20221, 1.1756 )
-frames = SubResource( 6 )
+frames = SubResource( 7 )
 animation = "dancing"
 frame = 1
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 907, 165 )
 
-[node name="enemies1" parent="Enemies" instance=ExtResource( 5 )]
+[node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
 position = Vector2( 0.562683, 0.78035 )

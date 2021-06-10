@@ -24,11 +24,9 @@ func fire():
 func _on_Area2D_body_entered(body):
 	if body.name == "Espi":
 		enemy = body
-		Audio.play()
 
 func _on_Area2D_body_exited(body):
 	enemy = null
-	Audio.stop()
 
 func notify_hit():
 	bodyy.frame = 4
