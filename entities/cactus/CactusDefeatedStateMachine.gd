@@ -5,11 +5,16 @@ signal show_dialog(faceset, text)
 
 var state: int
 var visits: int = 0
-var text: String = ""
 var faceset = null
 var amountNeeded: int = 3
 var itemNeeded: String = ""
+var current_dialog: Array = []
 var parent: KinematicBody2D = null
+var dialog_position: int = 0
+
+var DialogDying = ["¡Espi! me robaron hasta las medias. Para poder recuperarme necesito unos sanguchitos"]
+var DialogVisited = ["No es suficiente para recuperarme.... arrrgh me muero"]
+var DialogRescued = ["Gracias Espi, ¡Me salvaste!"]
 
 enum States {
 	DYING,
@@ -23,6 +28,15 @@ func initialize(parentNode: KinematicBody2D, item: String, amount: int, facesetP
 	itemNeeded = item
 	amountNeeded = amount
 	faceset = load(facesetPath)
+	dialog_position = 0
+
+func show_dialog():
+	emit_signal("show_dialog", faceset, current_dialog[dialog_position])
+
+func next_dialog():
+	if dialog_position < current_dialog.size() - 1:
+		dialog_position += 1
+		show_dialog()
 
 func hasAllItems(body: KinematicBody2D) -> bool:
 	return body.hasItems(itemNeeded, amountNeeded)
@@ -33,19 +47,16 @@ func handleEnterState(body: KinematicBody2D):
 	
 	if state == States.VISITED and hasAllItems(body):
 		state = States.RESCUED
-		text = "Gracias Espi, ¡Me salvaste!"
-		emit_signal("show_dialog", faceset, text)
-		return
+		current_dialog = DialogRescued
+	
+	if state == States.VISITED:
+		current_dialog = DialogVisited
 	
 	if state == States.DYING:
 		state = States.VISITED
-		text = "¡Espi! me robaron hasta las medias. Para poder recuperarme necesito unos sanguchitos"
-		emit_signal("show_dialog", faceset, text)
-		return
-
-	# else
-	text = "No es suficiente para recuperarme.... arrrgh me muero"
-	emit_signal("show_dialog", faceset, text)
+		current_dialog = DialogDying
+	
+	show_dialog()
 
 func handleExitState(_body: KinematicBody2D):
 	emit_signal("leave_dialog")
