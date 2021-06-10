@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-onready var sprite = $Sprite
+onready var sprite: AnimatedSprite = $Sprite
 onready var State: CactusDefeatedStateMachine = $StateMachine
 
-var espi: KinematicBody2D = null
 var espi_name: String = "Espi"
 var dialog_finish: bool = false
+var espi: KinematicBody2D = null
 
 func _ready():
 	set_physics_process(false)
