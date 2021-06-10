@@ -20,7 +20,6 @@ func _ready():
 func _physics_process(delta):
 	get_movement_input()
 	get_events_input()
-	get_actions_input()
 	fire()
 	
 	if item_picked != null:
@@ -57,10 +56,6 @@ func get_movement_input():
 
 func get_events_input():
 	var collect_item: bool = Input.is_action_just_pressed("pick_up")
-
-func get_actions_input():
-	if Input.is_action_just_pressed("bag"):
-		Bag.visible = not Bag.visible
 	
 func bag():
 	return Bag
