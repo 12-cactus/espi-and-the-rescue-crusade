@@ -2,7 +2,7 @@
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
-[ext_resource path="res://entities/cactus/Markis.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/cactus/CactusDefeated.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/enemies/enemies1.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
@@ -21,10 +21,19 @@ position = Vector2( 501.742, 482.835 )
 
 [node name="Conurban" parent="." instance=ExtResource( 1 )]
 
-[node name="Friends" type="Node2D" parent="."]
+[node name="Cactus" type="Node2D" parent="."]
 
-[node name="Markis" parent="Friends" instance=ExtResource( 4 )]
-position = Vector2( 514.639, 318.488 )
+[node name="Markis" parent="Cactus" instance=ExtResource( 3 )]
+position = Vector2( 509.909, 325.701 )
+faceset = "MarkisFaceset"
+item_needed = "Sandwich"
+amount_needed = 3
+
+[node name="FakeMarkis" parent="Cactus" instance=ExtResource( 3 )]
+position = Vector2( 428, 388 )
+faceset = "Markis"
+item_needed = "Sandwich"
+amount_needed = 4
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 907, 165 )

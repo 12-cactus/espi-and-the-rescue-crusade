@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
 onready var sprite = $Sprite
-onready var stateMachine: StateMachine = $StateMachine
+onready var stateMachine: CactusDefeatedStateMachine = $StateMachine
 
-export var faceset: String = "MarkisFaceset"
-export var item_needed: String = "Sandwich"
-export var amount_needed: int = 3
+export var faceset: String = ""
+export var item_needed: String = ""
+export var amount_needed: int = 0
 
 var dialog_finish: bool = false
 var mainCharacter: String = "Espi"
@@ -18,7 +18,6 @@ func _ready():
 		"res://assets/Actors/" + faceset + ".png"
 	)
 	sprite.animation = "idle"
-	set_name("Markis")
 	
 func dance():
 	sprite.animation = "dancing"

@@ -3,13 +3,16 @@ extends Node
 onready var GUI = $GUI
 onready var LifeBar = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
-onready var MarkisStateMachine: StateMachine = $World/Friends/Markis/StateMachine
+onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/StateMachine
+onready var FakeMarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/FakeMarkis/StateMachine
 
 func _ready():
 	Espi.connect("hit", GUI, "on_player_hit")
 	
 	MarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
 	MarkisStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
+	FakeMarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
+	FakeMarkisStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
 	
 	LifeBar.connect("dead", Espi, "death")
 	LifeBar.connect("dead", GUI, "on_player_dead")

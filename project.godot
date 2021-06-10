@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
-"class": "StateMachine",
+"class": "CactusDefeatedStateMachine",
 "language": "GDScript",
-"path": "res://entities/cactus/NPCStateMachine.gd"
+"path": "res://entities/cactus/CactusDefeatedStateMachine.gd"
 } ]
 _global_script_class_icons={
-"StateMachine": ""
+"CactusDefeatedStateMachine": ""
 }
 
 [application]

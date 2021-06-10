@@ -1,4 +1,4 @@
-class_name StateMachine extends Node
+class_name CactusDefeatedStateMachine extends Node
 
 signal leave_dialog
 signal show_dialog(faceset, text)
