@@ -1,14 +1,11 @@
 extends Area2D
 
-var speed=200
-var velocity=Vector2()
 onready var lifetime_timer = $LifeTimer
 
-var direction:Vector2
+var speed = 200
+var velocity = Vector2()
+var direction: Vector2
 
-func _ready():
-	pass 
-	
 func _physics_process(delta):
 	position += direction * speed * delta
 

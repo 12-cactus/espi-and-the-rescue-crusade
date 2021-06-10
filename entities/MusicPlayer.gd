@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
 onready var tween = $Tween
-const BASE_VOLUME = 0
+const BASE_VOLUME = -10
 const MUTE_VOLUME = -60
 
 func _on_music_changed(song):

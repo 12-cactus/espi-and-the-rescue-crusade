@@ -1,14 +1,15 @@
 extends KinematicBody2D
 
-onready var bodyy: AnimatedSprite = $Body
-onready var dead_timer = $DeadTimer
-onready var Audio = $AudioStreamPlayer2D
+onready var body: AnimatedSprite = $Body
+onready var dead_timer: Timer = $DeadTimer
+onready var life_bar: TextureProgress = $LifeBar
+onready var weapon: PackedScene = load("res://entities/arms/bottle.tscn")
 
-var count = 0
-var enemy = null
+var count: int = 0
+var enemy: KinematicBody2D = null
 
 func _ready():
-	bodyy.frame = 0
+	body.frame = 0
 
 func _process(delta):
 	if count != 0:
@@ -17,8 +18,7 @@ func _process(delta):
 		fire()
 
 func fire():
-	var bottle=load("res://entities/arms/bottle.tscn").instance()
-	bottle.initialize(self, global_position, global_position.direction_to(enemy.global_position))
+	weapon.instance().initialize(self, global_position, global_position.direction_to(enemy.global_position))
 	count = 200
 
 func _on_Area2D_body_entered(body):
@@ -29,7 +29,12 @@ func _on_Area2D_body_exited(body):
 	enemy = null
 
 func notify_hit():
-	bodyy.frame = 4
+	life_bar.value -= 10
+	if !life_bar.value:
+		death()
+
+func death():
+	body.frame = 4
 	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
 	dead_timer.start()
 
