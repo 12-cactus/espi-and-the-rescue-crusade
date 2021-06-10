@@ -29,12 +29,12 @@ enum States {
 	RESCUED
 }
 
-func initialize(parentNode: KinematicBody2D, item: String, amount: int, facesetPath: String):
+func initialize(parentNode: KinematicBody2D, facesetResource: Resource, item: String, amount: int):
 	parent = parentNode
-	state = States.DYING
+	faceset = facesetResource
 	itemNeeded = item
 	amountNeeded = amount
-	faceset = load(facesetPath)
+	state = States.DYING
 	dialog_position = 0
 
 func show_dialog():
@@ -48,6 +48,9 @@ func next_dialog(body: KinematicBody2D):
 	if dialog_position < current_dialog.size() - 1:
 		dialog_position += 1
 		show_dialog()
+	
+	if state == States.RESCUED:
+		parent.dance()
 
 func hasAllItems(body: KinematicBody2D) -> bool:
 	return body.hasItems(itemNeeded, amountNeeded)
@@ -71,8 +74,3 @@ func handleEnterState(body: KinematicBody2D):
 	
 	dialog_position = 0
 	show_dialog()
-
-func handleExitState(_body: KinematicBody2D):
-	dialog_position = 0
-	if state == States.RESCUED:
-		parent.dance()

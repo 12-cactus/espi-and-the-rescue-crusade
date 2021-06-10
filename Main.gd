@@ -3,8 +3,8 @@ extends Node
 onready var GUI = $GUI
 onready var LifeBar = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
-onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/StateMachine
-onready var FakeMarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/FakeMarkis/StateMachine
+onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/MarkisBody/StateMachine
+onready var FakeMarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/FakeMarkis/FakeMarkisBody/StateMachine
 
 func _ready():
 	Espi.connect("hit", GUI, "on_player_hit")

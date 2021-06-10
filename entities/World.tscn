@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/cactus/CactusDefeated.tscn" type="PackedScene" id=3]
+[ext_resource path="res://entities/cactus/MarkisController.gd" type="Script" id=4]
 [ext_resource path="res://entities/enemies/enemies1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://entities/cactus/FakeMarkisController.gd" type="Script" id=6]
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, 0 )
@@ -23,17 +25,17 @@ position = Vector2( 501.742, 482.835 )
 
 [node name="Cactus" type="Node2D" parent="."]
 
-[node name="Markis" parent="Cactus" instance=ExtResource( 3 )]
-position = Vector2( 509.909, 325.701 )
-faceset = "MarkisFaceset"
-item_needed = "Sandwich"
-amount_needed = 3
+[node name="Markis" type="Node2D" parent="Cactus"]
+script = ExtResource( 4 )
 
-[node name="FakeMarkis" parent="Cactus" instance=ExtResource( 3 )]
-position = Vector2( 428, 388 )
-faceset = "Markis"
-item_needed = "Sandwich"
-amount_needed = 4
+[node name="MarkisBody" parent="Cactus/Markis" instance=ExtResource( 3 )]
+position = Vector2( 510.909, 325.701 )
+
+[node name="FakeMarkis" type="Node2D" parent="Cactus"]
+script = ExtResource( 6 )
+
+[node name="FakeMarkisBody" parent="Cactus/FakeMarkis" instance=ExtResource( 3 )]
+position = Vector2( 429, 388 )
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 907, 165 )

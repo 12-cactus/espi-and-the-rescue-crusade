@@ -3,22 +3,22 @@ extends KinematicBody2D
 onready var sprite = $Sprite
 onready var State: CactusDefeatedStateMachine = $StateMachine
 
-export var faceset: String = ""
-export var item_needed: String = ""
-export var amount_needed: int = 0
-
 var espi: KinematicBody2D = null
 var espi_name: String = "Espi"
 var dialog_finish: bool = false
 
 func _ready():
+	set_physics_process(false)
+
+func initialize(faceset: Resource, item_needed: String, amount_needed: int):
 	State.initialize(
 		self,
+		faceset,
 		item_needed,
-		amount_needed,
-		"res://assets/Actors/" + faceset + ".png"
+		amount_needed
 	)
 	sprite.animation = "idle"
+	set_physics_process(true)
 
 func _physics_process(delta):
 	if espi != null and Input.is_action_just_pressed("next_dialog"):
@@ -36,4 +36,3 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.get_name() == espi_name:
 		espi = null
-		State.handleExitState(body)
