@@ -12,16 +12,9 @@ var current_dialog: Array = []
 var parent: KinematicBody2D = null
 var dialog_position: int = 0
 
-var DialogDying = [
-	"¡Espi!\n\n   (Q to continue ...)",
-	"¡Me robaron hasta las medias!",
-	 "Para poder recuperarme necesito unos sanguchitos"
-]
-var DialogVisited = [
-	"No es suficiente para recuperarme...",
-	"Arrrgh me mueroooo"
-]
-var DialogRescued = ["Gracias Espi, ¡Me salvaste!"]
+var DialogDying = [""]
+var DialogVisited = [""]
+var DialogRescued = [""]
 
 enum States {
 	DYING,
