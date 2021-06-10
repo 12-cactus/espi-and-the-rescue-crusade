@@ -31,6 +31,9 @@ func _physics_process(delta):
 	velocity = velocity.normalized() * speed
 	velocity = move_and_slide(velocity)
 
+func in_dialog(is_in_dialog: bool):
+	set_physics_process(not is_in_dialog)
+
 func picked(item: Sprite):
 	item_picked = item
 

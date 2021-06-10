@@ -7,8 +7,9 @@ export var faceset: String = ""
 export var item_needed: String = ""
 export var amount_needed: int = 0
 
+var espi: KinematicBody2D = null
+var espi_name: String = "Espi"
 var dialog_finish: bool = false
-var mainCharacter: String = "Espi"
 
 func _ready():
 	State.initialize(
@@ -20,17 +21,19 @@ func _ready():
 	sprite.animation = "idle"
 
 func _physics_process(delta):
-	if Input.is_action_pressed("next_dialog"):
-		State.next_dialog()
+	if espi != null and Input.is_action_just_pressed("next_dialog"):
+		State.next_dialog(espi)
 
 func dance():
 	sprite.animation = "dancing"
 	sprite.playing = true
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == mainCharacter:
+	if body.get_name() == espi_name:
+		espi = body
 		State.handleEnterState(body)
 
 func _on_Area2D_body_exited(body):
-	if body.get_name() == mainCharacter:
+	if body.get_name() == espi_name:
+		espi = null
 		State.handleExitState(body)
