@@ -4,6 +4,7 @@ signal hit(damage)
 
 onready var body: AnimatedSprite = $Body
 onready var Bag: Node = $Bag
+onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
@@ -16,9 +17,8 @@ func _ready():
 	body.animation = "idle_down"
 	self.set_name("Espi")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_movement_input()
-	get_events_input()
 	fire()
 	
 	if item_picked != null:
@@ -81,16 +81,12 @@ func get_movement_input():
 		body.playing = true
 		body.play("walk_right")
 
-func get_events_input():
-	var collect_item: bool = Input.is_action_just_pressed("pick_up")
-	
 func bag():
 	return Bag
 	
 func fire():
 	if Input.is_action_just_pressed("fire"):
-		var arm=load("res://entities/arms/barrette.tscn").instance()	
-		arm.initialize(self, global_position, direction)
+		Weapon.instance().initialize(self, global_position, direction)
 
 func notify_hit():
 	emit_signal("hit", 2)
