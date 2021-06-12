@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Walk.png-d13acfa7bc3b82283a0693bbf010c6e0.stex"
+path="res://.import/Faceset.png-a45844e99b3ef0e162d8160c244ecbf3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Actors/Markis/SeparateAnim/Walk.png"
-dest_files=[ "res://.import/Walk.png-d13acfa7bc3b82283a0693bbf010c6e0.stex" ]
+source_file="res://assets/Actors/Markis/Faceset.png"
+dest_files=[ "res://.import/Faceset.png-a45844e99b3ef0e162d8160c244ecbf3.stex" ]
 
 [params]
 

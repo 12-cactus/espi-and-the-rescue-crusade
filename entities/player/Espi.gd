@@ -30,6 +30,16 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 
 func in_dialog(is_in_dialog: bool):
+	if is_in_dialog:
+		body.playing = false
+		if direction == Vector2.UP:
+			body.animation = "idle_up"
+		if direction == Vector2.DOWN:
+			body.animation = "idle_down"
+		if direction == Vector2.LEFT:
+			body.animation = "idle_left"
+		if direction == Vector2.RIGHT:
+			body.animation = "idle_right"
 	set_physics_process(not is_in_dialog)
 
 func picked(item: Sprite):
