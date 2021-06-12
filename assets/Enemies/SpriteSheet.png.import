@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dead.png-b7cbaa72fd961e44c2c100d17f6f081b.stex"
+path="res://.import/SpriteSheet.png-ff68731007e819bfa6531e178530020a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/SeparateAnim/Dead.png"
-dest_files=[ "res://.import/Dead.png-b7cbaa72fd961e44c2c100d17f6f081b.stex" ]
+source_file="res://assets/Enemies/SpriteSheet.png"
+dest_files=[ "res://.import/SpriteSheet.png-ff68731007e819bfa6531e178530020a.stex" ]
 
 [params]
 

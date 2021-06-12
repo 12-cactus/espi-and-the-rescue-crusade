@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jump.png-6c90ef4325655c0e73f047f07370eb94.stex"
+path="res://.import/LifeBarMiniProgress.png-5d5b825790810f6bfacf1da2fe9542ac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/SeparateAnim/Jump.png"
-dest_files=[ "res://.import/Jump.png-6c90ef4325655c0e73f047f07370eb94.stex" ]
+source_file="res://assets/Enemies/LifeBarMiniProgress.png"
+dest_files=[ "res://.import/LifeBarMiniProgress.png-5d5b825790810f6bfacf1da2fe9542ac.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Item.png-61f6a44ba89a5d73ed6b1eef5c6bd491.stex"
+path="res://.import/botella.png-56dd47fe90ca713153cb0d45fc960c3c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/SeparateAnim/Item.png"
-dest_files=[ "res://.import/Item.png-61f6a44ba89a5d73ed6b1eef5c6bd491.stex" ]
+source_file="res://assets/Enemies/botella.png"
+dest_files=[ "res://.import/botella.png-56dd47fe90ca713153cb0d45fc960c3c.stex" ]
 
 [params]
 

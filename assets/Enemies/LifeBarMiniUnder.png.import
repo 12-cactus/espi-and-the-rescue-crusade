@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LifeBarMiniUnder.png-acd86d63afc6ff4807b6430587ecd1bf.stex"
+path="res://.import/LifeBarMiniUnder.png-99f08af5f79e08dc59cb3352bd4f9b80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/LifeBarMiniUnder.png"
-dest_files=[ "res://.import/LifeBarMiniUnder.png-acd86d63afc6ff4807b6430587ecd1bf.stex" ]
+source_file="res://assets/Enemies/LifeBarMiniUnder.png"
+dest_files=[ "res://.import/LifeBarMiniUnder.png-99f08af5f79e08dc59cb3352bd4f9b80.stex" ]
 
 [params]
 

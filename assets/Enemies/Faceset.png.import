@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LifeBarMiniProgress.png-2893b2ec5cbf77abe849bc7ad61aef7f.stex"
+path="res://.import/Faceset.png-07eafaef181b74103c5ea15f2363cfab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/LifeBarMiniProgress.png"
-dest_files=[ "res://.import/LifeBarMiniProgress.png-2893b2ec5cbf77abe849bc7ad61aef7f.stex" ]
+source_file="res://assets/Enemies/Faceset.png"
+dest_files=[ "res://.import/Faceset.png-07eafaef181b74103c5ea15f2363cfab.stex" ]
 
 [params]
 
