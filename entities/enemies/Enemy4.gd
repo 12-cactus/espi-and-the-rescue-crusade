@@ -19,6 +19,7 @@ func _process(delta):
 
 func fire():
 	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/rock.png")
+	$AudioStreamPlayer2D.play()
 	count = 200
 
 func _on_Area2D_body_entered(body):

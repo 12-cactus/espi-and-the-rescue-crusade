@@ -44,6 +44,8 @@ func in_dialog(is_in_dialog: bool):
 	set_physics_process(not is_in_dialog)
 
 func picked(item: Sprite):
+	$AudioStreamPlayer2D.stream = load("res://assets/sound/credits.wav")
+	$AudioStreamPlayer2D.play()
 	item_picked = item
 
 func get_movement_input():
