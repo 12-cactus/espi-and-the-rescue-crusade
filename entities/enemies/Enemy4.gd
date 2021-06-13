@@ -18,7 +18,7 @@ func _process(delta):
 		fire()
 
 func fire():
-	weapon.instance().initialize(self, global_position, global_position.direction_to(enemy.global_position))
+	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/rock.png")
 	count = 200
 
 func _on_Area2D_body_entered(body):

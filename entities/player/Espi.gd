@@ -5,6 +5,7 @@ signal hit(damage)
 onready var body: AnimatedSprite = $Body
 onready var Bag: Node = $Bag
 onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
+onready var SoundFire: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
@@ -87,6 +88,7 @@ func bag():
 func fire():
 	if Input.is_action_just_pressed("fire"):
 		Weapon.instance().initialize(self, global_position, direction)
+		SoundFire.play()
 
 func notify_hit():
 	emit_signal("hit", 2)

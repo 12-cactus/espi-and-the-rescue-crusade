@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Backgrounds/TilesetNature.png" type="Texture" id=3]
 [ext_resource path="res://entities/World/MusicArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entities/World/MusicArea.gd" type="Script" id=5]
-[ext_resource path="res://assets/sound/borracho.mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/sound/17 - Fight.ogg" type="AudioStream" id=6]
 [ext_resource path="res://assets/sound/La Mississippi - 05 Una Casa Con Diez Pinos (Inoxidables).mp3" type="AudioStream" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]

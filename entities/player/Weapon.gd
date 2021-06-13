@@ -2,6 +2,7 @@ extends AnimatedSprite
 
 onready var hitbox = $Hitbox
 onready var lifetime_timer = $LifeTimer
+onready var sound = $AudioStreamPlayer2D
 
 var speed: int = 200
 var velocity: Vector2 = Vector2.ZERO

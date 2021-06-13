@@ -5,6 +5,7 @@ onready var LifeBar = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
 onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/MarkisBody/StateMachine
 
+
 func _ready():
 	Espi.connect("hit", GUI, "on_player_hit")
 	
