@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/fx_health_item.wav-76b46b702152231d170bc1bc6da5f69f.sample"
+path="res://.import/fx_health_item.wav-8eecd2a56ba8b7fad94fc9c06c48de32.sample"
 
 [deps]
 
-source_file="res://entities/arms/fx_health_item.wav"
-dest_files=[ "res://.import/fx_health_item.wav-76b46b702152231d170bc1bc6da5f69f.sample" ]
+source_file="res://entities/weapons/fx_health_item.wav"
+dest_files=[ "res://.import/fx_health_item.wav-8eecd2a56ba8b7fad94fc9c06c48de32.sample" ]
 
 [params]
 

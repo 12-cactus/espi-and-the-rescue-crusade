@@ -3,7 +3,7 @@ extends KinematicBody2D
 onready var body: AnimatedSprite = $Body
 onready var dead_timer: Timer = $DeadTimer
 onready var life_bar: TextureProgress = $LifeBar
-onready var weapon: PackedScene = load("res://entities/arms/bottle.tscn")
+onready var weapon: PackedScene = load("res://entities/weapons/bottle.tscn")
 
 var count: int = 0
 var enemy: KinematicBody2D = null
