@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Final Credits.ogg-273beaecdefb5076fa4fd6dbc682bd67.oggstr"
+
+[deps]
+
+source_file="res://assets/sound/Final Credits.ogg"
+dest_files=[ "res://.import/Final Credits.ogg-273beaecdefb5076fa4fd6dbc682bd67.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
