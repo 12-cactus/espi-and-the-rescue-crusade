@@ -34,6 +34,7 @@ func notify_hit():
 		death()
 
 func death():
+	$AudioStreamPlayer2D.play()
 	body.frame = 4
 	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
 	dead_timer.start()
