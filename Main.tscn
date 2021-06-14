@@ -59,7 +59,7 @@ position = Vector2( -500, -345 )
 script = ExtResource( 6 )
 
 [node name="Espi" parent="." instance=ExtResource( 2 )]
-position = Vector2( 291.137, 227.879 )
+position = Vector2( 293.262, 258.349 )
 
 [node name="MusicPlayer" parent="." instance=ExtResource( 11 )]
 script = ExtResource( 12 )

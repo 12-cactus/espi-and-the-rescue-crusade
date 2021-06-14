@@ -77,10 +77,11 @@ position = Vector2( 907, 165 )
 position = Vector2( 0.562683, 0.78035 )
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
-position = Vector2( 55.717, 21.9936 )
+position = Vector2( 94.673, 93.9123 )
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
-position = Vector2( -68.0266, 19.8722 )
+position = Vector2( -47.8933, 136.1 )
+z_index = 19
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( 100.795, 754.887 )
