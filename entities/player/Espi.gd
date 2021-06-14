@@ -5,7 +5,7 @@ signal hit(damage)
 onready var body: AnimatedSprite = $Body
 onready var Bag: Node = $Bag
 onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
-onready var SoundFire: AudioStreamPlayer2D = $AudioStreamPlayer2D
+onready var ShotEffect: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
@@ -14,9 +14,9 @@ var direction:Vector2 = Vector2.DOWN
 enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
 func _ready():
+	self.set_name("Espi")
 	yield(get_tree().root, "ready")
 	body.animation = "idle_down"
-	self.set_name("Espi")
 
 func _physics_process(_delta):
 	get_movement_input()
@@ -44,8 +44,7 @@ func in_dialog(is_in_dialog: bool):
 	set_physics_process(not is_in_dialog)
 
 func picked(item: Sprite):
-	$AudioStreamPlayer2D.stream = load("res://assets/sound/credits.wav")
-	$AudioStreamPlayer2D.play()
+	item.play_picked_effect()
 	item_picked = item
 
 func get_movement_input():
@@ -90,7 +89,7 @@ func bag():
 func fire():
 	if Input.is_action_just_pressed("fire"):
 		Weapon.instance().initialize(self, global_position, direction)
-		SoundFire.play()
+		ShotEffect.play()
 
 func notify_hit():
 	emit_signal("hit", 2)

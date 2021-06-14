@@ -2,7 +2,7 @@
 
 [ext_resource path="res://entities/World/Sandwich.gd" type="Script" id=1]
 [ext_resource path="res://assets/Food/Sandwich.png" type="Texture" id=2]
-[ext_resource path="res://assets/sound/credits.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sound/Collect Item.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 16.7979

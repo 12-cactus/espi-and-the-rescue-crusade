@@ -5,8 +5,8 @@
 [ext_resource path="res://assets/Backgrounds/TilesetNature.png" type="Texture" id=3]
 [ext_resource path="res://entities/World/MusicArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entities/World/MusicArea.gd" type="Script" id=5]
-[ext_resource path="res://assets/sound/17 - Fight.ogg" type="AudioStream" id=6]
-[ext_resource path="res://assets/sound/La Mississippi - 05 Una Casa Con Diez Pinos (Inoxidables).mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/sound/Enemy.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/sound/First Level.ogg" type="AudioStream" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -38,7 +38,7 @@ points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
 extents = Vector2( 172.739, 285.685 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 152.681, 222.255 )
+extents = Vector2( 145.756, 153.034 )
 
 [node name="Conurban" type="YSort"]
 
@@ -78,7 +78,7 @@ script = ExtResource( 5 )
 song = ExtResource( 6 )
 
 [node name="Shape" type="CollisionShape2D" parent="MusicAreas/MusicArea2"]
-position = Vector2( 914.842, 233.386 )
+position = Vector2( 919.384, 172.314 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="MusicAreas/MusicArea" to="MusicAreas/MusicArea" method="_on_body_entered"]

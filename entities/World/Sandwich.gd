@@ -1,9 +1,10 @@
 extends Sprite
 
-var item_name: String = "Sandwich"
 var player_over: KinematicBody2D = null
+onready var PickedEffect: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _physics_process(delta):
+	self.set_name("Sandwich")
 	if player_over != null && Input.is_action_just_pressed("pick_up"):
 		player_over.picked(self)
 
@@ -18,3 +19,6 @@ func _on_Area2D_body_exited(body):
 func remove():
 	get_parent().remove_child(self)
 	queue_free()
+
+func play_picked_effect():
+	PickedEffect.play()
