@@ -101,7 +101,7 @@ func death():
 	call_deferred("_remove")
 
 func revive():
-	position = Vector2(112, 330)
+	#position = Vector2(112, 330)
 	body.frame = 0
 	collision_layer = 1
 	show()
