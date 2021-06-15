@@ -1,5 +1,6 @@
 extends Sprite
 
+var item_name: String = "Sandwich"
 var player_over: KinematicBody2D = null
 onready var PickedEffect: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
