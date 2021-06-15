@@ -15,7 +15,7 @@ var flag: bool = false
 onready var player = get_node("/root/Main/Espi")
 
 func _ready():
-	body.frame = 0
+	body.animation = "idle_up"
 
 func _process(delta):
 	if count != 0:
@@ -27,33 +27,54 @@ func _physics_process(delta):
 	if flag:
 		var direction = (player.global_position - global_position).normalized()
 		move_and_slide(direction * WALK_SPEED)
+		body.playing = true
+		var pos = player.global_position - global_position
+		print(Vector2.ZERO.angle_to(pos))
+		if direction.x >= 0 && direction.y >= 0:
+			body.animation = "walk_right"
+		if direction.x >= 0 && direction.y < 0:
+			body.animation = "walk_up"
+		if direction.x < 0 && direction.y >= 0:
+			body.animation = "walk_down"
+		if direction.x < 0 && direction.y < 0:
+			body.animation = "walk_left"
+	else:
+		body.playing = false
+		if body.animation == "walk_up":
+			body.animation = "idle_up"
+		if body.animation == "walk_down":
+			body.animation = "idle_down"
+		if body.animation == "walk_left":
+			body.animation = "idle_left"
+		if body.animation == "walk_right":
+			body.animation = "idle_right"
 
 func fire():
 	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/rock.png")
 	AudioPlayer.play()
 	count = 100
 
-func _on_Area2D_body_entered(body):
-	if body.name == "Espi":
-		enemy = body
+func _on_Area2D_body_entered(body_enter):
+	if body_enter.get_name() == "Espi":
+		enemy = body_enter
 		flag = true
 		$Combat.play()
 
-func _on_Area2D_body_exited(body):
+func _on_Area2D_body_exited(body_enter):
 	enemy = null
 	$Combat.stop()
 	flag = false
-	
+
 func notify_hit():
 	life_bar.value -= 10
 	if !life_bar.value:
 		death()
-	
 
 func death():
+	set_physics_process(false)
+	body.animation = "death"
 	AudioPlayer.stream = DeadSound
 	AudioPlayer.play()
-	body.frame = 4
 	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
 	dead_timer.start()
 
