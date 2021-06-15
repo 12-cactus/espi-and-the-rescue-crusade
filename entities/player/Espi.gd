@@ -6,6 +6,8 @@ onready var body: AnimatedSprite = $Body
 onready var Bag: Node = $Bag
 onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
 onready var ShotEffect: AudioStreamPlayer2D = $AudioStreamPlayer2D
+onready var SoundHurt: AudioStreamPlayer2D = $Player_hurt
+
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
@@ -92,13 +94,14 @@ func fire():
 		ShotEffect.play()
 
 func notify_hit():
+	SoundHurt.play()
 	emit_signal("hit", 2)
 
 func death():
 	call_deferred("_remove")
 
 func revive():
-	position = Vector2(112, 330)
+	#position = Vector2(112, 330)
 	body.frame = 0
 	collision_layer = 1
 	show()
