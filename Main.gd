@@ -3,15 +3,22 @@ extends Node
 onready var GUI = $GUI
 onready var LifeBar = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
-onready var Markis: KinematicBody2D = $World/Friends/Markis
+onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/MarkisBody/StateMachine
+
 
 func _ready():
+	#Esto hay que mejorarlo
+	$MusicPlayer.stream = load("res://assets/sound/Intro.ogg")
+	$MusicPlayer.play()
 	Espi.connect("hit", GUI, "on_player_hit")
 	
-	Markis.connect("show_dialog", GUI, "on_show_dialog")
-	Markis.connect("leave_dialog", GUI, "on_leave_dialog")
+	MarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
+	MarkisStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
 	
 	LifeBar.connect("dead", Espi, "death")
 	LifeBar.connect("dead", GUI, "on_player_dead")
 	LifeBar.connect("revive", Espi, "revive")
 	LifeBar.connect("revive", GUI, "on_player_revive")
+
+func stop_intro_music():
+	$MusicPlayer.stop()

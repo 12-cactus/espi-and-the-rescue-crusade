@@ -5,6 +5,7 @@ onready var Start: TextureRect = $Start
 onready var Restart: TextureRect = $Restart
 onready var WindowFrame: TextureRect = $WindowFrame
 onready var Dialog: Sprite = $Dialog
+onready var Sound = load("res://entities/MusicPlayer.tscn")
 
 func _ready():
 	Start.visible = true
@@ -31,6 +32,7 @@ func on_player_dead():
 	Restart.visible = true
 	LifeBar.visible = false
 	WindowFrame.visible = false
+
 
 func on_player_revive():
 	show()

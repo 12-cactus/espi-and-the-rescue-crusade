@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" groups=[
+"MusicPlayer",
+]]
+
+[node name="Tween" type="Tween" parent="."]

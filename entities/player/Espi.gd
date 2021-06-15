@@ -3,28 +3,24 @@ extends KinematicBody2D
 signal hit(damage)
 
 onready var body: AnimatedSprite = $Body
-onready var Bag: MarginContainer = $Bag
+onready var Bag: Node = $Bag
+onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
+onready var ShotEffect: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
-var speed: int = 200
+var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
 var item_picked: Sprite = null
 var direction:Vector2 = Vector2.DOWN
 enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
 func _ready():
-	yield(get_tree().root, "ready")
-	Bag.visible = false
-	body.animation = "idle"
-	body.frame = 0
 	self.set_name("Espi")
+	yield(get_tree().root, "ready")
+	body.animation = "idle_down"
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_movement_input()
-	get_events_input()
-	get_actions_input()
 	fire()
-	if Bag.visible:
-		return
 	
 	if item_picked != null:
 		Bag.add(item_picked)
@@ -34,7 +30,21 @@ func _physics_process(delta):
 	velocity = velocity.normalized() * speed
 	velocity = move_and_slide(velocity)
 
+func in_dialog(is_in_dialog: bool):
+	if is_in_dialog:
+		body.playing = false
+		if direction == Vector2.UP:
+			body.animation = "idle_up"
+		if direction == Vector2.DOWN:
+			body.animation = "idle_down"
+		if direction == Vector2.LEFT:
+			body.animation = "idle_left"
+		if direction == Vector2.RIGHT:
+			body.animation = "idle_right"
+	set_physics_process(not is_in_dialog)
+
 func picked(item: Sprite):
+	item.play_picked_effect()
 	item_picked = item
 
 func get_movement_input():
@@ -42,33 +52,44 @@ func get_movement_input():
 	Mov.DOWN =  int(Input.is_action_pressed("down"))
 	Mov.LEFT =  int(Input.is_action_pressed("left"))
 	Mov.RIGHT = int(Input.is_action_pressed("right"))
-	if Mov.UP:
-		self.direction = Vector2.UP
-		body.frame = 1
-	if Mov.DOWN:
-		self.direction = Vector2.DOWN
-		body.frame = 0
-	if Mov.RIGHT:
-		self.direction = Vector2.RIGHT
-		body.frame = 3
-	if Mov.LEFT:
-		self.direction = Vector2.LEFT
-		body.frame = 2
-
-func get_events_input():
-	var collect_item: bool = Input.is_action_just_pressed("pick_up")
-
-func get_actions_input():
-	if Input.is_action_just_pressed("bag"):
-		Bag.visible = not Bag.visible
 	
+	if Input.is_action_just_released("up"):
+		body.playing = false
+		body.animation = "idle_up"
+	if Input.is_action_just_released("down"):
+		body.playing = false
+		body.animation = "idle_down"
+	if Input.is_action_just_released("left"):
+		body.playing = false
+		body.animation = "idle_left"
+	if Input.is_action_just_released("right"):
+		body.playing = false
+		body.animation = "idle_right"
+	
+	if Mov.UP:
+		direction = Vector2.UP
+		body.playing = true
+		body.play("walk_up")
+	if Mov.DOWN:
+		direction = Vector2.DOWN
+		body.playing = true
+		body.play("walk_down")
+	if Mov.LEFT:
+		direction = Vector2.LEFT
+		body.playing = true
+		body.play("walk_left")
+	if Mov.RIGHT:
+		direction = Vector2.RIGHT
+		body.playing = true
+		body.play("walk_right")
+
 func bag():
 	return Bag
 	
 func fire():
 	if Input.is_action_just_pressed("fire"):
-		var arm=load("res://entities/arms/barrette.tscn").instance()	
-		arm.initialize(self, global_position, direction)
+		Weapon.instance().initialize(self, global_position, direction)
+		ShotEffect.play()
 
 func notify_hit():
 	emit_signal("hit", 2)
