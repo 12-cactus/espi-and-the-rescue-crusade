@@ -5,7 +5,7 @@ signal hit(damage)
 onready var body: AnimatedSprite = $Body
 onready var Bag: Node = $Bag
 onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
-onready var ShotEffect: AudioStreamPlayer2D = $AudioStreamPlayer2D
+onready var ShotEffect: AudioStreamPlayer2D = $Player_attack
 onready var SoundHurt: AudioStreamPlayer2D = $Player_hurt
 
 

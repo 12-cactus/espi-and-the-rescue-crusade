@@ -5,7 +5,9 @@ const WALK_SPEED = 25
 onready var body: AnimatedSprite = $Body
 onready var dead_timer: Timer = $DeadTimer
 onready var life_bar: TextureProgress = $LifeBar
+onready var AudioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
 onready var weapon: PackedScene = load("res://entities/weapons/bottle.tscn")
+onready var DeadSound: AudioStream = load("res://assets/sound/deadEnemy.wav")
 
 var count: int = 0
 var enemy: KinematicBody2D = null
@@ -28,7 +30,7 @@ func _physics_process(delta):
 
 func fire():
 	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/rock.png")
-	$AudioStreamPlayer2D.play()
+	AudioPlayer.play()
 	count = 100
 
 func _on_Area2D_body_entered(body):
@@ -40,7 +42,7 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	enemy = null
 	$Combat.stop()
-	flag = false	
+	flag = false
 	
 func notify_hit():
 	life_bar.value -= 10
@@ -49,8 +51,8 @@ func notify_hit():
 	
 
 func death():
-	$AudioStreamPlayer2D.stream = load("res://assets/sound/deadEnemy.wav")
-	$AudioStreamPlayer2D.play()
+	AudioPlayer.stream = DeadSound
+	AudioPlayer.play()
 	body.frame = 4
 	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
 	dead_timer.start()
@@ -61,5 +63,3 @@ func _on_dead_timer_timeout():
 func _remove():
 	get_parent().remove_child(self)
 	queue_free()
-
-
