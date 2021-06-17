@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Start screen.png-44da5267f0518d205d409d7774c6ee6e.stex"
+path="res://.import/Intro screen.png-c77349368538af9fe9b280cd3a409ad3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/Start screen.png"
-dest_files=[ "res://.import/Start screen.png-44da5267f0518d205d409d7774c6ee6e.stex" ]
+source_file="res://assets/GUI/Intro screen.png"
+dest_files=[ "res://.import/Intro screen.png-c77349368538af9fe9b280cd3a409ad3.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

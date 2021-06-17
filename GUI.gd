@@ -2,6 +2,7 @@ extends CanvasLayer
 
 onready var LifeBar = $LifeBar
 onready var Start: TextureRect = $Start
+onready var Intro: TextureRect = $Intro
 onready var Restart: TextureRect = $Restart
 onready var WindowFrame: TextureRect = $WindowFrame
 onready var Dialog: Sprite = $Dialog
@@ -9,16 +10,29 @@ onready var Sound = load("res://entities/MusicPlayer.tscn")
 
 func _ready():
 	Start.visible = true
+	Intro.visible = false
 	Restart.visible = false
 	LifeBar.visible = false
 	WindowFrame.visible = false
 	Dialog.visible = false
 
 func _on_World_start():
+	show_intro()
+
+func _on_World_intro():
 	show()
+	
+func show_intro():
+	Start.visible = false
+	Intro.visible = true
+	Restart.visible = false
+	LifeBar.visible = false
+	WindowFrame.visible = false
+	Dialog.visible = false
 
 func show():
 	Start.visible = false
+	Intro.visible = false
 	Restart.visible = false
 	LifeBar.visible = true
 	WindowFrame.visible = true
@@ -29,6 +43,7 @@ func on_player_hit(damage):
 
 func on_player_dead():
 	Start.visible = false
+	Intro.visible = false
 	Restart.visible = true
 	LifeBar.visible = false
 	WindowFrame.visible = false

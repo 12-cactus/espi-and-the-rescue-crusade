@@ -9,7 +9,6 @@ func add(item: Sprite):
 func hasItems(anItemName, anAmountOfItems):
 	var amount = 0
 	for item in items:
-		print(item.get_name())
 		if item.get_name().begins_with(anItemName):
 			amount += 1
 	return amount >= anAmountOfItems

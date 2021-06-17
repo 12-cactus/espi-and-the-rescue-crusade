@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://entities/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/GUI/Reset screen.jpeg" type="Texture" id=10]
 [ext_resource path="res://entities/MusicPlayer.tscn" type="PackedScene" id=11]
 [ext_resource path="res://entities/MusicPlayer.gd" type="Script" id=12]
+[ext_resource path="res://assets/GUI/Intro screen.png" type="Texture" id=13]
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
@@ -42,6 +43,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Intro" type="TextureRect" parent="GUI"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LifeBar" parent="GUI" instance=ExtResource( 9 )]
 visible = false
 margin_left = 12.681
@@ -59,9 +69,10 @@ position = Vector2( -541.849, -347.649 )
 script = ExtResource( 6 )
 
 [node name="Espi" parent="." instance=ExtResource( 2 )]
-position = Vector2( 293.262, 258.349 )
+position = Vector2( 293.213, 258.349 )
 
 [node name="MusicPlayer" parent="." instance=ExtResource( 11 )]
 script = ExtResource( 12 )
 
+[connection signal="intro" from="World" to="GUI" method="_on_World_intro"]
 [connection signal="start" from="World" to="GUI" method="_on_World_start"]

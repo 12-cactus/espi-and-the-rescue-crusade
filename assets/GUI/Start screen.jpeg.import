@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TilesetNature.png-852e9ec88ce2df592656674d80cfc7e1.stex"
+path="res://.import/Start screen.jpeg-7142cbbc9030ddb962b0c374f6a4b23c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Backgrounds/TilesetNature.png"
-dest_files=[ "res://.import/TilesetNature.png-852e9ec88ce2df592656674d80cfc7e1.stex" ]
+source_file="res://assets/GUI/Start screen.jpeg"
+dest_files=[ "res://.import/Start screen.jpeg-7142cbbc9030ddb962b0c374f6a4b23c.stex" ]
 
 [params]
 
@@ -24,7 +24,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

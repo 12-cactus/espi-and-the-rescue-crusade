@@ -28,8 +28,9 @@ func _on_lifetime_timer_timeout():
 	call_deferred("_remove")
 	
 func _remove():
-	get_parent().remove_child(self)
-	queue_free()
+	if get_parent() != null:
+		get_parent().remove_child(self)
+		queue_free()
 
 func _on_bottle_body_entered(body):
 	if body.has_method("notify_hit"):

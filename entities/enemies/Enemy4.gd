@@ -29,7 +29,6 @@ func _physics_process(delta):
 		move_and_slide(direction * WALK_SPEED)
 		body.playing = true
 		var pos = player.global_position - global_position
-		print(Vector2.ZERO.angle_to(pos))
 		if direction.x >= 0 && direction.y >= 0:
 			body.animation = "walk_right"
 		if direction.x >= 0 && direction.y < 0:

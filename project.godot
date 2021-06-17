@@ -39,7 +39,8 @@ Stretch=false
 
 texture={
 "detect_3d": false,
-"flags/filter": false
+"flags/filter": false,
+"process/fix_alpha_border": false
 }
 
 [input]
