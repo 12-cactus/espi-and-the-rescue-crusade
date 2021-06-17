@@ -47,10 +47,10 @@ position = Vector2( 1, 0 )
 [node name="Sandwiches" type="YSort" parent="."]
 
 [node name="Sandwich" parent="Sandwiches" instance=ExtResource( 2 )]
-position = Vector2( 504.779, 541.252 )
+position = Vector2( 1168.86, 953.555 )
 
 [node name="Sandwich2" parent="Sandwiches" instance=ExtResource( 2 )]
-position = Vector2( 502.034, 514.618 )
+position = Vector2( 942.07, 487.359 )
 
 [node name="Sandwich3" parent="Sandwiches" instance=ExtResource( 2 )]
 position = Vector2( 501.742, 482.835 )
