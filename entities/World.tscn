@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://entities/cactus/MarkisController.gd" type="Script" id=4]
 [ext_resource path="res://entities/enemies/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entities/enemies/Enemy4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://entities/Agus.gd" type="Script" id=7]
 [ext_resource path="res://assets/Actors/Markis/SpriteSheet.png" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -66,6 +67,17 @@ script = ExtResource( 4 )
 position = Vector2( 510.909, 325.701 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Cactus/Markis/MarkisBody"]
+scale = Vector2( 1.20221, 1.1756 )
+frames = SubResource( 5 )
+animation = "dancing"
+
+[node name="Agus" type="Node2D" parent="Cactus"]
+script = ExtResource( 7 )
+
+[node name="AgusBody" parent="Cactus/Agus" instance=ExtResource( 3 )]
+position = Vector2( 510.909, 325.701 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Cactus/Agus/AgusBody"]
 scale = Vector2( 1.20221, 1.1756 )
 frames = SubResource( 5 )
 animation = "dancing"
