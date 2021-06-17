@@ -4,12 +4,12 @@ onready var GUI = $GUI
 onready var LifeBar = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
 onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/MarkisBody/StateMachine
+onready var IntroMusic = load("res://assets/sound/Intro.ogg")
+onready var MusicPlayer = $MusicPlayer
 
 
 func _ready():
-	#Esto hay que mejorarlo
-	$MusicPlayer.stream = load("res://assets/sound/Intro.ogg")
-	$MusicPlayer.play()
+	MusicPlayer._on_music_changed(IntroMusic)
 	Espi.connect("hit", GUI, "on_player_hit")
 	
 	MarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
@@ -21,4 +21,4 @@ func _ready():
 	LifeBar.connect("revive", GUI, "on_player_revive")
 
 func stop_intro_music():
-	$MusicPlayer.stop()
+	MusicPlayer._on_music_changed(null)

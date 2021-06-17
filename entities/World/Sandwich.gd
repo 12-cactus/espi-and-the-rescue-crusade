@@ -1,6 +1,5 @@
 extends Sprite
 
-var item_name: String = "Sandwich"
 var player_over: KinematicBody2D = null
 onready var PickedEffect: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
@@ -18,6 +17,7 @@ func _on_Area2D_body_exited(body):
 		player_over = null
 
 func remove():
+	play_picked_effect()
 	get_parent().remove_child(self)
 	queue_free()
 
