@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://entities/World/Tileset/TilesetFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://entities/World/Tileset/TilesetWalls.tres" type="TileSet" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://assets/sound/Enemy.ogg" type="AudioStream" id=6]
 [ext_resource path="res://assets/sound/First Level.ogg" type="AudioStream" id=7]
 [ext_resource path="res://assets/Backgrounds/TilesetHouse.png" type="Texture" id=8]
+[ext_resource path="res://assets/Backgrounds/defe.png" type="Texture" id=9]
+[ext_resource path="res://assets/Backgrounds/Car.png" type="Texture" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 48, 0, 48, 0, 16, 64, 16 )
@@ -26,6 +28,9 @@ points = PoolVector2Array( 48, 48, 0, 48, 0, 0, 48, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 48, 0, 48 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 64, 20, 0, 20, 0, 0, 64, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 64, 48, 0, 48, 0, 16, 64, 16 )
@@ -346,6 +351,41 @@ points = PoolVector2Array( 48, 32, 0, 32, 0, 0, 48, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 13/z_index = 0
+14/name = "defe.png 14"
+14/texture = ExtResource( 9 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 28, 28 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Car.png 15"
+15/texture = ExtResource( 10 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 64, 20 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape = SubResource( 23 )
+15/shape_one_way = false
+15/shape_one_way_margin = 1.0
+15/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+15/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -433,7 +473,7 @@ z_index = 18
 tile_set = SubResource( 15 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 1638456, 11, 0, 1900588, 0, 0, 2031670, 3, 0, 2031674, 12, 0, 2031675, 12, 0, 2031678, 12, 0, 2031681, 13, 0, 2031684, 12, 0, 2228272, 1, 0, 2555959, 4, 0, 2687020, 6, 0, 3014721, 7, 0 )
+tile_data = PoolIntArray( 1310776, 15, 0, 1638456, 11, 0, 1900588, 0, 0, 2031670, 3, 0, 2031674, 12, 0, 2031675, 12, 0, 2031678, 12, 0, 2031681, 13, 0, 2031684, 12, 0, 2097215, 14, 0, 2228272, 1, 0, 2555959, 4, 0, 2687020, 6, 0, 3014721, 7, 0 )
 
 [node name="Borders" type="TileMap" parent="."]
 tile_set = SubResource( 20 )
