@@ -3,6 +3,7 @@ class_name CactusDefeatedStateMachine extends Node
 signal leave_dialog
 signal saved_cactus(faceset)
 signal show_dialog(faceset, text)
+signal consume_items(item_name, amount)
 
 var state: int
 var visits: int = 0
@@ -46,6 +47,7 @@ func next_dialog(body: KinematicBody2D):
 	if state == States.RESCUED:
 		parent.dance()
 		emit_signal("saved_cactus", faceset.resource_path)
+		emit_signal("consume_items", itemNeeded, amountNeeded)
 
 func hasAllItems(body: KinematicBody2D) -> bool:
 	return body.hasItems(itemNeeded, amountNeeded)

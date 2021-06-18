@@ -16,6 +16,7 @@ func _ready():
 	MarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
 	MarkisStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
 	MarkisStateMachine.connect("saved_cactus", GUI, "on_cactus_saved")
+	MarkisStateMachine.connect("consume_items", GUI, "on_items_consumed")
 	
 	LifeBar.connect("dead", Espi, "death")
 	LifeBar.connect("dead", GUI, "on_player_dead")
