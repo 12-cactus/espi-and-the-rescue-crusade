@@ -71,6 +71,8 @@ func on_cactus_saved(faceset):
 	cactus_saved_amount += 1
 	if faceset.match("*Markis*"):
 		CactusToSave.get_node("Markis/TextureRect").texture = load(faceset)
+	if faceset.match("*agus*"):
+		CactusToSave.get_node("Agus/TextureRect").texture = load(faceset)
 	if cactus_saved_amount == cactus_saved_needed:
 		_all_saved()
 
