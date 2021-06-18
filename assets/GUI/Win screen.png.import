@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DialogBoxFaceset.png-9f0de79b5508c1670335b3060bf38f85.stex"
+path="res://.import/Win screen.png-c7d2beb9764761afc096e64a28dae180.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/DialogBoxFaceset.png"
-dest_files=[ "res://.import/DialogBoxFaceset.png-9f0de79b5508c1670335b3060bf38f85.stex" ]
+source_file="res://assets/GUI/Win screen.png"
+dest_files=[ "res://.import/Win screen.png-c7d2beb9764761afc096e64a28dae180.stex" ]
 
 [params]
 

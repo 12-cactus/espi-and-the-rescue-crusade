@@ -2,6 +2,7 @@ extends CanvasLayer
 
 onready var LifeBar = $LifeBar
 onready var Start: TextureRect = $Start
+onready var Win: TextureRect = $Win
 onready var Intro: TextureRect = $Intro
 onready var Restart: TextureRect = $Restart
 onready var WindowFrame: TextureRect = $WindowFrame
@@ -43,10 +44,11 @@ func on_player_dead():
 
 func _all_saved():
 	_set_all_invisible()
-	Start.visible = true
+	Win.visible = true
 
 func _set_all_invisible():
 	Start.visible = false
+	Win.visible = false
 	Intro.visible = false
 	Restart.visible = false
 	LifeBar.visible = false

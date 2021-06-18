@@ -7,7 +7,7 @@ var amount_needed: int = 3
 var item_needed: String = "Sandwich"
 
 var DialogDying = [
-	"¡Espi!\n\n   (Q to continue ...)",
+	"¡Espiiii!\n\n   (Q to continue ...)",
 	"¡Me robaron hasta las medias!",
 	 "Para poder recuperarme necesito unos sanguchitos"
 ]

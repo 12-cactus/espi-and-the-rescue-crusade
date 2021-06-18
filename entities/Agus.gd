@@ -7,10 +7,10 @@ var amount_needed: int = 3
 var item_needed: String = "Wine"
 
 var DialogDying = [
-	"¡AIUDA!\n\n   (Q to continue ...)",
+	"¡AIIIIIUUUUDA!\n\n   (Q to continue ...)",
 	"¡Gracias por deshacerte del Gerente CAPITALISTA!",
-	"¡Me tenia programando en JAVA 1.4!",
-	 "Para poder recuperarme de este estres necesito un alto vino"
+	"¡¡¡Me tenía programando en TRAJE!!!",
+	 "Para poder recuperarme de este estrés necesito unos vinitos"
 ]
 var DialogVisited = [
 	"No es suficiente para recuperarme...",

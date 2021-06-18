@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
@@ -46,14 +46,6 @@ animations = [ {
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 16, 18 )
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 80, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 9 )
-region = Rect2( 16, 80, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 9 )
 region = Rect2( 32, 96, 16, 16 )
@@ -62,6 +54,10 @@ region = Rect2( 32, 96, 16, 16 )
 atlas = ExtResource( 9 )
 region = Rect2( 48, 96, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 80, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
 "frames": [ SubResource( 6 ) ],
@@ -69,7 +65,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 7 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
