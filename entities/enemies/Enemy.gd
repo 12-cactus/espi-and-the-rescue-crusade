@@ -18,6 +18,7 @@ func _process(delta):
 		fire()
 
 func fire():
+	$Sound_fire.play()
 	weapon.instance().initialize(self, global_position, global_position.direction_to(enemy.global_position))
 	count = 200
 
@@ -34,15 +35,19 @@ func notify_hit():
 		death()
 
 func death():
+	set_physics_process(false)
+	set_process(false)	
 	$AudioStreamPlayer2D.play()
 	body.frame = 4
-	dead_timer.connect("timeout", self, "_on_dead_timer_timeout")
+	dead_timer.connect("timeout", self, "_on_dead_timer_timeoutt")
 	dead_timer.start()
 	
 
-func _on_dead_timer_timeout():
+func _on_dead_timer_timeoutt():
 	call_deferred("_remove")
 	
 func _remove():
+	set_physics_process(false)
+	set_process(false)	
 	get_parent().remove_child(self)
 	queue_free()

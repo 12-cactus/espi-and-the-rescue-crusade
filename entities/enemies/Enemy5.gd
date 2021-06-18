@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const WALK_SPEED = 25
+const WALK_SPEED = 30
 
 onready var body: AnimatedSprite = $Body
 onready var dead_timer: Timer = $DeadTimer
@@ -49,7 +49,7 @@ func _physics_process(delta):
 			body.animation = "idle_right"
 
 func fire():
-	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/rock.png")
+	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/briefcase.png")
 	AudioPlayer.play()
 	count = 100
 
@@ -57,11 +57,11 @@ func _on_Area2D_body_entered(body_enter):
 	if body_enter.get_name() == "Espi":
 		enemy = body_enter
 		flag = true
-		$Combat.play()
+		#$Combat.play()
 
 func _on_Area2D_body_exited(body_enter):
 	enemy = null
-	$Combat.stop()
+	#$$Combat.stop()
 	flag = false
 
 func notify_hit():
@@ -71,6 +71,7 @@ func notify_hit():
 
 func death():
 	set_physics_process(false)
+	set_process(false)	
 	body.animation = "death"
 	AudioPlayer.stream = DeadSound
 	AudioPlayer.play()
@@ -81,5 +82,7 @@ func _on_dead_timer_timeout():
 	call_deferred("_remove")
 	
 func _remove():
+	set_physics_process(false)
+	set_process(false)
 	get_parent().remove_child(self)
 	queue_free()

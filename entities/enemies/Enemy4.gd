@@ -49,7 +49,7 @@ func _physics_process(delta):
 			body.animation = "idle_right"
 
 func fire():
-	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/briefcase.png")
+	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/weapons/rock.png")
 	AudioPlayer.play()
 	count = 100
 
@@ -71,6 +71,7 @@ func notify_hit():
 
 func death():
 	set_physics_process(false)
+	set_process(false)	
 	body.animation = "death"
 	AudioPlayer.stream = DeadSound
 	AudioPlayer.play()
@@ -81,5 +82,7 @@ func _on_dead_timer_timeout():
 	call_deferred("_remove")
 	
 func _remove():
+	set_physics_process(false)
+	set_process(false)	
 	get_parent().remove_child(self)
 	queue_free()

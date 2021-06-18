@@ -23,6 +23,7 @@ func _ready():
 func _physics_process(_delta):
 	get_movement_input()
 	fire()
+
 	
 	if item_picked != null:
 		Bag.add(item_picked)

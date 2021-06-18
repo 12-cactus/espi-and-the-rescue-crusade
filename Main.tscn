@@ -13,7 +13,7 @@
 [ext_resource path="res://entities/MusicPlayer.tscn" type="PackedScene" id=11]
 [ext_resource path="res://entities/MusicPlayer.gd" type="Script" id=12]
 [ext_resource path="res://assets/GUI/Intro screen.png" type="Texture" id=13]
-[ext_resource path="res://assets/Actors/Markis/Faceset.png" type="Texture" id=14]
+[ext_resource path="res://assets/Actors/agus/Faceset_2.png" type="Texture" id=14]
 [ext_resource path="res://assets/Font/PressStart2P.tres" type="DynamicFont" id=15]
 [ext_resource path="res://assets/Actors/Markis/FacesetGrey.png" type="Texture" id=16]
 [ext_resource path="res://assets/GUI/Sandwich.png" type="Texture" id=17]
