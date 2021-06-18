@@ -8,6 +8,7 @@
 radius = 16.7979
 
 [node name="Sandwich" type="Sprite" groups=[
+"Sandwich",
 "collectables",
 ]]
 position = Vector2( 701.549, 602.637 )
