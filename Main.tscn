@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://entities/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://assets/GUI/Items/passport.png" type="Texture" id=23]
 [ext_resource path="res://assets/Actors/Dan/FacesetGrey.png" type="Texture" id=24]
 [ext_resource path="res://assets/GUI/Items/nunchaku.png" type="Texture" id=25]
+[ext_resource path="res://entities/World/Crossfader.tscn" type="PackedScene" id=26]
 [ext_resource path="res://assets/Actors/Markis/FacesetGrey.png" type="Texture" id=27]
 
 [node name="Main" type="Node"]
@@ -161,6 +162,8 @@ position = Vector2( -85.0153, 436.339 )
 
 [node name="MusicPlayer" parent="." instance=ExtResource( 11 )]
 script = ExtResource( 12 )
+
+[node name="Crossfader" parent="." instance=ExtResource( 26 )]
 
 [connection signal="intro" from="World" to="GUI" method="_on_World_intro"]
 [connection signal="start" from="World" to="GUI" method="_on_World_start"]
