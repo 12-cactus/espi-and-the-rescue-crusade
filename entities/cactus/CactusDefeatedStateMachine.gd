@@ -53,6 +53,7 @@ func hasAllItems(body: KinematicBody2D) -> bool:
 	return body.hasItems(itemNeeded, amountNeeded)
 
 func handleEnterState(body: KinematicBody2D):
+	print(state)
 	if state == States.RESCUED:
 		return
 	
