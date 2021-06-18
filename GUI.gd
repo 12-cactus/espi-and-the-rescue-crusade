@@ -8,6 +8,7 @@ onready var WindowFrame: TextureRect = $WindowFrame
 onready var Dialog: Sprite = $Dialog
 onready var Sound = load("res://entities/MusicPlayer.tscn")
 onready var CactusToSave = $CactusToSave
+onready var ItemsToCollect = $ItemsToCollect
 
 var cactus_saved_amount = 0
 var cactus_saved_needed = 2
@@ -31,6 +32,7 @@ func show():
 	LifeBar.visible = true
 	WindowFrame.visible = true
 	CactusToSave.visible = true
+	ItemsToCollect.visible = true
 
 func on_player_hit(damage):
 	LifeBar.life -= damage
@@ -51,6 +53,7 @@ func _set_all_invisible():
 	WindowFrame.visible = false
 	Dialog.visible = false
 	CactusToSave.visible = false
+	ItemsToCollect.visible = false
 
 func on_player_revive():
 	show()
@@ -68,6 +71,11 @@ func on_cactus_saved(faceset):
 	cactus_saved_amount += 1
 	if faceset.match("*Markis*"):
 		CactusToSave.get_node("Markis/TextureRect").texture = load(faceset)
-
 	if cactus_saved_amount == cactus_saved_needed:
 		_all_saved()
+
+func on_item_collected(item_name):
+	if item_name.match("*Sandwich*"):
+		var label: Label = ItemsToCollect.get_node("Sandwiches/Label")
+		var amount: int = int(label.text)
+		label.text = str(amount + 1)

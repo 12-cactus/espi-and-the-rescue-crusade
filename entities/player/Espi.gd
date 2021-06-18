@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
 signal hit(damage)
+signal item_collected(name)
 
 onready var body: AnimatedSprite = $Body
 onready var Bag: Node = $Bag
 onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
 onready var ShotEffect: AudioStreamPlayer2D = $Player_attack
 onready var SoundHurt: AudioStreamPlayer2D = $Player_hurt
-
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
@@ -48,6 +48,7 @@ func in_dialog(is_in_dialog: bool):
 func picked(item: Sprite):
 	item.play_picked_effect()
 	item_picked = item
+	emit_signal("item_collected", item.collectable_name)
 
 func get_movement_input():
 	Mov.UP =    int(Input.is_action_pressed("up"))
