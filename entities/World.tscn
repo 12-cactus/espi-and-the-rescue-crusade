@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://entities/enemies/Enemy4.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/Agus.gd" type="Script" id=7]
 [ext_resource path="res://assets/Actors/Markis/SpriteSheet.png" type="Texture" id=8]
+[ext_resource path="res://entities/World/Wine.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 8 )
@@ -72,6 +73,11 @@ position = Vector2( 942.07, 487.359 )
 
 [node name="Sandwich3" parent="Sandwiches" instance=ExtResource( 2 )]
 position = Vector2( 501.742, 482.835 )
+
+[node name="Wines" type="YSort" parent="."]
+
+[node name="Wine" parent="Wines" instance=ExtResource( 9 )]
+position = Vector2( 774.603, 628.473 )
 
 [node name="Conurban" parent="." instance=ExtResource( 1 )]
 

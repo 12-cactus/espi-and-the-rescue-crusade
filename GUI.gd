@@ -76,6 +76,11 @@ func on_cactus_saved(faceset):
 
 func on_item_collected(item_name):
 	if item_name.match("*Sandwich*"):
-		var label: Label = ItemsToCollect.get_node("Sandwiches/Label")
-		var amount: int = int(label.text)
-		label.text = str(amount + 1)
+		_increase_amount_to("Sandwiches")
+	if item_name.match("*Wine*"):
+		_increase_amount_to("Wines")
+
+func _increase_amount_to(node_name):
+	var label: Label = ItemsToCollect.get_node(node_name + "/Label")
+	var amount: int = int(label.text)
+	label.text = str(amount + 1)
