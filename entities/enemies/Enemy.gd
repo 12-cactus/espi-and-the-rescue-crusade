@@ -14,7 +14,7 @@ func _ready():
 func _process(delta):
 	if count != 0:
 		count -=1
-	if enemy != null and count == 0:
+	if enemy != null and enemy.isAlive() and count == 0:
 		fire()
 
 func fire():

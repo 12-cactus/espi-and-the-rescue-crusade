@@ -8,11 +8,12 @@ onready var life_bar: TextureProgress = $LifeBar
 onready var AudioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
 onready var weapon: PackedScene = load("res://entities/weapons/bottle.tscn")
 onready var DeadSound: AudioStream = load("res://assets/sound/deadEnemy.wav")
+onready var player = get_node("/root/Main/Espi")
 
 var count: int = 0
 var enemy: KinematicBody2D = null
 var flag: bool = false
-onready var player = get_node("/root/Main/Espi")
+
 
 func _ready():
 	body.animation = "idle_up"
@@ -20,7 +21,7 @@ func _ready():
 func _process(delta):
 	if count != 0:
 		count -=1
-	if enemy != null and count == 0:
+	if enemy != null and enemy.isAlive() and count == 0:
 		fire()
 		
 func _physics_process(delta):
@@ -54,14 +55,12 @@ func fire():
 	count = 100
 
 func _on_Area2D_body_entered(body_enter):
-	if body_enter.get_name() == "Espi":
+	if body_enter.get_name() == "Espi" and body_enter.isAlive():
 		enemy = body_enter
 		flag = true
-		$Combat.play()
 
 func _on_Area2D_body_exited(body_enter):
 	enemy = null
-	$Combat.stop()
 	flag = false
 
 func notify_hit():

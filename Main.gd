@@ -6,6 +6,7 @@ onready var Espi: KinematicBody2D = $Espi
 onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/MarkisBody/StateMachine
 onready var AgusStateMachine: CactusDefeatedStateMachine = $World/Cactus/Agus/AgusBody/StateMachine
 onready var IntroMusic = load("res://assets/sound/Intro.ogg")
+onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
 onready var MusicPlayer = $MusicPlayer
 onready var CollectableSandwich = $World/Sandwiches/Sandwich
 
@@ -31,3 +32,9 @@ func _ready():
 
 func stop_intro_music():
 	MusicPlayer._on_music_changed(null)
+
+func start_intro_music():
+	MusicPlayer._on_music_changed(StoryMusic)
+	
+func play_game_over():
+	MusicPlayer.play_game_over()

@@ -8,14 +8,17 @@ onready var Bag: Node = $Bag
 onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
 onready var ShotEffect: AudioStreamPlayer2D = $Player_attack
 onready var SoundHurt: AudioStreamPlayer2D = $Player_hurt
+onready var ItemPickedSound: AudioStreamPlayer2D = $Item_Picked
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
 var item_picked: Sprite = null
 var direction:Vector2 = Vector2.DOWN
+var alive
 enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
 func _ready():
+	alive = true
 	self.set_name("Espi")
 	yield(get_tree().root, "ready")
 	body.animation = "idle_down"
@@ -48,7 +51,7 @@ func in_dialog(is_in_dialog: bool):
 
 func picked(item: Sprite):
 	item_picked = item
-	$AudioStreamPlayer2D.play()
+	ItemPickedSound.play()
 	emit_signal("item_collected", item.collectable_name)
 
 func get_movement_input():
@@ -100,12 +103,15 @@ func notify_hit():
 	emit_signal("hit", 2)
 
 func death():
+	alive = false
+	get_parent().play_game_over()
 	call_deferred("_remove")
 
 func revive():
 	position = Vector2(293.213, 258.349)
 	body.frame = 0
 	collision_layer = 1
+	get_parent().stop_intro_music()
 	show()
 	set_physics_process(true)
 
@@ -119,3 +125,6 @@ func _remove():
 
 func hasItems(anItemName, anAmountOfItems):
 	return Bag.hasItems(anItemName, anAmountOfItems) 
+
+func isAlive():
+	return alive
