@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://entities/Agus.gd" type="Script" id=7]
 [ext_resource path="res://assets/Actors/Markis/SpriteSheet.png" type="Texture" id=8]
 [ext_resource path="res://assets/Actors/agus/SpriteSheet.png" type="Texture" id=9]
+[ext_resource path="res://entities/World/Wine.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Enemies/enemi_boss/SpriteSheet.png" type="Texture" id=11]
 
 [sub_resource type="AtlasTexture" id=1]
@@ -239,6 +240,11 @@ animations = [ {
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, 0 )
+
+[node name="Wines" type="YSort" parent="."]
+
+[node name="Wine" parent="Wines" instance=ExtResource( 10 )]
+position = Vector2( 758.859, 628.483 )
 
 [node name="Sandwiches" type="YSort" parent="."]
 
