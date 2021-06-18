@@ -3,16 +3,16 @@ extends KinematicBody2D
 const WALK_SPEED = 30
 
 onready var body: AnimatedSprite = $Body
-onready var dead_timer: Timer = $DeadTimer
+onready var dead_timer: Timer = $DeadTimer5
 onready var life_bar: TextureProgress = $LifeBar
 onready var AudioPlayer: AudioStreamPlayer2D = $AudioStreamPlayer2D
 onready var weapon: PackedScene = load("res://entities/weapons/bottle.tscn")
 onready var DeadSound: AudioStream = load("res://assets/sound/deadEnemy.wav")
+onready var player = get_node("/root/Main/Espi")
 
 var count: int = 0
 var enemy: KinematicBody2D = null
 var flag: bool = false
-onready var player = get_node("/root/Main/Espi")
 
 func _ready():
 	body.animation = "idle_up"
@@ -57,11 +57,9 @@ func _on_Area2D_body_entered(body_enter):
 	if body_enter.get_name() == "Espi":
 		enemy = body_enter
 		flag = true
-		#$Combat.play()
 
 func _on_Area2D_body_exited(body_enter):
 	enemy = null
-	#$$Combat.stop()
 	flag = false
 
 func notify_hit():
@@ -71,7 +69,7 @@ func notify_hit():
 
 func death():
 	set_physics_process(false)
-	set_process(false)	
+	set_process(false)
 	body.animation = "death"
 	AudioPlayer.stream = DeadSound
 	AudioPlayer.play()
