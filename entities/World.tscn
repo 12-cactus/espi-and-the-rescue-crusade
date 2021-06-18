@@ -267,7 +267,7 @@ frames = SubResource( 5 )
 animation = "dancing"
 
 [node name="Agus" type="Node2D" parent="Cactus"]
-position = Vector2( 1442.99, 88.9949 )
+position = Vector2( 1031.39, 53.359 )
 script = ExtResource( 7 )
 
 [node name="AgusBody" parent="Cactus/Agus" instance=ExtResource( 3 )]
@@ -280,13 +280,13 @@ animation = "dancing"
 position = Vector2( 907, 165 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
-position = Vector2( 0.562683, 0.78035 )
+position = Vector2( 15.4137, 41.165 )
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
-position = Vector2( 94.673, 93.9123 )
+position = Vector2( 122.025, 77.3037 )
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
-position = Vector2( -47.8933, 136.1 )
+position = Vector2( -111.06, 143.972 )
 z_index = 19
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource( 6 )]
@@ -297,8 +297,9 @@ frames = SubResource( 41 )
 animation = "idle_up"
 
 [node name="Enemy5" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 299.157, 591.404 )
+position = Vector2( 87.1233, -99.9334 )
 
 [node name="Body" type="AnimatedSprite" parent="Enemies/Enemy5"]
+position = Vector2( 0.367615, -0.0140305 )
 frames = SubResource( 41 )
 animation = "idle_up"

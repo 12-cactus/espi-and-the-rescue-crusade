@@ -6,5 +6,5 @@ bus/1/name = "Credits"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -7.26851
+bus/1/volume_db = -8.79822
 bus/1/send = "Master"
