@@ -9,6 +9,9 @@ onready var Dialog: Sprite = $Dialog
 onready var Sound = load("res://entities/MusicPlayer.tscn")
 onready var CactusToSave = $CactusToSave
 
+var cactus_saved_amount = 0
+var cactus_saved_needed = 2
+
 func _ready():
 	_set_all_invisible()
 	Start.visible = true
@@ -36,6 +39,10 @@ func on_player_dead():
 	_set_all_invisible()
 	Restart.visible = true
 
+func _all_saved():
+	_set_all_invisible()
+	Start.visible = true
+
 func _set_all_invisible():
 	Start.visible = false
 	Intro.visible = false
@@ -58,5 +65,9 @@ func on_leave_dialog():
 	Dialog.visible = false
 
 func on_cactus_saved(faceset):
+	cactus_saved_amount += 1
 	if faceset.match("*Markis*"):
 		CactusToSave.get_node("Markis/TextureRect").texture = load(faceset)
+
+	if cactus_saved_amount == cactus_saved_needed:
+		_all_saved()

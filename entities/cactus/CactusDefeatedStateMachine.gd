@@ -45,6 +45,7 @@ func next_dialog(body: KinematicBody2D):
 	
 	if state == States.RESCUED:
 		parent.dance()
+		emit_signal("saved_cactus", faceset.resource_path)
 
 func hasAllItems(body: KinematicBody2D) -> bool:
 	return body.hasItems(itemNeeded, amountNeeded)
@@ -58,7 +59,6 @@ func handleEnterState(body: KinematicBody2D):
 	if state == States.VISITED and hasAllItems(body):
 		state = States.RESCUED
 		current_dialog = DialogRescued
-		emit_signal("saved_cactus", faceset.resource_path)
 	
 	if state == States.VISITED:
 		current_dialog = DialogVisited
