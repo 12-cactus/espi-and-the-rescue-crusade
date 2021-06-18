@@ -10,22 +10,18 @@
 [ext_resource path="res://assets/Actors/Markis/SpriteSheet.png" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 80, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 32, 80, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 48, 80, 16, 16 )
 

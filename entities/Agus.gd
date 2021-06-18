@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var body: KinematicBody2D = $AgusBody
-onready var faceset: Resource = load()
+onready var faceset: Resource = load("res://assets/Actors/Markis/Faceset.png")
 
 var amount_needed: int = 3
 var item_needed: String = "Wine"
