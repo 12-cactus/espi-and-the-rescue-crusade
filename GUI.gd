@@ -7,14 +7,11 @@ onready var Restart: TextureRect = $Restart
 onready var WindowFrame: TextureRect = $WindowFrame
 onready var Dialog: Sprite = $Dialog
 onready var Sound = load("res://entities/MusicPlayer.tscn")
+onready var CactusToSave = $CactusToSave
 
 func _ready():
+	_set_all_invisible()
 	Start.visible = true
-	Intro.visible = false
-	Restart.visible = false
-	LifeBar.visible = false
-	WindowFrame.visible = false
-	Dialog.visible = false
 
 func _on_World_start():
 	show_intro()
@@ -23,31 +20,30 @@ func _on_World_intro():
 	show()
 	
 func show_intro():
-	Start.visible = false
+	_set_all_invisible()
 	Intro.visible = true
-	Restart.visible = false
-	LifeBar.visible = false
-	WindowFrame.visible = false
-	Dialog.visible = false
 
 func show():
-	Start.visible = false
-	Intro.visible = false
-	Restart.visible = false
+	_set_all_invisible()
 	LifeBar.visible = true
 	WindowFrame.visible = true
-	Dialog.visible = false
+	CactusToSave.visible = true
 
 func on_player_hit(damage):
 	LifeBar.life -= damage
 
 func on_player_dead():
+	_set_all_invisible()
+	Restart.visible = true
+
+func _set_all_invisible():
 	Start.visible = false
 	Intro.visible = false
-	Restart.visible = true
+	Restart.visible = false
 	LifeBar.visible = false
 	WindowFrame.visible = false
-
+	Dialog.visible = false
+	CactusToSave.visible = false
 
 func on_player_revive():
 	show()
@@ -60,3 +56,7 @@ func on_show_dialog(faceset, text):
 func on_leave_dialog():
 	Dialog.get_node("text").set_text("EMPTY")
 	Dialog.visible = false
+
+func on_cactus_saved(faceset):
+	if faceset.match("*Markis*"):
+		CactusToSave.get_node("Markis/TextureRect").texture = load(faceset)

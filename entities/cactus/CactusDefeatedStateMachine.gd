@@ -1,6 +1,7 @@
 class_name CactusDefeatedStateMachine extends Node
 
 signal leave_dialog
+signal saved_cactus(faceset)
 signal show_dialog(faceset, text)
 
 var state: int
@@ -57,6 +58,7 @@ func handleEnterState(body: KinematicBody2D):
 	if state == States.VISITED and hasAllItems(body):
 		state = States.RESCUED
 		current_dialog = DialogRescued
+		emit_signal("saved_cactus", faceset.resource_path)
 	
 	if state == States.VISITED:
 		current_dialog = DialogVisited

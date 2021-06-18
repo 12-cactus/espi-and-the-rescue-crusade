@@ -38,7 +38,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 16, 16 )
 
@@ -46,9 +46,9 @@ region = Rect2( 0, 0, 16, 16 )
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 16, 16 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ SubResource( 8 ) ],
+"frames": [ SubResource( 6 ) ],
 "loop": true,
 "name": "idle",
 "speed": 5.0
@@ -94,7 +94,7 @@ script = ExtResource( 7 )
 [node name="AgusBody" parent="Cactus/Agus" instance=ExtResource( 3 )]
 
 [node name="Sprite" type="AnimatedSprite" parent="Cactus/Agus/AgusBody"]
-frames = SubResource( 6 )
+frames = SubResource( 8 )
 animation = "dancing"
 
 [node name="Enemies" type="Node2D" parent="."]

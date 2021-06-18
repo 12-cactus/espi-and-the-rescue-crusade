@@ -7,13 +7,13 @@ onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Marki
 onready var IntroMusic = load("res://assets/sound/Intro.ogg")
 onready var MusicPlayer = $MusicPlayer
 
-
 func _ready():
 	MusicPlayer._on_music_changed(IntroMusic)
 	Espi.connect("hit", GUI, "on_player_hit")
 	
 	MarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
 	MarkisStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
+	MarkisStateMachine.connect("saved_cactus", GUI, "on_cactus_saved")
 	
 	LifeBar.connect("dead", Espi, "death")
 	LifeBar.connect("dead", GUI, "on_player_dead")
