@@ -49,7 +49,7 @@ func _physics_process(delta):
 			body.animation = "idle_right"
 
 func fire():
-	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/briefcase.png")
+	weapon.instance().initialize2(self, global_position, global_position.direction_to(enemy.global_position), "res://assets/arms/rock.png")
 	AudioPlayer.play()
 	count = 100
 

@@ -8,7 +8,6 @@ onready var Weapon: PackedScene = load("res://entities/player/Weapon.tscn")
 onready var ShotEffect: AudioStreamPlayer2D = $Player_attack
 onready var SoundHurt: AudioStreamPlayer2D = $Player_hurt
 
-
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
 var item_picked: Sprite = null
@@ -46,8 +45,8 @@ func in_dialog(is_in_dialog: bool):
 	set_physics_process(not is_in_dialog)
 
 func picked(item: Sprite):
-	item.play_picked_effect()
 	item_picked = item
+	$AudioStreamPlayer2D.play()
 
 func get_movement_input():
 	Mov.UP =    int(Input.is_action_pressed("up"))
