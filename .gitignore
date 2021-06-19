@@ -390,5 +390,7 @@ gcov.css
 # https://clangd.llvm.org/ cache folder
 .clangd/
 .cache/
-.orig-files
+_orig-files
 gh-pages/
+linux/
+

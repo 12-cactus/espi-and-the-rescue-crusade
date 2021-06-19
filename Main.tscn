@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://entities/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
@@ -6,9 +6,19 @@
 [ext_resource path="res://GUI.gd" type="Script" id=4]
 [ext_resource path="res://Main.gd" type="Script" id=5]
 [ext_resource path="res://entities/World.gd" type="Script" id=6]
-[ext_resource path="res://assets/GUI/Start screen.png" type="Texture" id=7]
+[ext_resource path="res://assets/GUI/Start screen.jpeg" type="Texture" id=7]
+[ext_resource path="res://entities/dialog/Dialog.tscn" type="PackedScene" id=8]
 [ext_resource path="res://entities/player/LifeBar.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/GUI/Reset screen.png" type="Texture" id=10]
+[ext_resource path="res://assets/GUI/Reset screen.jpeg" type="Texture" id=10]
+[ext_resource path="res://entities/MusicPlayer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://entities/MusicPlayer.gd" type="Script" id=12]
+[ext_resource path="res://assets/GUI/Intro screen.png" type="Texture" id=13]
+[ext_resource path="res://assets/Actors/agus/Faceset_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/Font/PressStart2P.tres" type="DynamicFont" id=15]
+[ext_resource path="res://assets/Actors/Markis/FacesetGrey.png" type="Texture" id=16]
+[ext_resource path="res://assets/GUI/Sandwich.png" type="Texture" id=17]
+[ext_resource path="res://assets/GUI/Wine.png" type="Texture" id=18]
+[ext_resource path="res://assets/GUI/Win screen.png" type="Texture" id=19]
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
@@ -17,30 +27,39 @@ script = ExtResource( 5 )
 script = ExtResource( 4 )
 
 [node name="Start" type="TextureRect" parent="GUI"]
-margin_left = -118.466
-margin_top = -1.33936
-margin_right = 1165.53
-margin_bottom = 586.661
+visible = false
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Win" type="TextureRect" parent="GUI"]
+visible = false
+texture = ExtResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Restart" type="TextureRect" parent="GUI"]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
 texture = ExtResource( 10 )
-expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="WindowFrame" type="TextureRect" parent="GUI"]
-visible = false
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_right = 900.0
+margin_bottom = 500.0
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro" type="TextureRect" parent="GUI"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -52,11 +71,117 @@ margin_top = 10.6787
 margin_right = 52.6809
 margin_bottom = 50.6787
 
+[node name="Dialog" parent="GUI" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 400.223, 374.051 )
+scale = Vector2( 2.08, 2.08 )
+
+[node name="ItemsToCollect" type="HBoxContainer" parent="GUI"]
+margin_left = 5.79829
+margin_top = 436.665
+margin_right = 53.7983
+margin_bottom = 496.665
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sandwiches" type="VBoxContainer" parent="GUI/ItemsToCollect"]
+margin_right = 48.0
+margin_bottom = 60.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Sandwiches"]
+margin_right = 48.0
+margin_bottom = 48.0
+texture = ExtResource( 17 )
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="GUI/ItemsToCollect/Sandwiches"]
+margin_top = 52.0
+margin_right = 48.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="Wines" type="VBoxContainer" parent="GUI/ItemsToCollect"]
+margin_left = 52.0
+margin_right = 67.0
+margin_bottom = 60.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Wines"]
+margin_right = 15.0
+margin_bottom = 48.0
+texture = ExtResource( 18 )
+
+[node name="Label" type="Label" parent="GUI/ItemsToCollect/Wines"]
+margin_top = 52.0
+margin_right = 15.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="CactusToSave" type="HBoxContainer" parent="GUI"]
+margin_left = 559.0
+margin_top = 445.0
+margin_right = 592.842
+margin_bottom = 471.638
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Markis" type="VBoxContainer" parent="GUI/CactusToSave"]
+margin_right = 48.0
+margin_bottom = 50.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Markis"]
+margin_right = 48.0
+margin_bottom = 38.0
+texture = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="GUI/CactusToSave/Markis"]
+margin_top = 42.0
+margin_right = 48.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Markis"
+align = 1
+
+[node name="Agus" type="VBoxContainer" parent="GUI/CactusToSave"]
+margin_left = 52.0
+margin_right = 90.0
+margin_bottom = 50.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Agus"]
+margin_right = 38.0
+margin_bottom = 38.0
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="GUI/CactusToSave/Agus"]
+margin_top = 42.0
+margin_right = 38.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Agus"
+align = 1
+
 [node name="World" parent="." instance=ExtResource( 1 )]
-position = Vector2( -500, -345 )
+position = Vector2( -541.849, -347.649 )
 script = ExtResource( 6 )
 
 [node name="Espi" parent="." instance=ExtResource( 2 )]
-position = Vector2( 113.475, 331.037 )
+position = Vector2( 293.213, 258.349 )
 
+[node name="MusicPlayer" parent="." instance=ExtResource( 11 )]
+script = ExtResource( 12 )
+
+[connection signal="intro" from="World" to="GUI" method="_on_World_intro"]
 [connection signal="start" from="World" to="GUI" method="_on_World_start"]

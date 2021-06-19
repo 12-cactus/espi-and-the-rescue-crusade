@@ -1,54 +1,179 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/Actors/Espi/SpriteSheet.png" type="Texture" id=1]
 [ext_resource path="res://entities/player/Espi.gd" type="Script" id=2]
-[ext_resource path="res://assets/Actors/bag.png" type="Texture" id=3]
-[ext_resource path="res://assets/Food/Fish.png" type="Texture" id=4]
+[ext_resource path="res://assets/Actors/Espi/Shadow.png" type="Texture" id=3]
+[ext_resource path="res://assets/sound/attack_player.wav" type="AudioStream" id=4]
 [ext_resource path="res://entities/player/Bag.gd" type="Script" id=5]
 [ext_resource path="res://entities/player/Camera2D.gd" type="Script" id=6]
+[ext_resource path="res://assets/sound/hit_player.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sound/credits.wav" type="AudioStream" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 16, 16 )
+region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 16, 0, 16, 16 )
+region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 32, 0, 16, 16 )
+region = Rect2( 32, 16, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
+region = Rect2( 32, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
 region = Rect2( 48, 0, 16, 16 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 48, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 48, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 48, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 16, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 16, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=21]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), null ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
-"name": "idle",
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 20 ) ],
+"loop": true,
+"name": "idle_left",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 8.18965, 8.30194 )
 
 [node name="Espi" type="KinematicBody2D" groups=[
 "Player",
 ]]
+z_index = 10
 script = ExtResource( 2 )
 
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( 0, 7 )
+texture = ExtResource( 3 )
+
 [node name="Body" type="AnimatedSprite" parent="."]
-frames = SubResource( 5 )
-animation = "idle"
+frames = SubResource( 21 )
+animation = "walk_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 6 )
+shape = SubResource( 22 )
+
+[node name="Bag" type="Node" parent="."]
+script = ExtResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 light_mask = 1025
@@ -59,39 +184,17 @@ drag_margin_v_enabled = true
 script = ExtResource( 6 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Camera2D"]
-visible = false
 z_index = 1
 enabled = true
 collision_mask = 1024
 collide_with_areas = true
 
-[node name="Bag" type="MarginContainer" parent="."]
-visible = false
-margin_left = -138.591
-margin_top = -100.794
-margin_right = 261.409
-margin_bottom = 199.206
-rect_scale = Vector2( 0.692919, 0.692919 )
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Player_attack" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
 
-[node name="Background" type="TextureRect" parent="Bag"]
-margin_right = 400.0
-margin_bottom = 300.0
-texture = ExtResource( 3 )
+[node name="Player_hurt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
 
-[node name="Container" type="GridContainer" parent="Bag"]
-margin_right = 400.0
-margin_bottom = 300.0
-columns = 4
-
-[node name="Item" type="MarginContainer" parent="Bag/Container"]
-margin_right = 16.0
-margin_bottom = 16.0
-
-[node name="TextureRect" type="TextureRect" parent="Bag/Container/Item"]
-margin_right = 16.0
-margin_bottom = 16.0
-texture = ExtResource( 4 )
+[node name="Item_Picked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+bus = "Credits"
