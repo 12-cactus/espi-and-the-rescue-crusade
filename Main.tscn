@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://entities/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://assets/GUI/Sandwich.png" type="Texture" id=17]
 [ext_resource path="res://assets/GUI/Wine.png" type="Texture" id=18]
 [ext_resource path="res://assets/GUI/Win screen.png" type="Texture" id=19]
+[ext_resource path="res://assets/Actors/dami/Faceset2.png" type="Texture" id=20]
+[ext_resource path="res://assets/Actors/saba/Faceset2.png" type="Texture" id=21]
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
@@ -77,10 +79,10 @@ position = Vector2( 400.223, 374.051 )
 scale = Vector2( 2.08, 2.08 )
 
 [node name="ItemsToCollect" type="HBoxContainer" parent="GUI"]
-margin_left = 5.79829
-margin_top = 436.665
-margin_right = 53.7983
-margin_bottom = 496.665
+margin_left = 6.0
+margin_top = 437.0
+margin_right = 73.0
+margin_bottom = 497.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -126,10 +128,10 @@ text = "0"
 align = 1
 
 [node name="CactusToSave" type="HBoxContainer" parent="GUI"]
-margin_left = 559.0
-margin_top = 445.0
-margin_right = 592.842
-margin_bottom = 471.638
+margin_left = 514.0
+margin_top = 444.0
+margin_right = 688.0
+margin_bottom = 494.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -171,6 +173,46 @@ custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Agus"
+align = 1
+
+[node name="Dami" type="VBoxContainer" parent="GUI/CactusToSave"]
+margin_left = 94.0
+margin_right = 132.0
+margin_bottom = 50.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Dami"]
+margin_right = 38.0
+margin_bottom = 38.0
+texture = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="GUI/CactusToSave/Dami"]
+margin_top = 42.0
+margin_right = 38.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Dami"
+align = 1
+
+[node name="Saba" type="VBoxContainer" parent="GUI/CactusToSave"]
+margin_left = 136.0
+margin_right = 174.0
+margin_bottom = 50.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Saba"]
+margin_right = 38.0
+margin_bottom = 38.0
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="GUI/CactusToSave/Saba"]
+margin_top = 42.0
+margin_right = 38.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Saba"
 align = 1
 
 [node name="World" parent="." instance=ExtResource( 1 )]

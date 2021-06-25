@@ -22,10 +22,16 @@ func initialize(container: KinematicBody2D, origPosition: Vector2, target: Vecto
 		rotation_degrees = 90
 	if target == Vector2.LEFT:
 		rotation_degrees = -90
+	lifetime_timer.connect("timeout", self, "_on_lifetime_timer_timeout")
+	lifetime_timer.start()	
 
+func _on_lifetime_timer_timeout():
+	call_deferred("_remove")
+	
 func _remove():
-	get_parent().remove_child(self)
-	queue_free()
+	if get_parent() != null:
+		get_parent().remove_child(self)
+		queue_free()
 
 func _on_Hitbox_body_entered(body):
 	if body.get_name() == "Espi":
