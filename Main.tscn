@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://entities/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://assets/GUI/Win screen.png" type="Texture" id=19]
 [ext_resource path="res://assets/Actors/dami/Faceset2.png" type="Texture" id=20]
 [ext_resource path="res://assets/Actors/saba/Faceset2.png" type="Texture" id=21]
+[ext_resource path="res://assets/GUI/bici.png" type="Texture" id=22]
+[ext_resource path="res://assets/GUI/passport.png" type="Texture" id=23]
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
@@ -89,7 +91,7 @@ __meta__ = {
 
 [node name="Sandwiches" type="VBoxContainer" parent="GUI/ItemsToCollect"]
 margin_right = 48.0
-margin_bottom = 60.0
+margin_bottom = 136.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Sandwiches"]
 margin_right = 48.0
@@ -110,7 +112,7 @@ align = 1
 [node name="Wines" type="VBoxContainer" parent="GUI/ItemsToCollect"]
 margin_left = 52.0
 margin_right = 67.0
-margin_bottom = 60.0
+margin_bottom = 136.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Wines"]
 margin_right = 15.0
@@ -121,6 +123,46 @@ texture = ExtResource( 18 )
 margin_top = 52.0
 margin_right = 15.0
 margin_bottom = 60.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="Bike" type="VBoxContainer" parent="GUI/ItemsToCollect"]
+margin_left = 71.0
+margin_right = 111.0
+margin_bottom = 136.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Bike"]
+margin_right = 40.0
+margin_bottom = 27.0
+texture = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="GUI/ItemsToCollect/Bike"]
+margin_top = 31.0
+margin_right = 40.0
+margin_bottom = 39.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="Passport" type="VBoxContainer" parent="GUI/ItemsToCollect"]
+margin_left = 115.0
+margin_right = 152.0
+margin_bottom = 136.0
+
+[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Passport"]
+margin_right = 37.0
+margin_bottom = 50.0
+texture = ExtResource( 23 )
+
+[node name="Label" type="Label" parent="GUI/ItemsToCollect/Passport"]
+margin_top = 54.0
+margin_right = 37.0
+margin_bottom = 62.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )

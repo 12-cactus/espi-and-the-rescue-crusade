@@ -12,7 +12,7 @@ onready var CactusToSave = $CactusToSave
 onready var ItemsToCollect = $ItemsToCollect
 
 var cactus_saved_amount = 0
-var cactus_saved_needed = 2
+var cactus_saved_needed = 4
 
 func _ready():
 	_set_all_invisible()

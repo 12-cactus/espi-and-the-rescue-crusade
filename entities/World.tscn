@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://assets/Actors/saba/SpriteSheet.png" type="Texture" id=14]
 [ext_resource path="res://entities/Saba.gd" type="Script" id=15]
 [ext_resource path="res://entities/Dami.gd" type="Script" id=16]
+[ext_resource path="res://entities/World/Bike.tscn" type="PackedScene" id=17]
+[ext_resource path="res://entities/World/Passport.tscn" type="PackedScene" id=18]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 8 )
@@ -311,6 +313,19 @@ animations = [ {
 
 [node name="World" type="Node2D"]
 position = Vector2( 1, 0 )
+
+[node name="Passport" type="YSort" parent="."]
+position = Vector2( 1259.7, 649.451 )
+z_index = 2
+
+[node name="Passport" parent="Passport" instance=ExtResource( 18 )]
+position = Vector2( -1.26147, 273.303 )
+
+[node name="Bike" type="YSort" parent="."]
+position = Vector2( 1358.64, 974.25 )
+z_index = 2
+
+[node name="Bike" parent="Bike" instance=ExtResource( 17 )]
 
 [node name="Wines" type="YSort" parent="."]
 
