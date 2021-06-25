@@ -10,8 +10,8 @@ radius = 70.7252
 "Passport",
 "collectables",
 ]]
-position = Vector2( -1.26138, -0.420582 )
-scale = Vector2( 0.351047, 0.342202 )
+position = Vector2( -10.6258, -12.7816 )
+scale = Vector2( 0.147473, 0.14283 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

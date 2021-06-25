@@ -87,6 +87,10 @@ func on_item_collected(item_name):
 		_increase_amount_to("Sandwiches", 1)
 	if item_name.match("*Wine*"):
 		_increase_amount_to("Wines", 1)
+	if item_name.match("*Bike*"):
+		_increase_amount_to("Bike", 1)
+	if item_name.match("*Passport*"):
+		_increase_amount_to("Passport", 1)
 
 func on_items_consumed(item_name, amount):
 	if item_name.match("*Sandwich*"):

@@ -3,8 +3,8 @@ extends Node2D
 onready var body: KinematicBody2D = $DamiBody
 onready var faceset: Resource = load("res://assets/Actors/dami/Faceset.png")
 
-var amount_needed: int = 3
-var item_needed: String = "Wine"
+var amount_needed: int = 1
+var item_needed: String = "Bike"
 
 var DialogDying = [
 	"¡AIIIIIUUUUDA!\n\n   (Q to continue ...)",

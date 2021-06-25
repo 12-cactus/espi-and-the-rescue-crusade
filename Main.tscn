@@ -91,7 +91,7 @@ __meta__ = {
 
 [node name="Sandwiches" type="VBoxContainer" parent="GUI/ItemsToCollect"]
 margin_right = 48.0
-margin_bottom = 136.0
+margin_bottom = 62.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Sandwiches"]
 margin_right = 48.0
@@ -112,7 +112,7 @@ align = 1
 [node name="Wines" type="VBoxContainer" parent="GUI/ItemsToCollect"]
 margin_left = 52.0
 margin_right = 67.0
-margin_bottom = 136.0
+margin_bottom = 62.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Wines"]
 margin_right = 15.0
@@ -132,7 +132,7 @@ align = 1
 [node name="Bike" type="VBoxContainer" parent="GUI/ItemsToCollect"]
 margin_left = 71.0
 margin_right = 111.0
-margin_bottom = 136.0
+margin_bottom = 62.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Bike"]
 margin_right = 40.0
@@ -152,7 +152,7 @@ align = 1
 [node name="Passport" type="VBoxContainer" parent="GUI/ItemsToCollect"]
 margin_left = 115.0
 margin_right = 152.0
-margin_bottom = 136.0
+margin_bottom = 62.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Passport"]
 margin_right = 37.0

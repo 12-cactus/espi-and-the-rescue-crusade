@@ -3,8 +3,8 @@ extends Node2D
 onready var body: KinematicBody2D = $SabaBody
 onready var faceset: Resource = load("res://assets/Actors/saba/Faceset1.png")
 
-var amount_needed: int = 3
-var item_needed: String = "Wine"
+var amount_needed: int = 1
+var item_needed: String = "Passport"
 
 var DialogDying = [
 	"¡Espi AYUDAMEEEE!\n\n   (Q to continue ...)",

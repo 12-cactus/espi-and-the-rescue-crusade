@@ -10,8 +10,8 @@ radius = 349.671
 "Bike",
 "collectables",
 ]]
-position = Vector2( -1.06076, -0.353363 )
-scale = Vector2( 0.0781695, 0.0785626 )
+position = Vector2( -6.724, -4.36483 )
+scale = Vector2( 0.0584025, 0.0577778 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
