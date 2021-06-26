@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wine.png-8f4d14e18038346f97b10c0e41bf771b.stex"
+path="res://.import/Wine.png-d74e02ad3c377e4adcdba5c1eba3a777.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/Wine.png"
-dest_files=[ "res://.import/Wine.png-8f4d14e18038346f97b10c0e41bf771b.stex" ]
+source_file="res://assets/GUI/Items/Wine.png"
+dest_files=[ "res://.import/Wine.png-d74e02ad3c377e4adcdba5c1eba3a777.stex" ]
 
 [params]
 

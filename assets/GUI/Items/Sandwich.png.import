@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nunchaku.png-ad74d23c4817ad12fb539c573bfbc45d.stex"
+path="res://.import/Sandwich.png-16ba722677732202fb6cc14d6cf1336a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/nunchaku.png"
-dest_files=[ "res://.import/nunchaku.png-ad74d23c4817ad12fb539c573bfbc45d.stex" ]
+source_file="res://assets/GUI/Items/Sandwich.png"
+dest_files=[ "res://.import/Sandwich.png-16ba722677732202fb6cc14d6cf1336a.stex" ]
 
 [params]
 

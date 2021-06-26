@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/passport.png-04e40bfc345c7206e381df4255c1e5a3.stex"
+path="res://.import/nunchaku.png-5b7b07c1d6a28f08b58aa2e96feaaf47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/passport.png"
-dest_files=[ "res://.import/passport.png-04e40bfc345c7206e381df4255c1e5a3.stex" ]
+source_file="res://assets/GUI/Items/nunchaku.png"
+dest_files=[ "res://.import/nunchaku.png-5b7b07c1d6a28f08b58aa2e96feaaf47.stex" ]
 
 [params]
 

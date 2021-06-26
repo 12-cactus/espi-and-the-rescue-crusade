@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://entities/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
@@ -16,15 +16,16 @@
 [ext_resource path="res://assets/Actors/agus/Faceset_2.png" type="Texture" id=14]
 [ext_resource path="res://assets/Font/PressStart2P.tres" type="DynamicFont" id=15]
 [ext_resource path="res://assets/Actors/Markis/FacesetGrey.png" type="Texture" id=16]
-[ext_resource path="res://assets/GUI/Sandwich.png" type="Texture" id=17]
-[ext_resource path="res://assets/GUI/Wine.png" type="Texture" id=18]
+[ext_resource path="res://assets/GUI/Items/Sandwich.png" type="Texture" id=17]
+[ext_resource path="res://assets/GUI/Items/Wine.png" type="Texture" id=18]
 [ext_resource path="res://assets/GUI/Win screen.png" type="Texture" id=19]
 [ext_resource path="res://assets/Actors/dami/Faceset2.png" type="Texture" id=20]
 [ext_resource path="res://assets/Actors/saba/Faceset2.png" type="Texture" id=21]
-[ext_resource path="res://assets/GUI/bici.png" type="Texture" id=22]
-[ext_resource path="res://assets/GUI/passport.png" type="Texture" id=23]
+[ext_resource path="res://assets/GUI/Items/Bike.png" type="Texture" id=22]
+[ext_resource path="res://assets/GUI/Items/passport.png" type="Texture" id=23]
 [ext_resource path="res://assets/Actors/dan/Faceset2.png" type="Texture" id=24]
-[ext_resource path="res://assets/GUI/nunchaku.png" type="Texture" id=25]
+[ext_resource path="res://assets/GUI/Items/nunchaku.png" type="Texture" id=25]
+[ext_resource path="res://assets/GUI/WhiteBox.png" type="Texture" id=26]
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
@@ -71,7 +72,6 @@ __meta__ = {
 }
 
 [node name="LifeBar" parent="GUI" instance=ExtResource( 9 )]
-visible = false
 margin_left = 12.681
 margin_top = 10.6787
 margin_right = 52.6809
@@ -79,21 +79,21 @@ margin_bottom = 50.6787
 
 [node name="Dialog" parent="GUI" instance=ExtResource( 8 )]
 visible = false
-position = Vector2( 400.223, 374.051 )
+position = Vector2( 480.223, 327.051 )
 scale = Vector2( 2.08, 2.08 )
 
-[node name="ItemsToCollect" type="HBoxContainer" parent="GUI"]
-margin_left = 6.0
-margin_top = 437.0
-margin_right = 73.0
-margin_bottom = 497.0
+[node name="ItemsToCollect" type="VBoxContainer" parent="GUI"]
+margin_left = 14.0
+margin_top = 48.0
+margin_right = 99.0
+margin_bottom = 337.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sandwiches" type="VBoxContainer" parent="GUI/ItemsToCollect"]
-margin_right = 48.0
-margin_bottom = 62.0
+[node name="Sandwiches" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+margin_right = 85.0
+margin_bottom = 48.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Sandwiches"]
 margin_right = 48.0
@@ -102,89 +102,95 @@ texture = ExtResource( 17 )
 stretch_mode = 3
 
 [node name="Label" type="Label" parent="GUI/ItemsToCollect/Sandwiches"]
-margin_top = 52.0
-margin_right = 48.0
-margin_bottom = 60.0
+margin_left = 52.0
+margin_top = 16.0
+margin_right = 68.0
+margin_bottom = 32.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
+valign = 1
 
-[node name="Wines" type="VBoxContainer" parent="GUI/ItemsToCollect"]
-margin_left = 52.0
-margin_right = 67.0
-margin_bottom = 62.0
+[node name="Wines" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+margin_top = 52.0
+margin_right = 85.0
+margin_bottom = 100.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Wines"]
-margin_right = 15.0
+margin_right = 48.0
 margin_bottom = 48.0
 texture = ExtResource( 18 )
 
 [node name="Label" type="Label" parent="GUI/ItemsToCollect/Wines"]
-margin_top = 52.0
-margin_right = 15.0
-margin_bottom = 60.0
+margin_left = 52.0
+margin_top = 16.0
+margin_right = 68.0
+margin_bottom = 32.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
 
-[node name="Bike" type="VBoxContainer" parent="GUI/ItemsToCollect"]
-margin_left = 71.0
-margin_right = 111.0
-margin_bottom = 62.0
+[node name="Bike" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+margin_top = 104.0
+margin_right = 85.0
+margin_bottom = 152.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Bike"]
-margin_right = 40.0
-margin_bottom = 27.0
+margin_right = 48.0
+margin_bottom = 48.0
 texture = ExtResource( 22 )
 
 [node name="Label" type="Label" parent="GUI/ItemsToCollect/Bike"]
-margin_top = 31.0
-margin_right = 40.0
-margin_bottom = 39.0
+margin_left = 52.0
+margin_top = 16.0
+margin_right = 68.0
+margin_bottom = 32.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
 
-[node name="Passport" type="VBoxContainer" parent="GUI/ItemsToCollect"]
-margin_left = 115.0
-margin_right = 152.0
-margin_bottom = 62.0
+[node name="Passport" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+margin_top = 156.0
+margin_right = 85.0
+margin_bottom = 204.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Passport"]
-margin_right = 37.0
-margin_bottom = 50.0
+margin_right = 48.0
+margin_bottom = 48.0
 texture = ExtResource( 23 )
 
 [node name="Label" type="Label" parent="GUI/ItemsToCollect/Passport"]
-margin_top = 54.0
-margin_right = 37.0
-margin_bottom = 62.0
+margin_left = 52.0
+margin_top = 16.0
+margin_right = 68.0
+margin_bottom = 32.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
 align = 1
 
-[node name="Nunchaku" type="VBoxContainer" parent="GUI/ItemsToCollect"]
-margin_left = 156.0
-margin_right = 241.0
-margin_bottom = 62.0
+[node name="Nunchaku" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+margin_top = 208.0
+margin_right = 85.0
+margin_bottom = 256.0
 
 [node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Nunchaku"]
-margin_right = 85.0
-margin_bottom = 40.0
+margin_right = 48.0
+margin_bottom = 48.0
 texture = ExtResource( 25 )
 
 [node name="Label" type="Label" parent="GUI/ItemsToCollect/Nunchaku"]
-margin_top = 44.0
-margin_right = 85.0
-margin_bottom = 52.0
+margin_left = 52.0
+margin_top = 16.0
+margin_right = 68.0
+margin_bottom = 32.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -192,27 +198,46 @@ text = "0"
 align = 1
 
 [node name="CactusToSave" type="HBoxContainer" parent="GUI"]
-margin_left = 470.298
-margin_top = 445.498
-margin_right = 687.298
-margin_bottom = 495.498
+margin_left = 80.0
+margin_top = 426.0
+margin_right = 650.0
+margin_bottom = 496.0
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Markis" type="VBoxContainer" parent="GUI/CactusToSave"]
-margin_right = 48.0
-margin_bottom = 50.0
+margin_left = 10.0
+margin_right = 110.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 10
 
-[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Markis"]
-margin_right = 48.0
-margin_bottom = 38.0
+[node name="Center" type="CenterContainer" parent="GUI/CactusToSave/Markis"]
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+
+[node name="Border" type="TextureRect" parent="GUI/CactusToSave/Markis/Center"]
+margin_left = 25.0
+margin_right = 75.0
+margin_bottom = 50.0
+texture = ExtResource( 26 )
+
+[node name="Face" type="TextureRect" parent="GUI/CactusToSave/Markis/Center"]
+margin_left = 26.0
+margin_top = 1.0
+margin_right = 74.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 48, 48 )
 texture = ExtResource( 16 )
+expand = true
 
 [node name="Label" type="Label" parent="GUI/CactusToSave/Markis"]
-margin_top = 42.0
-margin_right = 48.0
-margin_bottom = 50.0
+margin_top = 54.0
+margin_right = 100.0
+margin_bottom = 70.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -220,19 +245,36 @@ text = "Markis"
 align = 1
 
 [node name="Agus" type="VBoxContainer" parent="GUI/CactusToSave"]
-margin_left = 52.0
-margin_right = 90.0
-margin_bottom = 50.0
+margin_left = 125.0
+margin_right = 225.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 10
 
-[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Agus"]
-margin_right = 38.0
-margin_bottom = 38.0
+[node name="Center" type="CenterContainer" parent="GUI/CactusToSave/Agus"]
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+
+[node name="Border" type="TextureRect" parent="GUI/CactusToSave/Agus/Center"]
+margin_left = 25.0
+margin_right = 75.0
+margin_bottom = 50.0
+texture = ExtResource( 26 )
+
+[node name="Face" type="TextureRect" parent="GUI/CactusToSave/Agus/Center"]
+margin_left = 26.0
+margin_top = 1.0
+margin_right = 74.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 48, 48 )
 texture = ExtResource( 14 )
+expand = true
 
 [node name="Label" type="Label" parent="GUI/CactusToSave/Agus"]
-margin_top = 42.0
-margin_right = 38.0
-margin_bottom = 50.0
+margin_top = 54.0
+margin_right = 100.0
+margin_bottom = 70.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -240,19 +282,35 @@ text = "Agus"
 align = 1
 
 [node name="Dami" type="VBoxContainer" parent="GUI/CactusToSave"]
-margin_left = 94.0
-margin_right = 132.0
+margin_left = 240.0
+margin_right = 340.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 10
+
+[node name="Center" type="CenterContainer" parent="GUI/CactusToSave/Dami"]
+margin_right = 100.0
 margin_bottom = 50.0
 
-[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Dami"]
-margin_right = 38.0
-margin_bottom = 38.0
+[node name="Border" type="TextureRect" parent="GUI/CactusToSave/Dami/Center"]
+margin_left = 25.0
+margin_right = 75.0
+margin_bottom = 50.0
+texture = ExtResource( 26 )
+
+[node name="Face" type="TextureRect" parent="GUI/CactusToSave/Dami/Center"]
+margin_left = 26.0
+margin_top = 1.0
+margin_right = 74.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 48, 48 )
 texture = ExtResource( 20 )
+expand = true
 
 [node name="Label" type="Label" parent="GUI/CactusToSave/Dami"]
-margin_top = 42.0
-margin_right = 38.0
-margin_bottom = 50.0
+margin_top = 54.0
+margin_right = 100.0
+margin_bottom = 70.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -260,19 +318,38 @@ text = "Dami"
 align = 1
 
 [node name="Saba" type="VBoxContainer" parent="GUI/CactusToSave"]
-margin_left = 136.0
-margin_right = 174.0
+margin_left = 355.0
+margin_right = 455.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 10
+
+[node name="Center" type="CenterContainer" parent="GUI/CactusToSave/Saba"]
+margin_right = 100.0
 margin_bottom = 50.0
 
-[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Saba"]
-margin_right = 38.0
-margin_bottom = 38.0
+[node name="Border" type="TextureRect" parent="GUI/CactusToSave/Saba/Center"]
+margin_left = 25.0
+margin_right = 75.0
+margin_bottom = 50.0
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Face" type="TextureRect" parent="GUI/CactusToSave/Saba/Center"]
+margin_left = 26.0
+margin_top = 1.0
+margin_right = 74.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 48, 48 )
 texture = ExtResource( 21 )
+expand = true
 
 [node name="Label" type="Label" parent="GUI/CactusToSave/Saba"]
-margin_top = 42.0
-margin_right = 38.0
-margin_bottom = 50.0
+margin_top = 54.0
+margin_right = 100.0
+margin_bottom = 70.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -280,19 +357,35 @@ text = "Saba"
 align = 1
 
 [node name="Dan" type="VBoxContainer" parent="GUI/CactusToSave"]
-margin_left = 178.0
-margin_right = 216.0
+margin_left = 470.0
+margin_right = 570.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 0 )
+size_flags_horizontal = 10
+
+[node name="Center" type="CenterContainer" parent="GUI/CactusToSave/Dan"]
+margin_right = 100.0
 margin_bottom = 50.0
 
-[node name="TextureRect" type="TextureRect" parent="GUI/CactusToSave/Dan"]
-margin_right = 38.0
-margin_bottom = 38.0
+[node name="Border" type="TextureRect" parent="GUI/CactusToSave/Dan/Center"]
+margin_left = 25.0
+margin_right = 75.0
+margin_bottom = 50.0
+texture = ExtResource( 26 )
+
+[node name="Face" type="TextureRect" parent="GUI/CactusToSave/Dan/Center"]
+margin_left = 26.0
+margin_top = 1.0
+margin_right = 74.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 48, 48 )
 texture = ExtResource( 24 )
+expand = true
 
 [node name="Label" type="Label" parent="GUI/CactusToSave/Dan"]
-margin_top = 42.0
-margin_right = 38.0
-margin_bottom = 50.0
+margin_top = 54.0
+margin_right = 100.0
+margin_bottom = 70.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )

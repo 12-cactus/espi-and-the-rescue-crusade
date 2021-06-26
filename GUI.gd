@@ -72,15 +72,15 @@ func on_leave_dialog():
 func on_cactus_saved(faceset):
 	cactus_saved_amount += 1
 	if faceset.match("*Markis*"):
-		CactusToSave.get_node("Markis/TextureRect").texture = load(faceset)
+		CactusToSave.get_node("Markis/Center/Face").texture = load(faceset)
 	if faceset.match("*agus*"):
-		CactusToSave.get_node("Agus/TextureRect").texture = load(faceset)
+		CactusToSave.get_node("Agus/Center/Face").texture = load(faceset)
 	if faceset.match("*dami*"):
-		CactusToSave.get_node("Dami/TextureRect").texture = load(faceset)
+		CactusToSave.get_node("Dami/Center/Face").texture = load(faceset)
 	if faceset.match("*saba*"):
-		CactusToSave.get_node("Saba/TextureRect").texture = load(faceset)
+		CactusToSave.get_node("Saba/Center/Face").texture = load(faceset)
 	if faceset.match("*dan*"):
-		CactusToSave.get_node("Dan/TextureRect").texture = load(faceset)
+		CactusToSave.get_node("Dan/Center/Face").texture = load(faceset)
 	
 	if cactus_saved_amount == cactus_saved_needed:
 		_all_saved()
