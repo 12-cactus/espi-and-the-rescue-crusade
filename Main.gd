@@ -3,6 +3,8 @@ extends Node
 onready var GUI: CanvasLayer = $GUI
 onready var LifeBar: Control = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
+onready var Locks: YSort = $World/Conurban/Locks
+
 onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Markis/MarkisBody/StateMachine
 onready var AgusStateMachine: CactusDefeatedStateMachine = $World/Cactus/Agus/AgusBody/StateMachine
 onready var DamiStateMachine: CactusDefeatedStateMachine = $World/Cactus/Dami/DamiBody/StateMachine
@@ -18,9 +20,10 @@ func _ready():
 	MusicPlayer._on_music_changed(IntroMusic)
 	Espi.connect("hit", GUI, "on_player_hit")
 	Espi.connect("item_collected", GUI, "on_item_collected")
-	
+
 	MarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
 	MarkisStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
+	MarkisStateMachine.connect("cactus_found", Locks, "on_cactus_found")
 	MarkisStateMachine.connect("saved_cactus", GUI, "on_cactus_saved")
 	MarkisStateMachine.connect("consume_items", GUI, "on_items_consumed")
 	

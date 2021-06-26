@@ -352,14 +352,14 @@ position = Vector2( 1, 0 )
 
 [node name="Sandwiches" type="YSort" parent="Items"]
 
-[node name="Sandwich" parent="Items/Sandwiches" instance=ExtResource( 2 )]
-position = Vector2( 1168.86, 953.555 )
+[node name="Sandwich1" parent="Items/Sandwiches" instance=ExtResource( 2 )]
+position = Vector2( 531.407, 688.371 )
 
 [node name="Sandwich2" parent="Items/Sandwiches" instance=ExtResource( 2 )]
 position = Vector2( 942.07, 487.359 )
 
 [node name="Sandwich3" parent="Items/Sandwiches" instance=ExtResource( 2 )]
-position = Vector2( 531.407, 688.371 )
+position = Vector2( 1081.55, 825.769 )
 
 [node name="Wines" type="YSort" parent="Items"]
 

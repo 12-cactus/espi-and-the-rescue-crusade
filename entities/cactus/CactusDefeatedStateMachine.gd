@@ -2,6 +2,7 @@ class_name CactusDefeatedStateMachine extends Node
 
 signal leave_dialog
 signal saved_cactus(faceset)
+signal cactus_found(faceset)
 signal show_dialog(faceset, text)
 signal consume_items(item_name, amount)
 
@@ -53,7 +54,6 @@ func hasAllItems(body: KinematicBody2D) -> bool:
 	return body.hasItems(itemNeeded, amountNeeded)
 
 func handleEnterState(body: KinematicBody2D):
-	print(state)
 	if state == States.RESCUED:
 		return
 	
@@ -69,6 +69,7 @@ func handleEnterState(body: KinematicBody2D):
 	if state == States.DYING:
 		state = States.VISITED
 		current_dialog = DialogDying
+		emit_signal("cactus_found", faceset.resource_path)
 	
 	dialog_position = 0
 	show_dialog()

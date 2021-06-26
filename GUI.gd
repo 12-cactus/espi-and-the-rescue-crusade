@@ -78,13 +78,12 @@ func on_cactus_saved(faceset):
 	if faceset.match("*dami*"):
 		CactusToSave.get_node("Dami/TextureRect").texture = load(faceset)
 	if faceset.match("*saba*"):
-		CactusToSave.get_node("Saba/TextureRect").texture = load(faceset)		
+		CactusToSave.get_node("Saba/TextureRect").texture = load(faceset)
+	if faceset.match("*dan*"):
+		CactusToSave.get_node("Dan/TextureRect").texture = load(faceset)
+	
 	if cactus_saved_amount == cactus_saved_needed:
 		_all_saved()
-	if faceset.match("*dan*"):
-		CactusToSave.get_node("Dan/TextureRect").texture = load(faceset)		
-	if cactus_saved_amount == cactus_saved_needed:
-		_all_saved()		
 
 func on_item_collected(item_name):
 	if item_name.match("*Sandwich*"):
@@ -108,7 +107,7 @@ func on_items_consumed(item_name, amount):
 	if item_name.match("*Passport*"):
 		_increase_amount_to("Passport", -1)
 	if item_name.match("*Nunchaku*"):
-		_increase_amount_to("Nunchaku", -1)		
+		_increase_amount_to("Nunchaku", -1)
 
 func _increase_amount_to(node_name, inc):
 	var label: Label = ItemsToCollect.get_node(node_name + "/Label")
