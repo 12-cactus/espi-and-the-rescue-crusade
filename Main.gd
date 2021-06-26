@@ -7,6 +7,7 @@ onready var MarkisStateMachine: CactusDefeatedStateMachine = $World/Cactus/Marki
 onready var AgusStateMachine: CactusDefeatedStateMachine = $World/Cactus/Agus/AgusBody/StateMachine
 onready var DamiStateMachine: CactusDefeatedStateMachine = $World/Cactus/Dami/DamiBody/StateMachine
 onready var SabaStateMachine: CactusDefeatedStateMachine = $World/Cactus/Saba/SabaBody/StateMachine
+onready var DanStateMachine: CactusDefeatedStateMachine = $World/Cactus/Dan/DanBody/StateMachine
 
 onready var IntroMusic = load("res://assets/sound/Intro.ogg")
 onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
@@ -37,6 +38,11 @@ func _ready():
 	SabaStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
 	SabaStateMachine.connect("saved_cactus", GUI, "on_cactus_saved")
 	SabaStateMachine.connect("consume_items", GUI, "on_items_consumed")
+
+	DanStateMachine.connect("show_dialog", GUI, "on_show_dialog")
+	DanStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
+	DanStateMachine.connect("saved_cactus", GUI, "on_cactus_saved")
+	DanStateMachine.connect("consume_items", GUI, "on_items_consumed")
 			
 	LifeBar.connect("dead", Espi, "death")
 	LifeBar.connect("dead", GUI, "on_player_dead")

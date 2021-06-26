@@ -12,7 +12,7 @@ onready var CactusToSave = $CactusToSave
 onready var ItemsToCollect = $ItemsToCollect
 
 var cactus_saved_amount = 0
-var cactus_saved_needed = 4
+var cactus_saved_needed = 5
 
 func _ready():
 	_set_all_invisible()
@@ -81,6 +81,10 @@ func on_cactus_saved(faceset):
 		CactusToSave.get_node("Saba/TextureRect").texture = load(faceset)		
 	if cactus_saved_amount == cactus_saved_needed:
 		_all_saved()
+	if faceset.match("*dan*"):
+		CactusToSave.get_node("Dan/TextureRect").texture = load(faceset)		
+	if cactus_saved_amount == cactus_saved_needed:
+		_all_saved()		
 
 func on_item_collected(item_name):
 	if item_name.match("*Sandwich*"):
@@ -91,12 +95,20 @@ func on_item_collected(item_name):
 		_increase_amount_to("Bike", 1)
 	if item_name.match("*Passport*"):
 		_increase_amount_to("Passport", 1)
+	if item_name.match("*Nunchaku*"):
+		_increase_amount_to("Nunchaku", 1)
 
 func on_items_consumed(item_name, amount):
 	if item_name.match("*Sandwich*"):
 		_increase_amount_to("Sandwiches", amount * -1)
 	if item_name.match("*Wine*"):
 		_increase_amount_to("Wines", amount * -1)
+	if item_name.match("*Bike*"):
+		_increase_amount_to("Bike", -1)
+	if item_name.match("*Passport*"):
+		_increase_amount_to("Passport", -1)
+	if item_name.match("*Nunchaku*"):
+		_increase_amount_to("Nunchaku", -1)		
 
 func _increase_amount_to(node_name, inc):
 	var label: Label = ItemsToCollect.get_node(node_name + "/Label")
