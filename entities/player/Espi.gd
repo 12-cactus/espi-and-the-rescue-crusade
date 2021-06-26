@@ -26,13 +26,12 @@ func _ready():
 func _physics_process(_delta):
 	get_movement_input()
 	fire()
-
 	
 	if item_picked != null:
 		Bag.add(item_picked)
 		item_picked = null
 	
-	velocity = Vector2(Mov.RIGHT-Mov.LEFT, Mov.DOWN-Mov.UP)
+	velocity = Vector2(Mov.RIGHT - Mov.LEFT, Mov.DOWN - Mov.UP)
 	velocity = velocity.normalized() * speed
 	velocity = move_and_slide(velocity)
 

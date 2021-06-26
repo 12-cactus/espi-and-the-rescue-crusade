@@ -12,7 +12,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 5.875
+radius = 4.21875
 height = 4.0
 
 [node name="Weapon" type="AnimatedSprite"]
@@ -21,7 +21,7 @@ frames = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="LifeTimer" type="Timer" parent="."]
-wait_time = 0.619
+wait_time = 0.8
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 0

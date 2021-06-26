@@ -23,7 +23,7 @@ func initialize(container: KinematicBody2D, origPosition: Vector2, target: Vecto
 	if target == Vector2.LEFT:
 		rotation_degrees = -90
 	lifetime_timer.connect("timeout", self, "_on_lifetime_timer_timeout")
-	lifetime_timer.start()	
+	lifetime_timer.start()
 
 func _on_lifetime_timer_timeout():
 	call_deferred("_remove")

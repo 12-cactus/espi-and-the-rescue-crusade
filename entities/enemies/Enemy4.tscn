@@ -11,7 +11,7 @@
 radius = 8.72495
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 190.43
+radius = 130.0
 
 [node name="Enemy" type="KinematicBody2D"]
 position = Vector2( -217.341, 302.869 )

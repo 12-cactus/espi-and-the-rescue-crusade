@@ -132,8 +132,8 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 8.18965, 8.30194 )
+[sub_resource type="CircleShape2D" id=22]
+radius = 7.40911
 
 [node name="Espi" type="KinematicBody2D" groups=[
 "Player",
@@ -150,6 +150,7 @@ frames = SubResource( 21 )
 animation = "walk_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
 shape = SubResource( 22 )
 
 [node name="Bag" type="Node" parent="."]

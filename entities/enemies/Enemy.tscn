@@ -39,7 +39,7 @@ animations = [ {
 radius = 8.72495
 
 [sub_resource type="CircleShape2D" id=8]
-radius = 190.43
+radius = 130.0
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_mask = 3
