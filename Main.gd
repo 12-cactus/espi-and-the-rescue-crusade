@@ -23,9 +23,10 @@ func _ready():
 
 	MarkisStateMachine.connect("show_dialog", GUI, "on_show_dialog")
 	MarkisStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")
-	MarkisStateMachine.connect("cactus_found", Locks, "on_cactus_found")
 	MarkisStateMachine.connect("saved_cactus", GUI, "on_cactus_saved")
 	MarkisStateMachine.connect("consume_items", GUI, "on_items_consumed")
+	MarkisStateMachine.connect("cactus_found", Locks, "on_cactus_found")
+	MarkisStateMachine.connect("saved_cactus", Locks, "on_cactus_saved")
 	
 	AgusStateMachine.connect("show_dialog", GUI, "on_show_dialog")
 	AgusStateMachine.connect("leave_dialog", GUI, "on_leave_dialog")

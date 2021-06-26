@@ -436,7 +436,7 @@ frames = SubResource( 20 )
 animation = "dancing"
 
 [node name="Dan" type="Node2D" parent="Cactus"]
-position = Vector2( 776.239, 744.491 )
+position = Vector2( 1166.56, 634.182 )
 script = ExtResource( 20 )
 
 [node name="DanBody" parent="Cactus/Dan" instance=ExtResource( 3 )]
