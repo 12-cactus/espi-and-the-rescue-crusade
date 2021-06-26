@@ -363,14 +363,14 @@ position = Vector2( 1081.55, 825.769 )
 
 [node name="Wines" type="YSort" parent="Items"]
 
-[node name="Wine" parent="Items/Wines" instance=ExtResource( 10 )]
+[node name="Wine1" parent="Items/Wines" instance=ExtResource( 10 )]
 position = Vector2( 811.832, 54.254 )
 
 [node name="Wine2" parent="Items/Wines" instance=ExtResource( 10 )]
 position = Vector2( 400.662, 399.22 )
 
 [node name="Wine3" parent="Items/Wines" instance=ExtResource( 10 )]
-position = Vector2( 1032.1, 738.248 )
+position = Vector2( 1004.74, 979.187 )
 
 [node name="Bike" type="YSort" parent="Items"]
 position = Vector2( 1358.64, 974.25 )
