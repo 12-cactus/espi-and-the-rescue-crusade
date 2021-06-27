@@ -14,7 +14,7 @@
 [ext_resource path="res://entities/MusicPlayer.gd" type="Script" id=12]
 [ext_resource path="res://assets/GUI/Intro screen.png" type="Texture" id=13]
 [ext_resource path="res://assets/Actors/agus/FacesetGrey.png" type="Texture" id=14]
-[ext_resource path="res://assets/Font/PressStart2P.tres" type="DynamicFont" id=15]
+[ext_resource path="res://entities/ItemCount.tscn" type="PackedScene" id=15]
 [ext_resource path="res://entities/GUIFace.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/GUI/Items/Sandwich.png" type="Texture" id=17]
 [ext_resource path="res://assets/GUI/Items/Wine.png" type="Texture" id=18]
@@ -91,111 +91,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sandwiches" type="HBoxContainer" parent="GUI/ItemsToCollect"]
-margin_right = 85.0
-margin_bottom = 48.0
-
-[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Sandwiches"]
-margin_right = 48.0
-margin_bottom = 48.0
+[node name="Sandwiches" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 texture = ExtResource( 17 )
-stretch_mode = 3
 
-[node name="Label" type="Label" parent="GUI/ItemsToCollect/Sandwiches"]
-margin_left = 52.0
-margin_top = 16.0
-margin_right = 68.0
-margin_bottom = 32.0
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "0"
-align = 1
-valign = 1
-
-[node name="Wines" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+[node name="Wines" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 margin_top = 52.0
-margin_right = 85.0
 margin_bottom = 100.0
-
-[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Wines"]
-margin_right = 48.0
-margin_bottom = 48.0
 texture = ExtResource( 18 )
 
-[node name="Label" type="Label" parent="GUI/ItemsToCollect/Wines"]
-margin_left = 52.0
-margin_top = 16.0
-margin_right = 68.0
-margin_bottom = 32.0
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "0"
-align = 1
-
-[node name="Bike" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+[node name="Bike" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 margin_top = 104.0
-margin_right = 85.0
 margin_bottom = 152.0
-
-[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Bike"]
-margin_right = 48.0
-margin_bottom = 48.0
 texture = ExtResource( 22 )
 
-[node name="Label" type="Label" parent="GUI/ItemsToCollect/Bike"]
-margin_left = 52.0
-margin_top = 16.0
-margin_right = 68.0
-margin_bottom = 32.0
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "0"
-align = 1
-
-[node name="Passport" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+[node name="Passport" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 margin_top = 156.0
-margin_right = 85.0
 margin_bottom = 204.0
-
-[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Passport"]
-margin_right = 48.0
-margin_bottom = 48.0
 texture = ExtResource( 23 )
 
-[node name="Label" type="Label" parent="GUI/ItemsToCollect/Passport"]
-margin_left = 52.0
-margin_top = 16.0
-margin_right = 68.0
-margin_bottom = 32.0
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "0"
-align = 1
-
-[node name="Nunchaku" type="HBoxContainer" parent="GUI/ItemsToCollect"]
+[node name="Nunchaku" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 margin_top = 208.0
-margin_right = 85.0
 margin_bottom = 256.0
-
-[node name="TextureRect" type="TextureRect" parent="GUI/ItemsToCollect/Nunchaku"]
-margin_right = 48.0
-margin_bottom = 48.0
 texture = ExtResource( 25 )
-
-[node name="Label" type="Label" parent="GUI/ItemsToCollect/Nunchaku"]
-margin_left = 52.0
-margin_top = 16.0
-margin_right = 68.0
-margin_bottom = 32.0
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "0"
-align = 1
 
 [node name="CactusToSave" type="HBoxContainer" parent="GUI"]
 margin_left = 80.0
@@ -208,32 +125,30 @@ __meta__ = {
 }
 
 [node name="Markis" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
-margin_left = 20.0
-margin_right = 120.0
 Face = ExtResource( 27 )
 Name = "Markis"
 
 [node name="Agus" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
-margin_left = 145.0
-margin_right = 245.0
+margin_left = 125.0
+margin_right = 225.0
 Face = ExtResource( 14 )
 Name = "Agus"
 
 [node name="Dami" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
-margin_left = 270.0
-margin_right = 370.0
+margin_left = 240.0
+margin_right = 340.0
 Face = ExtResource( 20 )
 Name = "Dami"
 
 [node name="Saba" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
-margin_left = 395.0
-margin_right = 495.0
+margin_left = 355.0
+margin_right = 455.0
 Face = ExtResource( 21 )
 Name = "Saba"
 
 [node name="Dan" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
-margin_left = 520.0
-margin_right = 620.0
+margin_left = 470.0
+margin_right = 570.0
 Face = ExtResource( 24 )
 Name = "Dan"
 
