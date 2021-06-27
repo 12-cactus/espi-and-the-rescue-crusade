@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Faceset_2.png-e637adb44d877ef7b43d7077a50d968d.stex"
+path="res://.import/FacesetGrey.png-4eae07cb05dfa3360268dce4d69503dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Actors/agus/Faceset_2.png"
-dest_files=[ "res://.import/Faceset_2.png-e637adb44d877ef7b43d7077a50d968d.stex" ]
+source_file="res://assets/Actors/Dan/FacesetGrey.png"
+dest_files=[ "res://.import/FacesetGrey.png-4eae07cb05dfa3360268dce4d69503dd.stex" ]
 
 [params]
 

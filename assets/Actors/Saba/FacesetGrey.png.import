@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpriteSheet.png-5faaa76f27332a0550a309fb45b5da2a.stex"
+path="res://.import/FacesetGrey.png-d3e0fb81e9338aba5a7395dd3413c3b9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Actors/dami/SpriteSheet.png"
-dest_files=[ "res://.import/SpriteSheet.png-5faaa76f27332a0550a309fb45b5da2a.stex" ]
+source_file="res://assets/Actors/Saba/FacesetGrey.png"
+dest_files=[ "res://.import/FacesetGrey.png-d3e0fb81e9338aba5a7395dd3413c3b9.stex" ]
 
 [params]
 

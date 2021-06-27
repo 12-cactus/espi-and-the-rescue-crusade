@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Faceset2.png-fa76202858703537b69e74d3abbb17f9.stex"
+path="res://.import/Faceset.png-cc46ea0d2921ed783c731456eb944a64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Actors/dami/Faceset2.png"
-dest_files=[ "res://.import/Faceset2.png-fa76202858703537b69e74d3abbb17f9.stex" ]
+source_file="res://assets/Actors/Dan/Faceset.png"
+dest_files=[ "res://.import/Faceset.png-cc46ea0d2921ed783c731456eb944a64.stex" ]
 
 [params]
 
