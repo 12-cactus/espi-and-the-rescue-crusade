@@ -88,21 +88,10 @@ func on_leave_dialog():
 	Dialog.visible = false
 
 func on_cactus_saved(faceset):
-	if faceset.match("*Markis*"):
-		cactus_to_save.Markis = true
-		CactusToSave.get_node("Markis/Center/Face").texture = load(faceset)
-	if faceset.match("*Agus*"):
-		cactus_to_save.Agus = true
-		CactusToSave.get_node("Agus/Center/Face").texture = load(faceset)
-	if faceset.match("*Dami*"):
-		cactus_to_save.Dami = true
-		CactusToSave.get_node("Dami/Center/Face").texture = load(faceset)
-	if faceset.match("*Saba*"):
-		cactus_to_save.Saba = true
-		CactusToSave.get_node("Saba/Center/Face").texture = load(faceset)
-	if faceset.match("*Dan*"):
-		cactus_to_save.Dan = true
-		CactusToSave.get_node("Dan/Center/Face").texture = load(faceset)
+	for cactus in cactus_to_save.keys():
+		if faceset.match("*" + cactus + "*"):
+			cactus_to_save[cactus] = true
+			CactusToSave.get_node(cactus + "/Center/Face").texture = load(faceset)
 	
 	# FIXME add some timer before this
 	if _are_all_cactus_saved():
