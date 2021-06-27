@@ -21,6 +21,9 @@ func initialize(faceset: Resource, item_needed: String, amount_needed: int):
 	set_physics_process(true)
 
 func _physics_process(delta):
+	if espi != null and Input.is_action_just_pressed("next_dialog") and not espi.is_in_dialog:
+		State.handleEnterState(espi)
+		return
 	if espi != null and Input.is_action_just_pressed("next_dialog"):
 		State.next_dialog(espi)
 
@@ -35,4 +38,5 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	if body.get_name() == espi_name:
+		State.handleLeaveState(body)
 		espi = null

@@ -13,7 +13,8 @@ onready var ItemPickedSound: AudioStreamPlayer2D = $Item_Picked
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
 var item_picked: Sprite = null
-var direction:Vector2 = Vector2.DOWN
+var direction: Vector2 = Vector2.DOWN
+var is_in_dialog: bool = false
 var alive
 enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
@@ -36,7 +37,8 @@ func _physics_process(_delta):
 	velocity = move_and_slide(velocity)
 
 func in_dialog(is_in_dialog: bool):
-	if is_in_dialog:
+	self.is_in_dialog = is_in_dialog
+	if self.is_in_dialog:
 		body.playing = false
 		if direction == Vector2.UP:
 			body.animation = "idle_up"
@@ -46,7 +48,7 @@ func in_dialog(is_in_dialog: bool):
 			body.animation = "idle_left"
 		if direction == Vector2.RIGHT:
 			body.animation = "idle_right"
-	set_physics_process(not is_in_dialog)
+	set_physics_process(not self.is_in_dialog)
 
 func picked(item: Sprite):
 	item_picked = item
@@ -108,6 +110,7 @@ func death():
 
 func revive():
 	alive = true
+	is_in_dialog = false
 	position = Vector2(293.213, 258.349)
 	body.frame = 0
 	collision_layer = 1

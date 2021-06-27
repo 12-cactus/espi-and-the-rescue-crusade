@@ -58,6 +58,7 @@ func handleEnterState(body: KinematicBody2D):
 		return
 	
 	body.in_dialog(true)
+	dialog_position = 0
 	
 	if state == States.VISITED and hasAllItems(body):
 		state = States.RESCUED
@@ -71,5 +72,7 @@ func handleEnterState(body: KinematicBody2D):
 		current_dialog = DialogDying
 		emit_signal("cactus_found", faceset.resource_path)
 	
-	dialog_position = 0
 	show_dialog()
+
+func handleLeaveState(body: KinematicBody2D):
+	body.in_dialog(false)
