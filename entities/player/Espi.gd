@@ -78,14 +78,17 @@ func get_movement_input():
 		direction = Vector2.UP
 		body.playing = true
 		body.play("walk_up")
+		return
 	if Mov.DOWN:
 		direction = Vector2.DOWN
 		body.playing = true
 		body.play("walk_down")
+		return
 	if Mov.LEFT:
 		direction = Vector2.LEFT
 		body.playing = true
 		body.play("walk_left")
+		return
 	if Mov.RIGHT:
 		direction = Vector2.RIGHT
 		body.playing = true
