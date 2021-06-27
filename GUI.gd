@@ -11,8 +11,20 @@ onready var Sound = load("res://entities/MusicPlayer.tscn")
 onready var CactusToSave = $CactusToSave
 onready var ItemsToCollect = $ItemsToCollect
 
-var cactus_saved_amount = 0
-var cactus_saved_needed = 5
+var items: Array = [
+	"Sandwich",
+	"Wine",
+	"Bike",
+	"Passport",
+	"Nunchaku",
+]
+var cactus_to_save: Dictionary = {
+	"Markis": false,
+	"Agus": false,
+	"Dami": false,
+	"Saba": false,
+	"Dan": false,
+}
 
 func _ready():
 	_set_all_invisible()
@@ -42,6 +54,12 @@ func on_player_dead():
 	_set_all_invisible()
 	Restart.visible = true
 
+func _are_all_cactus_saved() -> bool:
+	for rescued in cactus_to_save.values():
+		if not rescued:
+			return false
+	return true
+
 func _all_saved():
 	_set_all_invisible()
 	Win.visible = true
@@ -70,46 +88,37 @@ func on_leave_dialog():
 	Dialog.visible = false
 
 func on_cactus_saved(faceset):
-	cactus_saved_amount += 1
 	if faceset.match("*Markis*"):
+		cactus_to_save.Markis = true
 		CactusToSave.get_node("Markis/Center/Face").texture = load(faceset)
 	if faceset.match("*agus*"):
+		cactus_to_save.Agus = true
 		CactusToSave.get_node("Agus/Center/Face").texture = load(faceset)
 	if faceset.match("*dami*"):
+		cactus_to_save.Dami = true
 		CactusToSave.get_node("Dami/Center/Face").texture = load(faceset)
 	if faceset.match("*saba*"):
+		cactus_to_save.Saba = true
 		CactusToSave.get_node("Saba/Center/Face").texture = load(faceset)
 	if faceset.match("*dan*"):
+		cactus_to_save.Dan = true
 		CactusToSave.get_node("Dan/Center/Face").texture = load(faceset)
 	
-	if cactus_saved_amount == cactus_saved_needed:
+	# FIXME add some timer before this
+	if _are_all_cactus_saved():
 		_all_saved()
 
 func on_item_collected(item_name):
-	if item_name.match("*Sandwich*"):
-		_increase_amount_to("Sandwiches", 1)
-	if item_name.match("*Wine*"):
-		_increase_amount_to("Wines", 1)
-	if item_name.match("*Bike*"):
-		_increase_amount_to("Bike", 1)
-	if item_name.match("*Passport*"):
-		_increase_amount_to("Passport", 1)
-	if item_name.match("*Nunchaku*"):
-		_increase_amount_to("Nunchaku", 1)
+	for item in items:
+		if item_name.match("*" + item + "*"):
+			_increase_amount_to(item, 1)
 
 func on_items_consumed(item_name, amount):
-	if item_name.match("*Sandwich*"):
-		_increase_amount_to("Sandwiches", amount * -1)
-	if item_name.match("*Wine*"):
-		_increase_amount_to("Wines", amount * -1)
-	if item_name.match("*Bike*"):
-		_increase_amount_to("Bike", -1)
-	if item_name.match("*Passport*"):
-		_increase_amount_to("Passport", -1)
-	if item_name.match("*Nunchaku*"):
-		_increase_amount_to("Nunchaku", -1)
+	for item in items:
+		if item_name.match("*" + item + "*"):
+			_increase_amount_to(item, amount * -1)
 
 func _increase_amount_to(node_name, inc):
 	var label: Label = ItemsToCollect.get_node(node_name + "/Label")
-	var amount: int = int(label.text)
-	label.text = str(amount + inc)
+	var amount: int = max(int(label.text) + inc, 0)
+	label.text = str(amount)

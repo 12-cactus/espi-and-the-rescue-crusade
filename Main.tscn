@@ -91,10 +91,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sandwiches" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
+[node name="Sandwich" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 texture = ExtResource( 17 )
 
-[node name="Wines" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
+[node name="Wine" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 margin_top = 52.0
 margin_bottom = 100.0
 texture = ExtResource( 18 )
