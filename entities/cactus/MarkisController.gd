@@ -1,7 +1,8 @@
 extends Node2D
 
 onready var body: KinematicBody2D = $MarkisBody
-onready var faceset: Resource = load("res://assets/Actors/Markis/Faceset.png")
+
+export (Texture) var faceset = null
 
 var amount_needed: int = 3
 var item_needed: String = "Sandwich"

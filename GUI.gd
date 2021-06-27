@@ -91,16 +91,16 @@ func on_cactus_saved(faceset):
 	if faceset.match("*Markis*"):
 		cactus_to_save.Markis = true
 		CactusToSave.get_node("Markis/Center/Face").texture = load(faceset)
-	if faceset.match("*agus*"):
+	if faceset.match("*Agus*"):
 		cactus_to_save.Agus = true
 		CactusToSave.get_node("Agus/Center/Face").texture = load(faceset)
-	if faceset.match("*dami*"):
+	if faceset.match("*Dami*"):
 		cactus_to_save.Dami = true
 		CactusToSave.get_node("Dami/Center/Face").texture = load(faceset)
-	if faceset.match("*saba*"):
+	if faceset.match("*Saba*"):
 		cactus_to_save.Saba = true
 		CactusToSave.get_node("Saba/Center/Face").texture = load(faceset)
-	if faceset.match("*dan*"):
+	if faceset.match("*Dan*"):
 		cactus_to_save.Dan = true
 		CactusToSave.get_node("Dan/Center/Face").texture = load(faceset)
 	
