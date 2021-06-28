@@ -17,13 +17,16 @@ var items: Array = [
 	"Bike",
 	"Passport",
 	"Nunchaku",
+	"Mac"
 ]
+
 var cactus_to_save: Dictionary = {
 	"Markis": false,
 	"Agus": false,
 	"Dami": false,
 	"Saba": false,
 	"Dan": false,
+	"Alan": false
 }
 
 func _ready():
