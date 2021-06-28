@@ -12,8 +12,8 @@ func crossfade_to(audio_stream: AudioStream) -> void:
 	if SecondTrack.playing:
 		FirstTrack.stream = audio_stream
 		FirstTrack.play()
-		TrackFader.play("FadeToTrack1")
+		TrackFader.play("FadeToFirstTrack")
 	else:
 		SecondTrack.stream = audio_stream
 		SecondTrack.play()
-		TrackFader.play("FadeToTrack2")
+		TrackFader.play("FadeToSecondTrack")

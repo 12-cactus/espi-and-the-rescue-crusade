@@ -14,6 +14,7 @@ onready var Dan: CactusDefeatedStateMachine = $World/Cactus/Dan/DanBody/StateMac
 onready var IntroMusic = load("res://assets/sound/Intro.ogg")
 onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
 onready var MusicPlayer = $MusicPlayer
+onready var Crossfader = $Crossfader
 onready var CollectableSandwich = $World/Sandwiches/Sandwich
 
 func _ready():
@@ -35,10 +36,13 @@ func _ready():
 	LifeBar.connect("revive", GUI, "on_player_revive")
 
 func stop_intro_music():
-	MusicPlayer._on_music_changed(null)
+	#MusicPlayer._on_music_changed(null)
+	pass
 
 func start_intro_music():
-	MusicPlayer._on_music_changed(StoryMusic)
+	#MusicPlayer._on_music_changed(StoryMusic)
+	Crossfader.crossfade_to(StoryMusic)
 	
 func play_game_over():
-	MusicPlayer.play_game_over()
+	#MusicPlayer.play_game_over()
+	Crossfader.crossfade_to(MusicPlayer.GameOver)

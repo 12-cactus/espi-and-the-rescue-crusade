@@ -9,7 +9,7 @@ const MUTE_VOLUME = -60
 
 func _on_music_changed(song):
 	if song == null:
-		stream = BackgroundMusic
+		stream = null #BackgroundMusic
 		play()
 	
 	if stream == song:
