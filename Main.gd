@@ -11,6 +11,8 @@ onready var Dami: CactusDefeatedStateMachine = $World/Cactus/Dami/DamiBody/State
 onready var Saba: CactusDefeatedStateMachine = $World/Cactus/Saba/SabaBody/StateMachine
 onready var Dan: CactusDefeatedStateMachine = $World/Cactus/Dan/DanBody/StateMachine
 onready var Alan: CactusDefeatedStateMachine = $World/Cactus/Alan/AlanBody/StateMachine
+onready var Juan: CactusDefeatedStateMachine = $World/Cactus/Juan/JuanBody/StateMachine
+
 
 
 onready var IntroMusic = load("res://assets/sound/Intro.ogg")
@@ -23,7 +25,7 @@ func _ready():
 	Espi.connect("hit", GUI, "on_player_hit")
 	Espi.connect("item_collected", GUI, "on_item_collected")
 	
-	for cactus in [Markis, Agus, Dami, Saba, Dan, Alan]:
+	for cactus in [Markis, Agus, Dami, Saba, Dan, Alan, Juan]:
 		cactus.connect("show_dialog", GUI, "on_show_dialog")
 		cactus.connect("leave_dialog", GUI, "on_leave_dialog")
 		cactus.connect("saved_cactus", GUI, "on_cactus_saved")

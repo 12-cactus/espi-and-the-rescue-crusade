@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/articles/mac.png" type="Texture" id=1]
-[ext_resource path="res://entities/World/Mac.gd" type="Script" id=2]
+[ext_resource path="res://assets/articles/Libro de quejas.png" type="Texture" id=1]
+[ext_resource path="res://entities/World/Book.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 118.341
+radius = 478.428
 
-[node name="Mac" type="Sprite" groups=[
-"Mac",
+[node name="Book" type="Sprite" groups=[
+"Book",
 "collectables",
 ]]
-position = Vector2( -102.119, -79.7728 )
-scale = Vector2( 0.0841362, 0.0777705 )
+position = Vector2( -377.844, -269.027 )
+scale = Vector2( 0.0236599, 0.030532 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

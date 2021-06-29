@@ -17,7 +17,8 @@ var items: Array = [
 	"Bike",
 	"Passport",
 	"Nunchaku",
-	"Mac"
+	"Mac",
+	"Book"
 ]
 
 var cactus_to_save: Dictionary = {
@@ -26,7 +27,8 @@ var cactus_to_save: Dictionary = {
 	"Dami": false,
 	"Saba": false,
 	"Dan": false,
-	"Alan": false
+	"Alan": false,
+	"Juan": false,
 }
 
 func _ready():
