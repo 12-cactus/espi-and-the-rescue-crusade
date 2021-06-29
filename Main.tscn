@@ -93,8 +93,9 @@ scale = Vector2( 2.08, 2.08 )
 [node name="ItemsToCollect" type="VBoxContainer" parent="GUI"]
 margin_left = 14.0
 margin_top = 48.0
-margin_right = 99.0
-margin_bottom = 337.0
+margin_right = 82.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.7, 0.7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -128,26 +129,27 @@ margin_bottom = 308.0
 texture = ExtResource( 26 )
 
 [node name="Book" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 264.0
-margin_bottom = 304.0
+margin_top = 312.0
+margin_bottom = 360.0
 alignment = 1
 texture = ExtResource( 29 )
 
 [node name="Vodka" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 308.0
-margin_bottom = 348.0
+margin_top = 364.0
+margin_bottom = 412.0
 texture = ExtResource( 33 )
 
 [node name="Michis" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 352.0
-margin_bottom = 392.0
+margin_top = 416.0
+margin_bottom = 464.0
 texture = ExtResource( 34 )
 
 [node name="CactusToSave" type="HBoxContainer" parent="GUI"]
-margin_left = 80.0
+margin_left = 49.0
 margin_top = 426.0
-margin_right = 650.0
+margin_right = 981.0
 margin_bottom = 496.0
+rect_scale = Vector2( 0.8, 0.8 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
