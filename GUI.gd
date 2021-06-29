@@ -94,6 +94,8 @@ func on_cactus_saved(faceset):
 	for cactus in cactus_to_save.keys():
 		if faceset.match("*" + cactus + "*"):
 			cactus_to_save[cactus] = true
+			CactusToSave.get_node(cactus + "/Center/WhiteBorder").visible = false
+			CactusToSave.get_node(cactus + "/Center/GreenBorder").visible = true
 			CactusToSave.get_node(cactus + "/Center/Face").texture = load(faceset)
 	
 	# FIXME add some timer before this

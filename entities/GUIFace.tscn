@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Font/PressStart2P.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/Actors/Markis/FacesetGrey.png" type="Texture" id=2]
 [ext_resource path="res://assets/GUI/WhiteBox.png" type="Texture" id=3]
 [ext_resource path="res://entities/GUIFace.gd" type="Script" id=4]
+[ext_resource path="res://assets/GUI/GreenBox.png" type="Texture" id=5]
 
 [node name="GUIFace" type="VBoxContainer"]
 margin_left = 10.0
@@ -21,11 +22,18 @@ margin_right = 100.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 50, 50 )
 
-[node name="Border" type="TextureRect" parent="Center"]
+[node name="WhiteBorder" type="TextureRect" parent="Center"]
 margin_left = 25.0
 margin_right = 75.0
 margin_bottom = 50.0
 texture = ExtResource( 3 )
+
+[node name="GreenBorder" type="TextureRect" parent="Center"]
+visible = false
+margin_left = 25.0
+margin_right = 75.0
+margin_bottom = 50.0
+texture = ExtResource( 5 )
 
 [node name="Face" type="TextureRect" parent="Center"]
 margin_left = 26.0
