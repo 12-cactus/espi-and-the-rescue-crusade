@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
 onready var tween = $Tween
-onready var BackgroundMusic = load("res://assets/sound/Background.mp3")
+onready var BackgroundMusic = load("res://assets/sound/Background.ogg")
 onready var GameOver = load("res://assets/sound/GameOver.wav")
 const BASE_VOLUME = -10
 const MUTE_VOLUME = -60
