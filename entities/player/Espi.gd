@@ -12,6 +12,7 @@ onready var ItemPickedSound: AudioStreamPlayer2D = $Item_Picked
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
+var back_force: int = -10
 var item_picked: Sprite = null
 var direction: Vector2 = Vector2.DOWN
 var is_in_dialog: bool = false
@@ -36,8 +37,8 @@ func _physics_process(_delta):
 	velocity = velocity.normalized() * speed
 	velocity = move_and_slide(velocity)
 
-func in_dialog(is_in_dialog: bool):
-	self.is_in_dialog = is_in_dialog
+func in_dialog(_is_in_dialog: bool):
+	self.is_in_dialog = _is_in_dialog
 	if self.is_in_dialog:
 		body.playing = false
 		if direction == Vector2.UP:
@@ -103,6 +104,7 @@ func fire():
 		ShotEffect.play()
 
 func notify_hit():
+	move_and_collide(direction * back_force)
 	SoundHurt.play()
 	emit_signal("hit", 2)
 
