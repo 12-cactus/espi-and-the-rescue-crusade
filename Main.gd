@@ -1,6 +1,7 @@
 extends Node
 
 onready var GUI: CanvasLayer = $GUI
+onready var World: Node2D = $World
 onready var LifeBar: Control = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
 onready var Locks: YSort = $World/Conurban/Locks
@@ -8,7 +9,6 @@ onready var Locks: YSort = $World/Conurban/Locks
 onready var IntroMusic = load("res://assets/sound/Intro.ogg")
 onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
 onready var MusicPlayer = $MusicPlayer
-onready var CollectableSandwich = $World/Sandwiches/Sandwich
 
 var format_node = "World/Cactus/{name}/{name}Body/StateMachine"
 var Cactus = [
@@ -37,6 +37,7 @@ func _ready():
 		cactus.connect("cactus_found", GUI, "on_cactus_found")
 		cactus.connect("cactus_found", Locks, "on_cactus_found")
 		cactus.connect("saved_cactus", Locks, "on_cactus_saved")
+		cactus.connect("cactus_found", World, "on_cactus_found")
 	
 	LifeBar.connect("dead", Espi, "death")
 	LifeBar.connect("dead", GUI, "on_player_dead")

@@ -17,3 +17,6 @@ func _physics_process(delta):
 		emit_signal("start")
 		started = true
 		return
+
+func on_cactus_found(_faceset: String, item: String):
+	get_node("Items/" + item).visible = true

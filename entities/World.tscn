@@ -346,71 +346,71 @@ region = Rect2( 0, 96, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=56]
 atlas = ExtResource( 13 )
-region = Rect2( 16, 16, 16, 16 )
+region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=57]
 atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 16, 16 )
+region = Rect2( 32, 16, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=58]
 atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 16, 16 )
+region = Rect2( 32, 32, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=59]
 atlas = ExtResource( 13 )
-region = Rect2( 0, 16, 16, 16 )
+region = Rect2( 32, 48, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=60]
 atlas = ExtResource( 13 )
-region = Rect2( 0, 32, 16, 16 )
+region = Rect2( 16, 16, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=61]
 atlas = ExtResource( 13 )
-region = Rect2( 0, 48, 16, 16 )
+region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=62]
 atlas = ExtResource( 13 )
-region = Rect2( 32, 0, 16, 16 )
+region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=63]
 atlas = ExtResource( 13 )
-region = Rect2( 16, 0, 16, 16 )
+region = Rect2( 0, 16, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=64]
 atlas = ExtResource( 13 )
-region = Rect2( 16, 32, 16, 16 )
+region = Rect2( 0, 32, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=65]
 atlas = ExtResource( 13 )
-region = Rect2( 16, 48, 16, 16 )
+region = Rect2( 0, 48, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=66]
 atlas = ExtResource( 13 )
-region = Rect2( 16, 64, 16, 16 )
+region = Rect2( 32, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=67]
 atlas = ExtResource( 13 )
-region = Rect2( 16, 80, 16, 16 )
+region = Rect2( 16, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=68]
 atlas = ExtResource( 13 )
-region = Rect2( 48, 0, 16, 16 )
+region = Rect2( 16, 32, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=69]
 atlas = ExtResource( 13 )
-region = Rect2( 32, 0, 16, 16 )
+region = Rect2( 16, 48, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=70]
 atlas = ExtResource( 13 )
-region = Rect2( 32, 16, 16, 16 )
+region = Rect2( 16, 64, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=71]
 atlas = ExtResource( 13 )
-region = Rect2( 32, 32, 16, 16 )
+region = Rect2( 16, 80, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=72]
 atlas = ExtResource( 13 )
-region = Rect2( 32, 48, 16, 16 )
+region = Rect2( 48, 0, 16, 16 )
 
 [sub_resource type="SpriteFrames" id=73]
 animations = [ {
@@ -419,42 +419,42 @@ animations = [ {
 "name": "death",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 56 ) ],
-"loop": true,
-"name": "idle_up",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 57 ) ],
-"loop": true,
-"name": "idle_down",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
-"loop": true,
-"name": "walk_down",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 62 ) ],
-"loop": true,
-"name": "idle_left",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 63 ), SubResource( 56 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ) ],
-"loop": true,
-"name": "walk_up",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 68 ) ],
-"loop": true,
-"name": "idle_right",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
+"frames": [ SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
 "loop": true,
 "name": "walk_left",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ) ],
+"frames": [ SubResource( 60 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 61 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 66 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 67 ), SubResource( 60 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 72 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
 "loop": true,
 "name": "walk_right",
 "speed": 5.0
@@ -467,35 +467,39 @@ position = Vector2( 1, 0 )
 
 [node name="Items" type="Node2D" parent="."]
 
-[node name="Sandwiches" type="YSort" parent="Items"]
+[node name="Sandwich" type="YSort" parent="Items"]
+visible = false
 
-[node name="Sandwich1" parent="Items/Sandwiches" instance=ExtResource( 2 )]
+[node name="Sandwich1" parent="Items/Sandwich" instance=ExtResource( 2 )]
 position = Vector2( 531.407, 688.371 )
 
-[node name="Sandwich2" parent="Items/Sandwiches" instance=ExtResource( 2 )]
+[node name="Sandwich2" parent="Items/Sandwich" instance=ExtResource( 2 )]
 position = Vector2( 942.07, 487.359 )
 
-[node name="Sandwich3" parent="Items/Sandwiches" instance=ExtResource( 2 )]
+[node name="Sandwich3" parent="Items/Sandwich" instance=ExtResource( 2 )]
 position = Vector2( 1081.55, 825.769 )
 
-[node name="Wines" type="YSort" parent="Items"]
+[node name="Wine" type="YSort" parent="Items"]
+visible = false
 
-[node name="Wine1" parent="Items/Wines" instance=ExtResource( 10 )]
+[node name="Wine1" parent="Items/Wine" instance=ExtResource( 10 )]
 position = Vector2( 811.832, 54.254 )
 
-[node name="Wine2" parent="Items/Wines" instance=ExtResource( 10 )]
+[node name="Wine2" parent="Items/Wine" instance=ExtResource( 10 )]
 position = Vector2( 400.662, 399.22 )
 
-[node name="Wine3" parent="Items/Wines" instance=ExtResource( 10 )]
+[node name="Wine3" parent="Items/Wine" instance=ExtResource( 10 )]
 position = Vector2( 1004.74, 979.187 )
 
 [node name="Bike" type="YSort" parent="Items"]
+visible = false
 position = Vector2( 1358.64, 974.25 )
 z_index = 2
 
 [node name="Bike" parent="Items/Bike" instance=ExtResource( 17 )]
 
 [node name="Passport" type="YSort" parent="Items"]
+visible = false
 position = Vector2( 1259.7, 649.451 )
 z_index = 2
 
@@ -503,6 +507,7 @@ z_index = 2
 position = Vector2( -1.26147, 273.303 )
 
 [node name="Nunchaku" type="YSort" parent="Items"]
+visible = false
 
 [node name="Nunchaku" parent="Items/Nunchaku" instance=ExtResource( 21 )]
 position = Vector2( 783.991, 614.72 )
@@ -510,24 +515,28 @@ scale = Vector2( 0.113447, 0.155024 )
 z_index = 2
 
 [node name="Mac" type="YSort" parent="Items"]
+visible = false
 position = Vector2( 554.139, 446.34 )
 
 [node name="Mac" parent="Items/Mac" instance=ExtResource( 28 )]
 scale = Vector2( 0.4, 0.4 )
 
 [node name="Book" type="YSort" parent="Items"]
+visible = false
 position = Vector2( -2.1189, 0 )
 
 [node name="Book" parent="Items/Book" instance=ExtResource( 34 )]
 position = Vector2( 721.536, 527.799 )
 
 [node name="Vodka" type="YSort" parent="Items"]
+visible = false
 position = Vector2( 514.088, 527.557 )
 
 [node name="Vodka" parent="Items/Vodka" instance=ExtResource( 40 )]
 position = Vector2( 648.574, 302.906 )
 
 [node name="Michis" type="YSort" parent="Items"]
+visible = false
 position = Vector2( 433.27, 781.234 )
 
 [node name="Michis" parent="Items/Michis" instance=ExtResource( 41 )]
