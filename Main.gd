@@ -12,6 +12,9 @@ onready var Saba: CactusDefeatedStateMachine = $World/Cactus/Saba/SabaBody/State
 onready var Dan: CactusDefeatedStateMachine = $World/Cactus/Dan/DanBody/StateMachine
 onready var Alan: CactusDefeatedStateMachine = $World/Cactus/Alan/AlanBody/StateMachine
 onready var Juan: CactusDefeatedStateMachine = $World/Cactus/Juan/JuanBody/StateMachine
+onready var Ana: CactusDefeatedStateMachine = $World/Cactus/Ana/AnaBody/StateMachine
+onready var Maru: CactusDefeatedStateMachine = $World/Cactus/Maru/MaruBody/StateMachine
+
 
 
 
@@ -25,7 +28,7 @@ func _ready():
 	Espi.connect("hit", GUI, "on_player_hit")
 	Espi.connect("item_collected", GUI, "on_item_collected")
 	
-	for cactus in [Markis, Agus, Dami, Saba, Dan, Alan, Juan]:
+	for cactus in [Markis, Agus, Dami, Saba, Dan, Alan, Juan, Ana, Maru]:
 		cactus.connect("show_dialog", GUI, "on_show_dialog")
 		cactus.connect("leave_dialog", GUI, "on_leave_dialog")
 		cactus.connect("saved_cactus", GUI, "on_cactus_saved")

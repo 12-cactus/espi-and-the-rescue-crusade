@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=2]
+[gd_scene load_steps=121 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
@@ -34,6 +34,14 @@
 [ext_resource path="res://entities/Juan.gd" type="Script" id=32]
 [ext_resource path="res://assets/Actors/Juan/Faceset.png" type="Texture" id=33]
 [ext_resource path="res://entities/World/Book.tscn" type="PackedScene" id=34]
+[ext_resource path="res://entities/Ana.gd" type="Script" id=35]
+[ext_resource path="res://entities/Maru.gd" type="Script" id=36]
+[ext_resource path="res://assets/Actors/Ana/Faceset.png" type="Texture" id=37]
+[ext_resource path="res://assets/Actors/Maru/Faceset.png" type="Texture" id=38]
+[ext_resource path="res://assets/Actors/Ana/SpriteSheet.png" type="Texture" id=39]
+[ext_resource path="res://entities/World/Vodka.tscn" type="PackedScene" id=40]
+[ext_resource path="res://entities/World/Michis.tscn" type="PackedScene" id=41]
+[ext_resource path="res://assets/Actors/Maru/SpriteSheet.png" type="Texture" id=42]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 8 )
@@ -233,6 +241,64 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
+"loop": true,
+"name": "dancing",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 39 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 39 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 39 )
+region = Rect2( 32, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 39 )
+region = Rect2( 48, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=79]
+animations = [ {
+"frames": [ SubResource( 81 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 82 ), SubResource( 83 ), SubResource( 84 ) ],
+"loop": true,
+"name": "dancing",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 42 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 42 )
+region = Rect2( 0, 64, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 42 )
+region = Rect2( 32, 64, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 42 )
+region = Rect2( 48, 64, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=80]
+animations = [ {
+"frames": [ SubResource( 85 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -479,9 +545,25 @@ position = Vector2( 554.139, 446.34 )
 [node name="Mac" parent="Items/Mac" instance=ExtResource( 28 )]
 
 [node name="Book" type="YSort" parent="Items"]
+position = Vector2( -2.1189, 0 )
 
 [node name="Book" parent="Items/Book" instance=ExtResource( 34 )]
-position = Vector2( 437.6, 716.383 )
+position = Vector2( 721.536, 527.799 )
+
+[node name="Vodka" type="YSort" parent="Items"]
+position = Vector2( 514.088, 527.557 )
+
+[node name="Vodka" parent="Items/Vodka" instance=ExtResource( 40 )]
+position = Vector2( 648.574, 302.906 )
+
+[node name="Michis" type="YSort" parent="Items"]
+position = Vector2( 433.27, 781.234 )
+
+[node name="Michis" parent="Items/Michis" instance=ExtResource( 41 )]
+position = Vector2( 734.101, -634.32 )
+
+[node name="Michis2" parent="Items/Michis" instance=ExtResource( 41 )]
+position = Vector2( 836.017, -341.037 )
 
 [node name="Cactus" type="Node2D" parent="."]
 
@@ -554,7 +636,7 @@ frames = SubResource( 73 )
 animation = "dancing"
 
 [node name="Juan" type="Node2D" parent="Cactus"]
-position = Vector2( 599.417, 787.005 )
+position = Vector2( 1430.04, 483.999 )
 z_index = 2
 script = ExtResource( 32 )
 faceset = ExtResource( 33 )
@@ -563,6 +645,30 @@ faceset = ExtResource( 33 )
 
 [node name="Sprite" type="AnimatedSprite" parent="Cactus/Juan/JuanBody"]
 frames = SubResource( 78 )
+animation = "dancing"
+
+[node name="Ana" type="Node2D" parent="Cactus"]
+position = Vector2( 1461.47, 281.072 )
+z_index = 2
+script = ExtResource( 35 )
+faceset = ExtResource( 37 )
+
+[node name="AnaBody" parent="Cactus/Ana" instance=ExtResource( 3 )]
+
+[node name="Sprite" type="AnimatedSprite" parent="Cactus/Ana/AnaBody"]
+frames = SubResource( 79 )
+animation = "dancing"
+
+[node name="Maru" type="Node2D" parent="Cactus"]
+position = Vector2( 1464.03, 82.3765 )
+z_index = 2
+script = ExtResource( 36 )
+faceset = ExtResource( 38 )
+
+[node name="MaruBody" parent="Cactus/Maru" instance=ExtResource( 3 )]
+
+[node name="Sprite" type="AnimatedSprite" parent="Cactus/Maru/MaruBody"]
+frames = SubResource( 80 )
 animation = "dancing"
 
 [node name="Enemies" type="Node2D" parent="."]
