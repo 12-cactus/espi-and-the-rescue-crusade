@@ -5,30 +5,31 @@ onready var LifeBar: Control = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
 onready var Locks: YSort = $World/Conurban/Locks
 
-onready var Markis: CactusDefeatedStateMachine = $World/Cactus/Markis/MarkisBody/StateMachine
-onready var Agus: CactusDefeatedStateMachine = $World/Cactus/Agus/AgusBody/StateMachine
-onready var Dami: CactusDefeatedStateMachine = $World/Cactus/Dami/DamiBody/StateMachine
-onready var Saba: CactusDefeatedStateMachine = $World/Cactus/Saba/SabaBody/StateMachine
-onready var Dan: CactusDefeatedStateMachine = $World/Cactus/Dan/DanBody/StateMachine
-onready var Alan: CactusDefeatedStateMachine = $World/Cactus/Alan/AlanBody/StateMachine
-onready var Juan: CactusDefeatedStateMachine = $World/Cactus/Juan/JuanBody/StateMachine
-onready var Ana: CactusDefeatedStateMachine = $World/Cactus/Ana/AnaBody/StateMachine
-onready var Maru: CactusDefeatedStateMachine = $World/Cactus/Maru/MaruBody/StateMachine
-
-
-
-
 onready var IntroMusic = load("res://assets/sound/Intro.ogg")
 onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
 onready var MusicPlayer = $MusicPlayer
 onready var CollectableSandwich = $World/Sandwiches/Sandwich
+
+var format_node = "World/Cactus/{name}/{name}Body/StateMachine"
+var Cactus = [
+  "Markis",
+  "Agus",
+  "Dami",
+  "Saba",
+  "Dan",
+  "Alan",
+  "Juan",
+  "Ana",
+  "Maru",
+]
 
 func _ready():
 	MusicPlayer._on_music_changed(IntroMusic)
 	Espi.connect("hit", GUI, "on_player_hit")
 	Espi.connect("item_collected", GUI, "on_item_collected")
 	
-	for cactus in [Markis, Agus, Dami, Saba, Dan, Alan, Juan, Ana, Maru]:
+	for name in Cactus:
+		var cactus = get_node(format_node.format({"name": name}))
 		cactus.connect("show_dialog", GUI, "on_show_dialog")
 		cactus.connect("leave_dialog", GUI, "on_leave_dialog")
 		cactus.connect("saved_cactus", GUI, "on_cactus_saved")
