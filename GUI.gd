@@ -96,13 +96,17 @@ func on_leave_dialog():
 	Dialog.get_node("text").set_text("EMPTY")
 	Dialog.visible = false
 
-func on_cactus_saved(faceset):
+func on_cactus_found(_faceset: String, item: String):
+	get_node("ItemsToCollect/" + item).visible = true
+
+func on_cactus_saved(faceset: String, item: String):
 	for cactus in cactus_to_save.keys():
 		if faceset.match("*" + cactus + "*"):
 			cactus_to_save[cactus] = true
 			CactusToSave.get_node(cactus + "/Center/WhiteBorder").visible = false
 			CactusToSave.get_node(cactus + "/Center/GreenBorder").visible = true
 			CactusToSave.get_node(cactus + "/Center/Face").texture = load(faceset)
+			get_node("ItemsToCollect/" + item).visible = false
 	
 	# FIXME add some timer before this
 	if _are_all_cactus_saved():

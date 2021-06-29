@@ -34,6 +34,7 @@ func _ready():
 		cactus.connect("leave_dialog", GUI, "on_leave_dialog")
 		cactus.connect("saved_cactus", GUI, "on_cactus_saved")
 		cactus.connect("consume_items", GUI, "on_items_consumed")
+		cactus.connect("cactus_found", GUI, "on_cactus_found")
 		cactus.connect("cactus_found", Locks, "on_cactus_found")
 		cactus.connect("saved_cactus", Locks, "on_cactus_saved")
 	
