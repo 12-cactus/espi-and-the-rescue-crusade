@@ -94,32 +94,31 @@ __meta__ = {
 }
 
 [node name="Sandwich" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_bottom = 40.0
 texture = ExtResource( 17 )
 
 [node name="Wine" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 44.0
-margin_bottom = 84.0
+margin_top = 52.0
+margin_bottom = 100.0
 texture = ExtResource( 18 )
 
 [node name="Bike" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 88.0
-margin_bottom = 128.0
+margin_top = 104.0
+margin_bottom = 152.0
 texture = ExtResource( 22 )
 
 [node name="Passport" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 132.0
-margin_bottom = 172.0
+margin_top = 156.0
+margin_bottom = 204.0
 texture = ExtResource( 23 )
 
 [node name="Nunchaku" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 176.0
-margin_bottom = 216.0
+margin_top = 208.0
+margin_bottom = 256.0
 texture = ExtResource( 25 )
 
 [node name="Mac" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
-margin_top = 220.0
-margin_bottom = 260.0
+margin_top = 260.0
+margin_bottom = 308.0
 texture = ExtResource( 26 )
 
 [node name="CactusToSave" type="HBoxContainer" parent="GUI"]
