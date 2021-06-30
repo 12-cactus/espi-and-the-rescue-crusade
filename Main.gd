@@ -21,6 +21,7 @@ var Cactus = [
   "Juan",
   "Ana",
   "Maru",
+  "Alvaro"
 ]
 
 func _ready():

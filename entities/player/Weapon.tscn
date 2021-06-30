@@ -21,7 +21,7 @@ frames = SubResource( 1 )
 script = ExtResource( 2 )
 
 [node name="LifeTimer" type="Timer" parent="."]
-wait_time = 0.8
+wait_time = 0.6
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 0
