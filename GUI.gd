@@ -31,7 +31,7 @@ var cactus_to_save: Dictionary = {
 	"Saba": false,
 	"Dan": false,
 	"Alan": false,
-	"Juan": false,
+	"JP": false,
 	"Pipi": false,
 	"Ana": false,
 	"Maru": false,

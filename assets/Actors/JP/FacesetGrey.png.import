@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpriteSheet.png-1ff0b5feb91cd2684c3ee05cbfd23be5.stex"
+path="res://.import/FacesetGrey.png-3d8986b1b5c36b235340a8b396ddb8b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Actors/Juan/SpriteSheet.png"
-dest_files=[ "res://.import/SpriteSheet.png-1ff0b5feb91cd2684c3ee05cbfd23be5.stex" ]
+source_file="res://assets/Actors/JP/FacesetGrey.png"
+dest_files=[ "res://.import/FacesetGrey.png-3d8986b1b5c36b235340a8b396ddb8b8.stex" ]
 
 [params]
 

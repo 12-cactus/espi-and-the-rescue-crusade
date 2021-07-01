@@ -30,9 +30,9 @@
 [ext_resource path="res://entities/World/Mac.tscn" type="PackedScene" id=28]
 [ext_resource path="res://assets/Actors/Alan/Faceset.png" type="Texture" id=29]
 [ext_resource path="res://assets/Actors/Dan/SpriteSheet.png" type="Texture" id=30]
-[ext_resource path="res://assets/Actors/Juan/SpriteSheet.png" type="Texture" id=31]
-[ext_resource path="res://entities/Juan.gd" type="Script" id=32]
-[ext_resource path="res://assets/Actors/Juan/Faceset.png" type="Texture" id=33]
+[ext_resource path="res://assets/Actors/JP/SpriteSheet.png" type="Texture" id=31]
+[ext_resource path="res://entities/JP.gd" type="Script" id=32]
+[ext_resource path="res://assets/Actors/JP/Faceset.png" type="Texture" id=33]
 [ext_resource path="res://entities/World/Book.tscn" type="PackedScene" id=34]
 [ext_resource path="res://entities/Ana.gd" type="Script" id=35]
 [ext_resource path="res://entities/Maru.gd" type="Script" id=36]
@@ -742,15 +742,15 @@ faceset = ExtResource( 29 )
 frames = SubResource( 30 )
 animation = "dancing"
 
-[node name="Juan" type="Node2D" parent="Cactus"]
+[node name="JP" type="Node2D" parent="Cactus"]
 position = Vector2( 1430.04, 483.999 )
 z_index = 2
 script = ExtResource( 32 )
 faceset = ExtResource( 33 )
 
-[node name="JuanBody" parent="Cactus/Juan" instance=ExtResource( 3 )]
+[node name="JPBody" parent="Cactus/JP" instance=ExtResource( 3 )]
 
-[node name="Sprite" type="AnimatedSprite" parent="Cactus/Juan/JuanBody"]
+[node name="Sprite" type="AnimatedSprite" parent="Cactus/JP/JPBody"]
 frames = SubResource( 35 )
 animation = "dancing"
 
