@@ -475,6 +475,7 @@ position = Vector2( -181.541, 44.8855 )
 
 [node name="Nunchaku" type="YSort" parent="Items"]
 visible = false
+position = Vector2( 787.555, 325.701 )
 
 [node name="Nunchaku" parent="Items/Nunchaku" instance=ExtResource( 21 )]
 position = Vector2( 1490.81, 714.254 )
@@ -694,7 +695,6 @@ position = Vector2( 947.552, 322.18 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 1
 playing = true
 
 [node name="smoke12c" type="AnimatedSprite" parent="Efectos"]
@@ -702,7 +702,6 @@ position = Vector2( 1462.02, 584.145 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 1
 playing = true
 
 [node name="DanHouseFire" type="AnimatedSprite" parent="Efectos"]
@@ -710,11 +709,11 @@ position = Vector2( 1284.81, 634.193 )
 scale = Vector2( 4.0625, 2.54167 )
 z_index = 16
 frames = SubResource( 70 )
-frame = 6
+frame = 11
 playing = true
 
 [node name="CarFire" type="AnimatedSprite" parent="Efectos"]
 position = Vector2( 1394.77, 418.445 )
 frames = SubResource( 70 )
-frame = 6
+frame = 11
 playing = true

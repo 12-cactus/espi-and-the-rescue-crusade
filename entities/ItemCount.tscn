@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Font/PressStart2P.tres" type="DynamicFont" id=1]
-[ext_resource path="res://assets/GUI/mac.png" type="Texture" id=2]
+[ext_resource path="res://assets/GUI/Items/mac.png" type="Texture" id=2]
 [ext_resource path="res://entities/ItemCount.gd" type="Script" id=3]
 
 [node name="ItemCount" type="HBoxContainer"]
