@@ -15,3 +15,14 @@ func on_cactus_saved(faceset: String, _item: String):
 		remove_child($AgusSaved)
 	if name.match("*dami*"):
 		remove_child($DamiSaved)
+	if name.match("*saba*"):
+		remove_child($SabaSaved)
+	if name.match("*jp*"):
+		remove_child($JPSaved)
+	if name.match("*dan*"):
+		remove_child($DanSaved)
+	if name.match("*anita*"):
+		remove_child($AnitaSaved)
+	if name.match("*pipi*"):
+		remove_child($PipiSaved)
+
