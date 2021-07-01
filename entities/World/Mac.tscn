@@ -4,7 +4,7 @@
 [ext_resource path="res://entities/World/Mac.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 33.3312
+radius = 20.1037
 
 [node name="Mac" type="Sprite" groups=[
 "Mac",

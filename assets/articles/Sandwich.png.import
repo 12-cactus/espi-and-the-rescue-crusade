@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Beaf.png-24b6a9f0812c528e0f7493b50411f721.stex"
+path="res://.import/Sandwich.png-1caec3d9d2c63a7f92538fd0d5e815ab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Food/Beaf.png"
-dest_files=[ "res://.import/Beaf.png-24b6a9f0812c528e0f7493b50411f721.stex" ]
+source_file="res://assets/articles/Sandwich.png"
+dest_files=[ "res://.import/Sandwich.png-1caec3d9d2c63a7f92538fd0d5e815ab.stex" ]
 
 [params]
 
@@ -24,7 +24,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

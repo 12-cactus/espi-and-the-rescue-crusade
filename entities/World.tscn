@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=119 format=2]
 
 [ext_resource path="res://entities/World/Conurban.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/World/Sandwich.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://entities/World/Wine.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Actors/Dami/SpriteSheet.png" type="Texture" id=11]
 [ext_resource path="res://entities/enemies/Enemy5.tscn" type="PackedScene" id=12]
+[ext_resource path="res://entities/World/Ivar.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/Actors/Saba/SpriteSheet.png" type="Texture" id=14]
 [ext_resource path="res://entities/Saba.gd" type="Script" id=15]
 [ext_resource path="res://entities/Dami.gd" type="Script" id=16]
@@ -39,7 +40,7 @@
 [ext_resource path="res://assets/Actors/Maru/Faceset.png" type="Texture" id=38]
 [ext_resource path="res://assets/Actors/Anita/SpriteSheet.png" type="Texture" id=39]
 [ext_resource path="res://entities/World/Vodka.tscn" type="PackedScene" id=40]
-[ext_resource path="res://entities/World/Michis.tscn" type="PackedScene" id=41]
+[ext_resource path="res://entities/World/Felipe.tscn" type="PackedScene" id=41]
 [ext_resource path="res://assets/Actors/Maru/SpriteSheet.png" type="Texture" id=42]
 [ext_resource path="res://assets/fx/SpriteSheet.png" type="Texture" id=43]
 [ext_resource path="res://assets/Actors/Pipi/redsamurai.png" type="Texture" id=46]
@@ -513,11 +514,10 @@ position = Vector2( 808.045, -195.997 )
 visible = false
 position = Vector2( 433.27, 781.234 )
 
-[node name="Michis" parent="Items/Michis" instance=ExtResource( 41 )]
+[node name="Felipe" parent="Items/Michis" instance=ExtResource( 41 )]
 position = Vector2( 1051.24, -222.791 )
 
-[node name="Michis2" parent="Items/Michis" instance=ExtResource( 41 )]
-position = Vector2( 1040.37, -357.791 )
+[node name="Ivar" parent="Items/Michis" instance=ExtResource( 13 )]
 
 [node name="Cactus" type="Node2D" parent="."]
 
@@ -694,7 +694,7 @@ position = Vector2( 947.552, 322.18 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 4
+frame = 1
 playing = true
 
 [node name="smoke12c" type="AnimatedSprite" parent="Efectos"]
@@ -702,7 +702,7 @@ position = Vector2( 1462.02, 584.145 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 4
+frame = 1
 playing = true
 
 [node name="DanHouseFire" type="AnimatedSprite" parent="Efectos"]
@@ -710,11 +710,11 @@ position = Vector2( 1284.81, 634.193 )
 scale = Vector2( 4.0625, 2.54167 )
 z_index = 16
 frames = SubResource( 70 )
-frame = 9
+frame = 6
 playing = true
 
 [node name="CarFire" type="AnimatedSprite" parent="Efectos"]
 position = Vector2( 1394.77, 418.445 )
 frames = SubResource( 70 )
-frame = 9
+frame = 6
 playing = true

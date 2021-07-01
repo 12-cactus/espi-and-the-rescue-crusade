@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Libro quejas 2.png-f4f055c768179a71204c37039a717c8d.stex"
+path="res://.import/Wine.png-182c7fcd65b074a7b866af7fed52c281.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/articles/Libro quejas 2.png"
-dest_files=[ "res://.import/Libro quejas 2.png-f4f055c768179a71204c37039a717c8d.stex" ]
+source_file="res://assets/articles/Wine.png"
+dest_files=[ "res://.import/Wine.png-182c7fcd65b074a7b866af7fed52c281.stex" ]
 
 [params]
 

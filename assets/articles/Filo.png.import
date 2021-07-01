@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fish.png-a23245795259af94a871412456c53a14.stex"
+path="res://.import/Filo.png-69b927fa80a1a52a8c17541615a01c08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Food/Fish.png"
-dest_files=[ "res://.import/Fish.png-a23245795259af94a871412456c53a14.stex" ]
+source_file="res://assets/articles/Filo.png"
+dest_files=[ "res://.import/Filo.png-69b927fa80a1a52a8c17541615a01c08.stex" ]
 
 [params]
 
@@ -24,7 +24,7 @@ flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false

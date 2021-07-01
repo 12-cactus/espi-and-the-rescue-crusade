@@ -4,14 +4,13 @@
 [ext_resource path="res://entities/World/Nunchaku.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 120.0
+radius = 12.3196
 
 [node name="Nunchaku" type="Sprite" groups=[
 "Nunchaku",
 "collectables",
 ]]
 position = Vector2( -68.5992, -34.7451 )
-scale = Vector2( 0.33074, 0.283607 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

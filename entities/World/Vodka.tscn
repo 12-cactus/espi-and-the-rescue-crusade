@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/Food/Wine.png" type="Texture" id=1]
+[ext_resource path="res://assets/articles/Vodka.png" type="Texture" id=1]
 [ext_resource path="res://entities/World/Vodka.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.875
-height = 0.0
+height = 18.4808
 
 [node name="Vodka" type="Sprite" groups=[
 "Vodka",

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bici2.png-20324c13d6af912c62d372c2b768a6b6.stex"
+path="res://.import/book.png-761b5040c1e5c5cf764e9e935e7f27cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/articles/bici2.png"
-dest_files=[ "res://.import/bici2.png-20324c13d6af912c62d372c2b768a6b6.stex" ]
+source_file="res://assets/articles/book.png"
+dest_files=[ "res://.import/book.png-761b5040c1e5c5cf764e9e935e7f27cd.stex" ]
 
 [params]
 

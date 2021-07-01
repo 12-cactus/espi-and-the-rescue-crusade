@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/articles/Libro quejas 2.png" type="Texture" id=1]
+[ext_resource path="res://assets/articles/Filo.png" type="Texture" id=1]
 [ext_resource path="res://entities/Filo.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 341.802
+radius = 19.2451
+height = 0.0
 
 [node name="Filo" type="Sprite" groups=[
 "Filo",
 "collectables",
 ]]
 position = Vector2( -4.759, -0.752991 )
-scale = Vector2( 0.30112, 0.297329 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

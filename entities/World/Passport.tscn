@@ -4,14 +4,13 @@
 [ext_resource path="res://entities/World/Passport.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 70.7252
+radius = 19.094
 
 [node name="Passport" type="Sprite" groups=[
 "Passport",
 "collectables",
 ]]
 position = Vector2( -10.6258, -12.7816 )
-scale = Vector2( 0.147473, 0.14283 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
