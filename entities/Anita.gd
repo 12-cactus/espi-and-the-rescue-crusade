@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var body: KinematicBody2D = $AnaBody
+onready var body: KinematicBody2D = $AnitaBody
 
 export (Texture) var faceset = null
 

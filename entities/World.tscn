@@ -34,11 +34,11 @@
 [ext_resource path="res://entities/JP.gd" type="Script" id=32]
 [ext_resource path="res://assets/Actors/JP/Faceset.png" type="Texture" id=33]
 [ext_resource path="res://entities/World/Book.tscn" type="PackedScene" id=34]
-[ext_resource path="res://entities/Ana.gd" type="Script" id=35]
+[ext_resource path="res://entities/Anita.gd" type="Script" id=35]
 [ext_resource path="res://entities/Maru.gd" type="Script" id=36]
-[ext_resource path="res://assets/Actors/Ana/Faceset.png" type="Texture" id=37]
+[ext_resource path="res://assets/Actors/Anita/Faceset.png" type="Texture" id=37]
 [ext_resource path="res://assets/Actors/Maru/Faceset.png" type="Texture" id=38]
-[ext_resource path="res://assets/Actors/Ana/SpriteSheet.png" type="Texture" id=39]
+[ext_resource path="res://assets/Actors/Anita/SpriteSheet.png" type="Texture" id=39]
 [ext_resource path="res://entities/World/Vodka.tscn" type="PackedScene" id=40]
 [ext_resource path="res://entities/World/Michis.tscn" type="PackedScene" id=41]
 [ext_resource path="res://assets/Actors/Maru/SpriteSheet.png" type="Texture" id=42]
@@ -754,15 +754,15 @@ faceset = ExtResource( 33 )
 frames = SubResource( 35 )
 animation = "dancing"
 
-[node name="Ana" type="Node2D" parent="Cactus"]
+[node name="Anita" type="Node2D" parent="Cactus"]
 position = Vector2( 1461.47, 281.072 )
 z_index = 2
 script = ExtResource( 35 )
 faceset = ExtResource( 37 )
 
-[node name="AnaBody" parent="Cactus/Ana" instance=ExtResource( 3 )]
+[node name="AnitaBody" parent="Cactus/Anita" instance=ExtResource( 3 )]
 
-[node name="Sprite" type="AnimatedSprite" parent="Cactus/Ana/AnaBody"]
+[node name="Sprite" type="AnimatedSprite" parent="Cactus/Anita/AnitaBody"]
 frames = SubResource( 40 )
 animation = "dancing"
 

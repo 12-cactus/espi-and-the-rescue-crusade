@@ -29,7 +29,7 @@
 [ext_resource path="res://assets/Actors/Markis/FacesetGrey.png" type="Texture" id=27]
 [ext_resource path="res://assets/Actors/Maru/FacesetGrey.png" type="Texture" id=28]
 [ext_resource path="res://assets/GUI/Libro quejas 2.png" type="Texture" id=29]
-[ext_resource path="res://assets/Actors/Ana/FacesetGrey.png" type="Texture" id=30]
+[ext_resource path="res://assets/Actors/Anita/FacesetGrey.png" type="Texture" id=30]
 [ext_resource path="res://assets/Actors/Alan/FacesetGrey.png" type="Texture" id=31]
 [ext_resource path="res://assets/Actors/JP/FacesetGrey.png" type="Texture" id=32]
 [ext_resource path="res://assets/Food/Wine.png" type="Texture" id=33]
@@ -209,12 +209,12 @@ margin_bottom = 70.0
 Face = ExtResource( 35 )
 Name = "Pipi"
 
-[node name="Ana" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
+[node name="Anita" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
 margin_left = 537.0
 margin_right = 585.0
 margin_bottom = 70.0
 Face = ExtResource( 30 )
-Name = "Ana"
+Name = "Anita"
 
 [node name="Maru" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
 margin_left = 603.0
