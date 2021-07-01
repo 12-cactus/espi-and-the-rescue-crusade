@@ -21,7 +21,7 @@ var items: Array = [
 	"Book",
 	"Vodka",
 	"Michis",
-	"BookPhilosophy"
+	"Filo"
 ]
 
 var cactus_to_save: Dictionary = {

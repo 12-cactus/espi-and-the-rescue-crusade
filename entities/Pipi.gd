@@ -5,7 +5,7 @@ onready var body: KinematicBody2D = $PipiBody
 export (Texture) var faceset = null
 
 var amount_needed: int = 1
-var item_needed: String = "BookPhilosophy"
+var item_needed: String = "Filo"
 
 var DialogDying = [
 	"¡Espi AYUDAMEEEE!\n\n   (Q to continue ...)",

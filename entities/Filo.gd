@@ -1,6 +1,6 @@
 extends Sprite
 
-var collectable_name: String = "BookPhilosophy"
+var collectable_name: String = "Filo"
 var player_over: KinematicBody2D = null
 
 func _physics_process(delta):

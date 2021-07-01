@@ -139,7 +139,7 @@ texture = ExtResource( 33 )
 visible = false
 texture = ExtResource( 34 )
 
-[node name="BookPhilosophy" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
+[node name="Filo" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 visible = false
 texture = ExtResource( 29 )
 
