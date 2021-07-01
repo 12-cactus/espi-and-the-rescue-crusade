@@ -34,7 +34,7 @@
 [ext_resource path="res://assets/Actors/Juan/FacesetGrey.png" type="Texture" id=32]
 [ext_resource path="res://assets/Food/Wine.png" type="Texture" id=33]
 [ext_resource path="res://assets/GUI/michi.png" type="Texture" id=34]
-[ext_resource path="res://assets/Actors/Alvaro/Facesetgrey.png" type="Texture" id=35]
+[ext_resource path="res://assets/Actors/Pipi/FacesetGrey.png" type="Texture" id=35]
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
@@ -216,12 +216,12 @@ margin_bottom = 70.0
 Face = ExtResource( 28 )
 Name = "Maru"
 
-[node name="Alvaro" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
+[node name="Pipi" parent="GUI/CactusToSave" instance=ExtResource( 16 )]
 margin_left = 603.0
 margin_right = 651.0
 margin_bottom = 70.0
 Face = ExtResource( 35 )
-Name = "Alvaro"
+Name = "Pipi"
 
 [node name="World" parent="." instance=ExtResource( 1 )]
 position = Vector2( -541.849, -347.649 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Facesetgrey.png-400b7407d047582c2252d2aba053cfc8.stex"
+path="res://.import/FacesetGrey.png-bc3d30ae7ba227b52e84da8789314d84.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Actors/Alvaro/Facesetgrey.png"
-dest_files=[ "res://.import/Facesetgrey.png-400b7407d047582c2252d2aba053cfc8.stex" ]
+source_file="res://assets/Actors/Pipi/FacesetGrey.png"
+dest_files=[ "res://.import/FacesetGrey.png-bc3d30ae7ba227b52e84da8789314d84.stex" ]
 
 [params]
 

@@ -19,9 +19,9 @@ var Cactus = [
   "Dan",
   "Alan",
   "Juan",
+  "Pipi",
   "Ana",
   "Maru",
-  "Alvaro"
 ]
 
 func _ready():

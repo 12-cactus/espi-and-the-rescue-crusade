@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/redsamurai.png-8905b7a680fdf31b89592f97e8e9ee3f.stex"
+path="res://.import/Faceset.png-6c823d0be255bb7f7de35ab75a82bdd9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Actors/Alvaro/redsamurai.png"
-dest_files=[ "res://.import/redsamurai.png-8905b7a680fdf31b89592f97e8e9ee3f.stex" ]
+source_file="res://assets/Actors/Pipi/Faceset.png"
+dest_files=[ "res://.import/Faceset.png-6c823d0be255bb7f7de35ab75a82bdd9.stex" ]
 
 [params]
 

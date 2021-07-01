@@ -45,10 +45,10 @@
 [ext_resource path="res://assets/fx/SpriteSheet.png" type="Texture" id=43]
 [ext_resource path="res://assets/fx/SpriteSheetFire.png" type="Texture" id=44]
 [ext_resource path="res://assets/fx/plant.png" type="Texture" id=45]
-[ext_resource path="res://assets/Actors/Alvaro/redsamurai.png" type="Texture" id=46]
-[ext_resource path="res://entities/Alvaro.gd" type="Script" id=47]
+[ext_resource path="res://assets/Actors/Pipi/redsamurai.png" type="Texture" id=46]
+[ext_resource path="res://entities/Pipi.gd" type="Script" id=47]
 [ext_resource path="res://entities/BookPhilosophy.tscn" type="PackedScene" id=48]
-[ext_resource path="res://assets/Actors/Alvaro/Faceset.png" type="Texture" id=49]
+[ext_resource path="res://assets/Actors/Pipi/Faceset.png" type="Texture" id=49]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 8 )
@@ -778,15 +778,15 @@ faceset = ExtResource( 38 )
 frames = SubResource( 45 )
 animation = "dancing"
 
-[node name="Alvaro" type="Node2D" parent="Cactus"]
+[node name="Pipi" type="Node2D" parent="Cactus"]
 position = Vector2( 1301.72, 424.73 )
 z_index = 2
 script = ExtResource( 47 )
 faceset = ExtResource( 49 )
 
-[node name="AlvaroBody" parent="Cactus/Alvaro" instance=ExtResource( 3 )]
+[node name="PipiBody" parent="Cactus/Pipi" instance=ExtResource( 3 )]
 
-[node name="Sprite" type="AnimatedSprite" parent="Cactus/Alvaro/AlvaroBody"]
+[node name="Sprite" type="AnimatedSprite" parent="Cactus/Pipi/PipiBody"]
 frames = SubResource( 50 )
 animation = "dancing"
 

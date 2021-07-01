@@ -32,9 +32,9 @@ var cactus_to_save: Dictionary = {
 	"Dan": false,
 	"Alan": false,
 	"Juan": false,
+	"Pipi": false,
 	"Ana": false,
 	"Maru": false,
-	"Alvaro": false
 }
 
 func _ready():
