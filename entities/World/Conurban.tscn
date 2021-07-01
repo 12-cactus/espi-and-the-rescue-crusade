@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://entities/World/Tileset/TilesetFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://entities/World/Tileset/TilesetWalls.tres" type="TileSet" id=2]
@@ -6,11 +6,12 @@
 [ext_resource path="res://entities/World/MusicArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://entities/World/MusicArea.gd" type="Script" id=5]
 [ext_resource path="res://assets/sound/Enemy.ogg" type="AudioStream" id=6]
-[ext_resource path="res://assets/sound/First Level.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/sound/Background.ogg" type="AudioStream" id=7]
 [ext_resource path="res://assets/Backgrounds/TilesetHouse.png" type="Texture" id=8]
 [ext_resource path="res://assets/Backgrounds/defe.png" type="Texture" id=9]
 [ext_resource path="res://assets/Backgrounds/Car.png" type="Texture" id=10]
 [ext_resource path="res://entities/World/Locks.gd" type="Script" id=11]
+[ext_resource path="res://assets/sound/Second Level.ogg" type="AudioStream" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 64, 48, 0, 48, 0, 16, 64, 16 )
@@ -523,10 +524,13 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 2/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 163.071, 280.935 )
+extents = Vector2( 203.208, 255.007 )
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 160.698, 249.271 )
+extents = Vector2( 160.698, 243.752 )
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 216.65, 434.557 )
 
 [node name="Conurban" type="YSort"]
 
@@ -593,7 +597,7 @@ script = ExtResource( 5 )
 song = ExtResource( 7 )
 
 [node name="Shape" type="CollisionShape2D" parent="MusicAreas/MusicArea"]
-position = Vector2( 926.88, 289.647 )
+position = Vector2( 912.584, 275.129 )
 shape = SubResource( 26 )
 
 [node name="MusicArea2" parent="MusicAreas" instance=ExtResource( 4 )]
@@ -601,10 +605,20 @@ script = ExtResource( 5 )
 song = ExtResource( 6 )
 
 [node name="Shape" type="CollisionShape2D" parent="MusicAreas/MusicArea2"]
-position = Vector2( 917.265, 259.752 )
+position = Vector2( 919.265, 258.752 )
 shape = SubResource( 27 )
+
+[node name="MusicArea3" parent="MusicAreas" instance=ExtResource( 4 )]
+script = ExtResource( 5 )
+song = ExtResource( 12 )
+
+[node name="Shape" type="CollisionShape2D" parent="MusicAreas/MusicArea3"]
+position = Vector2( 1317.12, 463.123 )
+shape = SubResource( 28 )
 
 [connection signal="body_entered" from="MusicAreas/MusicArea" to="MusicAreas/MusicArea" method="_on_body_entered"]
 [connection signal="body_exited" from="MusicAreas/MusicArea" to="MusicAreas/MusicArea" method="_on_body_exited"]
 [connection signal="body_entered" from="MusicAreas/MusicArea2" to="MusicAreas/MusicArea2" method="_on_body_entered"]
 [connection signal="body_exited" from="MusicAreas/MusicArea2" to="MusicAreas/MusicArea2" method="_on_body_exited"]
+[connection signal="body_entered" from="MusicAreas/MusicArea3" to="MusicAreas/MusicArea3" method="_on_body_entered"]
+[connection signal="body_exited" from="MusicAreas/MusicArea3" to="MusicAreas/MusicArea3" method="_on_body_exited"]

@@ -51,18 +51,22 @@
 [ext_resource path="res://assets/Actors/Pipi/Faceset.png" type="Texture" id=49]
 
 [sub_resource type="AtlasTexture" id=1]
+flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=2]
+flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 80, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=3]
+flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 32, 80, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=4]
+flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 48, 80, 16, 16 )
 
@@ -472,12 +476,12 @@ animations = [ {
 }, {
 "frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
 "loop": true,
-"name": "walk_down",
+"name": "idle_left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 71 ) ],
 "loop": true,
-"name": "idle_left",
+"name": "walk_down",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 72 ), SubResource( 65 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ) ],

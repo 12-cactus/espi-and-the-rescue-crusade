@@ -5,9 +5,6 @@ onready var World: Node2D = $World
 onready var LifeBar: Control = $GUI/LifeBar
 onready var Espi: KinematicBody2D = $Espi
 onready var Locks: YSort = $World/Conurban/Locks
-
-onready var IntroMusic = load("res://assets/sound/Intro.ogg")
-onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
 onready var MusicPlayer = $MusicPlayer
 
 var format_node = "World/Cactus/{name}/{name}Body/StateMachine"
@@ -25,7 +22,7 @@ var Cactus = [
 ]
 
 func _ready():
-	MusicPlayer._on_music_changed(IntroMusic)
+	MusicPlayer.play_intro_music()
 	Espi.connect("hit", GUI, "on_player_hit")
 	Espi.connect("item_collected", GUI, "on_item_collected")
 	
@@ -46,10 +43,10 @@ func _ready():
 	LifeBar.connect("revive", GUI, "on_player_revive")
 
 func stop_intro_music():
-	MusicPlayer._on_music_changed(null)
+	MusicPlayer.play_first_level_music()
 
 func start_intro_music():
-	MusicPlayer._on_music_changed(StoryMusic)
+	MusicPlayer.play_story_music()
 	
 func play_game_over():
 	MusicPlayer.play_game_over()
