@@ -89,9 +89,10 @@ func _set_all_invisible():
 func on_player_revive():
 	show()
 
-func on_show_dialog(faceset, text):
+func on_show_dialog(faceset: Texture, text):
 	Dialog.get_node("face").texture = faceset
 	Dialog.get_node("text").set_text(text)
+	Dialog.get_node("name").set_text(faceset.resource_path.split("/")[4])
 	Dialog.visible = true
 
 func on_leave_dialog():
