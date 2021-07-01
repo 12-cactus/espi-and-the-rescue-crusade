@@ -48,5 +48,8 @@ func stop_intro_music():
 func start_intro_music():
 	MusicPlayer.play_story_music()
 	
+func start_game_won_music():
+	MusicPlayer.play_game_won_music()
+	
 func play_game_over():
 	MusicPlayer.play_game_over()

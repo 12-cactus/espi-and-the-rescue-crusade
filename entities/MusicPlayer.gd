@@ -5,6 +5,7 @@ onready var IntroMusic = load("res://assets/sound/Intro.ogg")
 onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
 onready var BackgroundMusic = load("res://assets/sound/First Level.ogg")
 onready var GameOver = load("res://assets/sound/GameOver.wav")
+onready var GameWon = load("res://assets/sound/Game won.ogg")
 
 const BASE_VOLUME = -10
 const MUTE_VOLUME = -60
@@ -38,3 +39,6 @@ func play_story_music():
 
 func play_game_over():
 	self._on_music_changed(GameOver)
+	
+func play_game_won_music():
+	self._on_music_changed(GameWon)

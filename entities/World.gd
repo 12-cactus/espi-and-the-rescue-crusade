@@ -7,6 +7,8 @@ var started: bool = false
 var intro_started: bool = false
 
 func _physics_process(delta):
+	if started and self.get_parent().GUI._are_all_cactus_saved():
+		self.get_parent().start_game_won_music()
 	if started and not intro_started and Input.is_action_just_pressed("start"):
 		self.get_parent().stop_intro_music()
 		emit_signal("intro")
