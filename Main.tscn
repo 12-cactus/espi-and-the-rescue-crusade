@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://entities/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/player/Espi.tscn" type="PackedScene" id=2]
@@ -25,16 +25,17 @@
 [ext_resource path="res://assets/GUI/Items/passport.png" type="Texture" id=23]
 [ext_resource path="res://assets/Actors/Dan/FacesetGrey.png" type="Texture" id=24]
 [ext_resource path="res://assets/GUI/Items/nunchaku.png" type="Texture" id=25]
-[ext_resource path="res://assets/GUI/mac.png" type="Texture" id=26]
+[ext_resource path="res://assets/GUI/Items/mac.png" type="Texture" id=26]
 [ext_resource path="res://assets/Actors/Markis/FacesetGrey.png" type="Texture" id=27]
 [ext_resource path="res://assets/Actors/Maru/FacesetGrey.png" type="Texture" id=28]
-[ext_resource path="res://assets/GUI/Libro quejas 2.png" type="Texture" id=29]
+[ext_resource path="res://assets/GUI/Items/Filo.png" type="Texture" id=29]
 [ext_resource path="res://assets/Actors/Anita/FacesetGrey.png" type="Texture" id=30]
 [ext_resource path="res://assets/Actors/Alan/FacesetGrey.png" type="Texture" id=31]
 [ext_resource path="res://assets/Actors/JP/FacesetGrey.png" type="Texture" id=32]
-[ext_resource path="res://assets/Food/Wine.png" type="Texture" id=33]
-[ext_resource path="res://assets/GUI/michi.png" type="Texture" id=34]
+[ext_resource path="res://assets/GUI/Items/Vodka.png" type="Texture" id=33]
+[ext_resource path="res://assets/GUI/Items/Cat.png" type="Texture" id=34]
 [ext_resource path="res://assets/Actors/Pipi/FacesetGrey.png" type="Texture" id=35]
+[ext_resource path="res://assets/GUI/Items/Libro.png" type="Texture" id=36]
 
 [node name="Main" type="Node"]
 script = ExtResource( 5 )
@@ -93,9 +94,9 @@ scale = Vector2( 2.08, 2.08 )
 
 [node name="ItemsToCollect" type="VBoxContainer" parent="GUI"]
 margin_left = 14.0
-margin_top = 48.0
+margin_top = 69.0
 margin_right = 82.0
-margin_bottom = 512.0
+margin_bottom = 533.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -129,7 +130,7 @@ texture = ExtResource( 26 )
 [node name="Book" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 visible = false
 alignment = 1
-texture = ExtResource( 29 )
+texture = ExtResource( 36 )
 
 [node name="Vodka" parent="GUI/ItemsToCollect" instance=ExtResource( 15 )]
 visible = false
