@@ -9,13 +9,13 @@ var item_needed: String = "Passport"
 
 var DialogDying = [
 	"¡Espi por favor!\n\n   (Q to continue ...)",
-	"¡necesito que encuentres mi pasaporte,\n sino no puedo irme a Canada!"
+	"¡Necesito que encuentres mi pasaporte!",
+	"Sin mi pasaporte no puedo irme a Canada!",
+	"¡¡Ya van 3 veces que Dami me lo esconde!!",
+	"¡¡Encontralo por favor!!"
 ]
-var DialogVisited = [
-	"Se me va el vuelo",
-	"Mientras voy a ponerme otra campera"
-]
-var DialogRescued = ["¡Ay si! Ya salgo para Ezeiza"]
+var DialogVisited = ["¡¡Dale que me cancelan el viaje!!"]
+var DialogRescued = ["¡Ay si! Sabakuskas sale para Ezeiza"]
 
 func _ready():
 	body.initialize(

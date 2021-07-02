@@ -10,7 +10,7 @@ var item_needed: String = "Sandwich"
 var DialogDying = [
 	"¡Espiiii!\n\n   (Q to continue ...)",
 	"¡Me robaron hasta las medias!",
-	 "Para poder recuperarme necesito unos sanguchitos"
+	"Para poder recuperarme necesito unos sanguchitos"
 ]
 var DialogVisited = [
 	"No es suficiente para recuperarme...",

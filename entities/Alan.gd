@@ -8,13 +8,18 @@ var amount_needed: int = 1
 var item_needed: String = "Mac"
 
 var DialogDying = [
-	"¡No encuentro mi MAC!\n\n   (Q to continue ...)",
+	"¡Espi No encuentro mi MAC!\n\n   (Q to continue ...)",
+	"No me obliguen a usar Windows de nuevo, por favor",
 	"¡Ayudame a encontrarla!"
 ]
 var DialogVisited = [
-	"Tengo que terminar de laburar",
+	"Dale que tengo que terminar de laburar",
+	"Esos efectos de React no se programan solos"
 ]
-var DialogRescued = ["Ahora si puedo ver unos Laracasts"]
+var DialogRescued = [
+	"¡Genial!",
+	"Ahora ya puedo volver a ver unos Laracasts"
+]
 
 func _ready():
 	body.initialize(

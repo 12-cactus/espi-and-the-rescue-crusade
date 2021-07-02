@@ -8,14 +8,18 @@ var amount_needed: int = 2
 var item_needed: String = "Michis"
 
 var DialogDying = [
-	"¡Espi!\n\n   (Q to continue ...)",
-	"¡El viento me abrió la puerta y se escaparon Ivar y Feli,\n Por favor ayudame a encontrarlos!"
+	"¡Hola Espi querido!\n\n   (Q to continue ...)",
+	"Estaba haciendo masa madre y se escaparon los michis",
+	"Ayudame a encontrar a Ivar y Feli.\n¡Por favor Espi!"
 ]
 var DialogVisited = [
-	"Ivar ¿Dónde estas?",
+	"Ivar ¿Dónde estás?",
 	"¡Felipe! tengo pollito, Feli Feli..."
 ]
-var DialogRescued = ["¡Encontraste a mis Michis! \n ¡Gracias!"]
+var DialogRescued = [
+	"¡Encontraste a mis chiquis, Espi!",
+	"¡Gracias, sos el mejor!"
+]
 
 func _ready():
 	body.initialize(

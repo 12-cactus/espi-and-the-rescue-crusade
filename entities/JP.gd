@@ -9,14 +9,18 @@ var item_needed: String = "Book"
 
 var DialogDying = [
 	"¡Espi!\n\n   (Q to continue ...)",
-	"¡Este juego es una porquería! no me importa que sea gratis,\n",
-	"no pienso dejar que esto siga hasta que no me traigan el libro de quejas"
+	"¡Este juego es una porquería!",
+	"¡No me importa que sea gratis!",
+	"No me voy a mover de acá\nhasta que no me traigan el libro de quejas"
 ]
 var DialogVisited = [
-	"Apura, no tengo todo el día",
-	"Mas tardas más me voy a quejar..."
+	"Apura amigo, no tengo todo el día",
+	"Mas tardás más me voy a quejar"
 ]
-var DialogRescued = ["Gracias pero,\n ¡podrías haberlo traído más rápido!"]
+var DialogRescued = [
+	"¡Gracias!",
+	"Igual podrías haberlo traído más rápido"
+]
 
 func _ready():
 	body.initialize(

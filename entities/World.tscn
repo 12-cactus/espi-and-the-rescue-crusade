@@ -689,7 +689,7 @@ position = Vector2( 947.552, 322.18 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 1
+frame = 4
 playing = true
 
 [node name="smoke12c" type="AnimatedSprite" parent="Efectos"]
@@ -697,7 +697,7 @@ position = Vector2( 1462.02, 584.145 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 1
+frame = 4
 playing = true
 
 [node name="DanHouseFire" type="AnimatedSprite" parent="Efectos"]
@@ -705,9 +705,11 @@ position = Vector2( 1284.81, 634.193 )
 scale = Vector2( 4.0625, 2.54167 )
 z_index = 16
 frames = SubResource( 70 )
+frame = 9
 playing = true
 
 [node name="CarFire" type="AnimatedSprite" parent="Efectos"]
 position = Vector2( 1394.77, 418.445 )
 frames = SubResource( 70 )
+frame = 9
 playing = true

@@ -8,13 +8,19 @@ var amount_needed: int = 1
 var item_needed: String = "Filo"
 
 var DialogDying = [
-	"¡Espi AYUDAMEEEE!\n\n   (Q to continue ...)",
-	"¡Perdí mi Libro de filosofía y no se qué pensar de la vida!"
+	"¡Auxilio en nombre de Sócrates!\n\n   (Q to continue ...)",
+	"Perdí mi libro de filosofía",
+	"Sin mi libro no puedo cultivar mi mente",
 ]
 var DialogVisited = [
-	"Necesito cultivar mi mente y peinar mi barba"
+	"Necesito salir de la caverna",
+	"Necesito peinar mi barba",
+	"Quiero mi libro..."
 ]
-var DialogRescued = ["Espi,\n ¡La libertad está en ser dueños de la propia vida...!"]
+var DialogRescued = [
+	"¡Eureka Espi!",
+	"¡La libertad está en ser dueños de la propia vida!"
+]
 
 func _ready():
 	body.initialize(

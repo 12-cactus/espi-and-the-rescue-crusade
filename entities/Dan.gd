@@ -8,14 +8,15 @@ var amount_needed: int = 1
 var item_needed: String = "Nunchaku"
 
 var DialogDying = [
-	"¡Espi dame una mano!\n\n   (Q to continue ...)",
-	"¡necesito que encuentres mi Nunchaku!"
+	"Espi escuchame una cosas\n\n   (Q to continue ...)",
+	"¡Necesito que encuentres mi Nunchaku!",
+	"¿Me hacés ese favor?"
 ]
 var DialogVisited = [
-	"Tengo que entrenar y se me hace tarde",
+	"¡Tengo que entrenar, se me hace tarde!",
 	"Si no me apuro mi novia me va a retar"
 ]
-var DialogRescued = ["Sos groso Espi"]
+var DialogRescued = ["Sos un groso Espi"]
 
 func _ready():
 	body.initialize(

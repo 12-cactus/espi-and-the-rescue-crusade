@@ -8,16 +8,18 @@ var amount_needed: int = 1
 var item_needed: String = "Bike"
 
 var DialogDying = [
-	"¡AIIIIIUUUUDA!\n\n   (Q to continue ...)",
-	 "Espi me pegue un palo haciendo un truco con la bici \n", 
-	 "y la perdi"
+	"¡Qué onda perro!\n\n   (Q to continue ...)",
+	"Escuchame, me pegue un palo con la bici",
+	"Me estaba haciendo el bicivolador \npero me la di en la pera\ny no se dónde quedó"
 ]
 
 var DialogVisited = [
 	"Traeme la bici por favor",
-	"Te prometo que no vuelvo a intentarlo"
+	"Te juro que es la última vez que lo intento\nla espalda ya no me da"
 ]
-var DialogRescued = ["Iupii, ya Puedo ir al hospital"]
+var DialogRescued = [
+	"¡Vamos canejo! Me voy volando al hospital"
+]
 
 func _ready():
 	body.initialize(
