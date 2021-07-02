@@ -11,6 +11,7 @@ radius = 12.3196
 "collectables",
 ]]
 position = Vector2( -68.5992, -34.7451 )
+z_index = 7
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

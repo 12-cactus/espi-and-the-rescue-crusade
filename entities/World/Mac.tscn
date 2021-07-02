@@ -4,14 +4,13 @@
 [ext_resource path="res://entities/World/Mac.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 20.1037
+radius = 10.4845
 
 [node name="Mac" type="Sprite" groups=[
 "Mac",
 "collectables",
 ]]
 position = Vector2( -102.119, -79.7728 )
-scale = Vector2( 0.0841362, 0.0777705 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

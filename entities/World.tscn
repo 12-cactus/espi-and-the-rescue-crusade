@@ -475,41 +475,40 @@ position = Vector2( -181.541, 44.8855 )
 
 [node name="Nunchaku" type="YSort" parent="Items"]
 visible = false
-position = Vector2( 787.555, 325.701 )
+position = Vector2( 789.305, 337.763 )
+z_index = 7
 
 [node name="Nunchaku" parent="Items/Nunchaku" instance=ExtResource( 21 )]
-position = Vector2( 1490.81, 714.254 )
-scale = Vector2( 0.113447, 0.155024 )
+position = Vector2( 0.992188, 1.31982 )
 z_index = 2
 
 [node name="Mac" type="YSort" parent="Items"]
 visible = false
-position = Vector2( 554.139, 446.34 )
+position = Vector2( 618.803, 396.131 )
 
 [node name="Mac" parent="Items/Mac" instance=ExtResource( 28 )]
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 0.111221, -0.169983 )
 
 [node name="Book" type="YSort" parent="Items"]
 visible = false
-position = Vector2( -2.1189, 0 )
+position = Vector2( 1227.98, 980.272 )
 
 [node name="Book" parent="Items/Book" instance=ExtResource( 34 )]
-position = Vector2( 1230.08, 977.011 )
+position = Vector2( 8.19934, 4.03204 )
 
 [node name="Filo" type="YSort" parent="Items"]
 visible = false
-position = Vector2( 1291.54, 498.936 )
+position = Vector2( 1132.69, 639.094 )
 
 [node name="Filo" parent="Items/Filo" instance=ExtResource( 48 )]
-position = Vector2( -142.324, 83.666 )
-scale = Vector2( 0.0256332, 0.0258975 )
+position = Vector2( -0.828125, 2.24023 )
 
 [node name="Vodka" type="YSort" parent="Items"]
 visible = false
-position = Vector2( 514.088, 527.557 )
+position = Vector2( 1456.09, 473.557 )
 
 [node name="Vodka" parent="Items/Vodka" instance=ExtResource( 40 )]
-position = Vector2( 808.045, -195.997 )
+position = Vector2( 0.0449829, 2.00307 )
 
 [node name="Michis" type="YSort" parent="Items"]
 visible = false
@@ -695,6 +694,7 @@ position = Vector2( 947.552, 322.18 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
+frame = 1
 playing = true
 
 [node name="smoke12c" type="AnimatedSprite" parent="Efectos"]
@@ -702,6 +702,7 @@ position = Vector2( 1462.02, 584.145 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
+frame = 1
 playing = true
 
 [node name="DanHouseFire" type="AnimatedSprite" parent="Efectos"]
@@ -709,11 +710,11 @@ position = Vector2( 1284.81, 634.193 )
 scale = Vector2( 4.0625, 2.54167 )
 z_index = 16
 frames = SubResource( 70 )
-frame = 11
+frame = 6
 playing = true
 
 [node name="CarFire" type="AnimatedSprite" parent="Efectos"]
 position = Vector2( 1394.77, 418.445 )
 frames = SubResource( 70 )
-frame = 11
+frame = 6
 playing = true
