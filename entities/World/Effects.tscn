@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://entities/World/Rain.tscn" type="PackedScene" id=1]
+
+[node name="Effects" type="YSort"]
+
+[node name="FX" type="Position2D" parent="."]
+
+[node name="Rain" parent="FX" instance=ExtResource( 1 )]
+position = Vector2( 467.194, 2.66968 )
