@@ -10,6 +10,7 @@ onready var WindowFrame: TextureRect = $WindowFrame
 onready var Dialog: Sprite = $Dialog
 onready var CactusToSave = $CactusToSave
 onready var ItemsToCollect = $ItemsToCollect
+onready var Post_credits = $PostCredits
 onready var Sound = load("res://entities/MusicPlayer.tscn")
 
 var items: Array = [
@@ -69,6 +70,10 @@ func on_player_dead():
 func _on_credits():
 	_set_all_invisible()
 	Credits.visible = true
+	
+func _on_post_credits():
+	_set_all_invisible()
+	Post_credits.visible = true
 
 func _are_all_cactus_saved() -> bool:
 	for rescued in cactus_to_save.values():
