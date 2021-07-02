@@ -1,8 +1,12 @@
 extends AudioStreamPlayer
 
 onready var tween = $Tween
-onready var BackgroundMusic = load("res://assets/sound/Background.mp3")
+onready var IntroMusic = load("res://assets/sound/Intro.ogg")
+onready var StoryMusic = load("res://assets/sound/StoryTelling.ogg")
+onready var BackgroundMusic = load("res://assets/sound/First Level.ogg")
 onready var GameOver = load("res://assets/sound/GameOver.wav")
+onready var GameWon = load("res://assets/sound/Game won.ogg")
+
 const BASE_VOLUME = -10
 const MUTE_VOLUME = -60
 
@@ -23,12 +27,18 @@ func _on_music_changed(song):
 func reset_sound():
 	tween.stop_all()
 	volume_db = BASE_VOLUME
+	
+func play_first_level_music():
+	self._on_music_changed(null)
+
+func play_intro_music():
+	self._on_music_changed(IntroMusic)
+	
+func play_story_music():
+	self._on_music_changed(StoryMusic)
 
 func play_game_over():
 	self._on_music_changed(GameOver)
-
-func fade_out():
-	tween.interpolate_property(self,"volume_db",BASE_VOLUME,MUTE_VOLUME,1.4,Tween.TRANS_LINEAR,Tween.EASE_IN)
-	tween.start()
 	
-
+func play_game_won_music():
+	self._on_music_changed(GameWon)

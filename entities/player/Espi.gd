@@ -12,8 +12,10 @@ onready var ItemPickedSound: AudioStreamPlayer2D = $Item_Picked
 
 var speed: int = 100
 var velocity: Vector2 = Vector2.ZERO
+var back_force: int = -10
 var item_picked: Sprite = null
-var direction:Vector2 = Vector2.DOWN
+var direction: Vector2 = Vector2.DOWN
+var is_in_dialog: bool = false
 var alive
 enum Mov { LEFT = 0, RIGHT = 0, UP = 0, DOWN = 0 }
 
@@ -26,18 +28,18 @@ func _ready():
 func _physics_process(_delta):
 	get_movement_input()
 	fire()
-
 	
 	if item_picked != null:
 		Bag.add(item_picked)
 		item_picked = null
 	
-	velocity = Vector2(Mov.RIGHT-Mov.LEFT, Mov.DOWN-Mov.UP)
+	velocity = Vector2(Mov.RIGHT - Mov.LEFT, Mov.DOWN - Mov.UP)
 	velocity = velocity.normalized() * speed
 	velocity = move_and_slide(velocity)
 
-func in_dialog(is_in_dialog: bool):
-	if is_in_dialog:
+func in_dialog(_is_in_dialog: bool):
+	self.is_in_dialog = _is_in_dialog
+	if self.is_in_dialog:
 		body.playing = false
 		if direction == Vector2.UP:
 			body.animation = "idle_up"
@@ -47,7 +49,7 @@ func in_dialog(is_in_dialog: bool):
 			body.animation = "idle_left"
 		if direction == Vector2.RIGHT:
 			body.animation = "idle_right"
-	set_physics_process(not is_in_dialog)
+	set_physics_process(not self.is_in_dialog)
 
 func picked(item: Sprite):
 	item_picked = item
@@ -77,14 +79,17 @@ func get_movement_input():
 		direction = Vector2.UP
 		body.playing = true
 		body.play("walk_up")
+		return
 	if Mov.DOWN:
 		direction = Vector2.DOWN
 		body.playing = true
 		body.play("walk_down")
+		return
 	if Mov.LEFT:
 		direction = Vector2.LEFT
 		body.playing = true
 		body.play("walk_left")
+		return
 	if Mov.RIGHT:
 		direction = Vector2.RIGHT
 		body.playing = true
@@ -99,6 +104,7 @@ func fire():
 		ShotEffect.play()
 
 func notify_hit():
+	move_and_collide(direction * back_force)
 	SoundHurt.play()
 	emit_signal("hit", 2)
 
@@ -109,6 +115,7 @@ func death():
 
 func revive():
 	alive = true
+	is_in_dialog = false
 	position = Vector2(293.213, 258.349)
 	body.frame = 0
 	collision_layer = 1

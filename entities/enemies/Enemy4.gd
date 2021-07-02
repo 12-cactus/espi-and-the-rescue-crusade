@@ -13,7 +13,7 @@ onready var player = get_node("/root/Main/Espi")
 var count: int = 0
 var enemy: KinematicBody2D = null
 var flag: bool = false
-
+var dead: bool = false
 
 func _ready():
 	body.animation = "idle_up"
@@ -64,13 +64,16 @@ func _on_Area2D_body_exited(body_enter):
 	flag = false
 
 func notify_hit():
-	life_bar.value -= 10
-	if !life_bar.value:
-		death()
+	if not dead:
+		life_bar.value -= 10
+		if !life_bar.value:
+			death()
 
 func death():
 	set_physics_process(false)
-	set_process(false)	
+	set_process(false)
+	$CollisionShape2D.visible = false
+	dead = true
 	body.animation = "death"
 	AudioPlayer.stream = DeadSound
 	AudioPlayer.play()

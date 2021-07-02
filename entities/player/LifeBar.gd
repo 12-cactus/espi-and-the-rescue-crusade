@@ -3,11 +3,11 @@ extends Control
 signal dead
 signal revive
 
-export var start_life = 12
+export var start_life = 20
 
-var max_life = 12 setget set_max_life
-var life = 12 setget set_life
-var life_preview = 12 setget set_preview_life
+var max_life = 20 setget set_max_life
+var life = 20 setget set_life
+var life_preview = 20 setget set_preview_life
 
 const NBR_BY_HEART = 4.0
 onready var hearts = $Hearts
@@ -19,7 +19,7 @@ func _physics_process(_delta):
 		emit_signal("revive")
 
 func _ready():
-	self.max_life = 12
+	self.max_life = 20
 	self.life = start_life
 
 func reset():
