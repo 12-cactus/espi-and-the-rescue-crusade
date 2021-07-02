@@ -7,6 +7,7 @@ onready var weapon: PackedScene = load("res://entities/weapons/bottle.tscn")
 
 var count: int = 0
 var enemy: KinematicBody2D = null
+var dead: bool = false
 
 func _ready():
 	body.frame = 0
@@ -25,18 +26,30 @@ func fire():
 func _on_Area2D_body_entered(body):
 	if body.name == "Espi":
 		enemy = body
+		var direction = (body.global_position - global_position).normalized()
+		if direction.x >= 0 && direction.y >= 0:
+			body.frame = 3
+		if direction.x >= 0 && direction.y < 0:
+			body.frame = 1
+		if direction.x < 0 && direction.y >= 0:
+			body.frame = 0
+		if direction.x < 0 && direction.y < 0:
+			body.frame = 2
 
 func _on_Area2D_body_exited(body):
 	enemy = null
 
 func notify_hit():
-	life_bar.value -= 10
-	if !life_bar.value:
-		death()
+	if not dead:
+		life_bar.value -= 10
+		if !life_bar.value:
+			death()
 
 func death():
 	set_physics_process(false)
-	set_process(false)	
+	set_process(false)
+	$CollisionShape2D.visible = false
+	dead = true
 	$AudioStreamPlayer2D.play()
 	body.frame = 4
 	dead_timer.connect("timeout", self, "_on_dead_timer_timeoutt")

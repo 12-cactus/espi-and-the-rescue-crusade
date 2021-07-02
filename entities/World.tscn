@@ -643,7 +643,7 @@ position = Vector2( 257.636, 89.5627 )
 position = Vector2( 105.426, 53.3202 )
 
 [node name="EnemyIntermedio" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 257.596, 693.438 )
+position = Vector2( 390.34, 754.019 )
 
 [node name="EnemyDami1" parent="Enemies" instance=ExtResource( 12 )]
 position = Vector2( 602.903, 727.133 )
@@ -689,7 +689,7 @@ position = Vector2( 947.552, 322.18 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 1
+frame = 3
 playing = true
 
 [node name="smoke12c" type="AnimatedSprite" parent="Efectos"]
@@ -697,7 +697,7 @@ position = Vector2( 1462.02, 584.145 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 1
+frame = 3
 playing = true
 
 [node name="DanHouseFire" type="AnimatedSprite" parent="Efectos"]
@@ -705,9 +705,11 @@ position = Vector2( 1284.81, 634.193 )
 scale = Vector2( 4.0625, 2.54167 )
 z_index = 16
 frames = SubResource( 70 )
+frame = 2
 playing = true
 
 [node name="CarFire" type="AnimatedSprite" parent="Efectos"]
 position = Vector2( 1394.77, 418.445 )
 frames = SubResource( 70 )
+frame = 2
 playing = true
