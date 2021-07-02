@@ -9,15 +9,15 @@ var item_needed: String = "Wine"
 
 var DialogDying = [
 	"¡AIIIIIUUUUDA!\n\n   (Q to continue ...)",
-	"¡Gracias por deshacerte del Gerente CAPITALISTA!",
-	"¡¡¡Me tenía programando en TRAJE!!!",
-	 "Para poder recuperarme de este estrés necesito unos vinitos"
+	"¡Gracias por deshacerte de ese Gerente capitalista!",
+	"¡¡¡Me tenía programando en traje!!!",
+	 "Traeme unos vinitos que ya es viernes"
 ]
 var DialogVisited = [
-	"No es suficiente para recuperarme...",
-	"Arrrgh me mueroooo"
+	"Necesito mas nafta",
+	"Dale Espiiiiii"
 ]
-var DialogRescued = ["Gracias Espi, ¡Me salvaste!"]
+var DialogRescued = ["Es viernes y mi cuerpo lo sabe, aurrrrrr"]
 
 func _ready():
 	body.initialize(

@@ -8,15 +8,14 @@ var amount_needed: int = 1
 var item_needed: String = "Vodka"
 
 var DialogDying = [
-	"¡Espi AYUDAMEEEE!\n\n   (Q to continue ...)",
-	"! Perdi mi botella de vodka y nose donde ESTA\n", 
-	"¡Esto me pasa por codear en ANGULAR!"
+	"¡Espi!\n\n   (Q to continue ...)",
+	"perdí mi botella de vodka y no sé dónde está\n", 
+	"¡Esto me pasa por codear en Angular hasta tarde!"
 ]
 var DialogVisited = [
-	"Espiiiii apurateee TENGO SED",
-	"Arrrgh...#!#"
+	"Espi tengo sed"
 ]
-var DialogRescued = ["Gracias Espi,\n ¡ME SALVASTE!"]
+var DialogRescued = ["¡Si! Vamos a hacer unos tragos"]
 
 func _ready():
 	body.initialize(

@@ -5,11 +5,12 @@ onready var Start: TextureRect = $Start
 onready var Win: TextureRect = $Win
 onready var Intro: TextureRect = $Intro
 onready var Restart: TextureRect = $Restart
+onready var Credits: TextureRect = $Credits
 onready var WindowFrame: TextureRect = $WindowFrame
 onready var Dialog: Sprite = $Dialog
-onready var Sound = load("res://entities/MusicPlayer.tscn")
 onready var CactusToSave = $CactusToSave
 onready var ItemsToCollect = $ItemsToCollect
+onready var Sound = load("res://entities/MusicPlayer.tscn")
 
 var items: Array = [
 	"Sandwich",
@@ -65,6 +66,10 @@ func on_player_dead():
 	_set_all_invisible()
 	Restart.visible = true
 
+func _on_credits():
+	_set_all_invisible()
+	Credits.visible = true
+
 func _are_all_cactus_saved() -> bool:
 	for rescued in cactus_to_save.values():
 		if not rescued:
@@ -85,6 +90,7 @@ func _set_all_invisible():
 	Dialog.visible = false
 	CactusToSave.visible = false
 	ItemsToCollect.visible = false
+	Credits.visible = false
 
 func on_player_revive():
 	show()
