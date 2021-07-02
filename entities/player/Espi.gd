@@ -10,7 +10,7 @@ onready var ShotEffect: AudioStreamPlayer2D = $Player_attack
 onready var SoundHurt: AudioStreamPlayer2D = $Player_hurt
 onready var ItemPickedSound: AudioStreamPlayer2D = $Item_Picked
 
-var speed: int = 100
+var speed: int = 400
 var velocity: Vector2 = Vector2.ZERO
 var back_force: int = -10
 var item_picked: Sprite = null
