@@ -705,9 +705,11 @@ position = Vector2( 1284.81, 634.193 )
 scale = Vector2( 4.0625, 2.54167 )
 z_index = 16
 frames = SubResource( 70 )
+frame = 6
 playing = true
 
 [node name="CarFire" type="AnimatedSprite" parent="Efectos"]
 position = Vector2( 1394.77, 418.445 )
 frames = SubResource( 70 )
+frame = 6
 playing = true

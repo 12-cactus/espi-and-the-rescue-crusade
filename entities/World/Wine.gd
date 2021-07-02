@@ -6,7 +6,7 @@ var collectable_name: String = "Wine"
 var player_over: KinematicBody2D = null
 
 func _physics_process(delta):
-	if player_over != null && Input.is_action_just_pressed("pick_up"):
+	if player_over != null && get_parent().visible && Input.is_action_just_pressed("pick_up"):
 		player_over.picked(self)
 
 func _on_Area2D_body_entered(body):
