@@ -12,21 +12,12 @@ var dead: bool = false
 func _ready():
 	body.frame = 0
 
-func _process(delta):
+func _physics_process(delta):
 	if count != 0:
 		count -=1
 	if enemy != null and enemy.isAlive() and count == 0:
 		fire()
-
-func fire():
-	$Sound_fire.play()
-	weapon.instance().initialize(self, global_position, global_position.direction_to(enemy.global_position))
-	count = 200
-
-func _on_Area2D_body_entered(body):
-	if body.name == "Espi":
-		enemy = body
-		var direction = (body.global_position - global_position).normalized()
+		var direction = (enemy.global_position - global_position).normalized()
 		if direction.x >= 0 && direction.y >= 0:
 			body.frame = 3
 		if direction.x >= 0 && direction.y < 0:
@@ -35,6 +26,15 @@ func _on_Area2D_body_entered(body):
 			body.frame = 0
 		if direction.x < 0 && direction.y < 0:
 			body.frame = 2
+
+func fire():
+	$Sound_fire.play()
+	weapon.instance().initialize(self, global_position, global_position.direction_to(enemy.global_position))
+	count = 200
+
+func _on_Area2D_body_entered(_enemy):
+	if _enemy.name == "Espi":
+		enemy = _enemy
 
 func _on_Area2D_body_exited(body):
 	enemy = null

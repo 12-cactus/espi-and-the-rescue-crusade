@@ -254,7 +254,9 @@ position = Vector2( -85.0153, 436.339 )
 [node name="MusicPlayer" parent="." instance=ExtResource( 11 )]
 script = ExtResource( 12 )
 
+[connection signal="revive" from="GUI/LifeBar" to="." method="_on_LifeBar_revive"]
 [connection signal="credits" from="World" to="GUI" method="_on_credits"]
 [connection signal="intro" from="World" to="GUI" method="_on_World_intro"]
 [connection signal="post_credits" from="World" to="GUI" method="_on_post_credits"]
 [connection signal="start" from="World" to="GUI" method="_on_World_start"]
+[connection signal="start" from="World" to="." method="_on_World_start"]

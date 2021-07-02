@@ -22,6 +22,7 @@ var Cactus = [
 ]
 
 func _ready():
+	Espi.set_physics_process(false)
 	MusicPlayer.play_intro_music()
 	Espi.connect("hit", GUI, "on_player_hit")
 	Espi.connect("item_collected", GUI, "on_item_collected")
@@ -52,4 +53,11 @@ func start_game_won_music():
 	MusicPlayer.play_game_won_music()
 	
 func play_game_over():
+	Espi.set_physics_process(true)
 	MusicPlayer.play_game_over()
+
+func _on_World_start():
+	Espi.set_physics_process(true)
+
+func _on_LifeBar_revive():
+	Espi.set_physics_process(true)
