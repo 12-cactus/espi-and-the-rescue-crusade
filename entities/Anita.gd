@@ -9,14 +9,14 @@ var item_needed: String = "Vodka"
 
 var DialogDying = [
 	"¡Espi!\n\n   (Q to continue ...)",
-	"Perdí mi botella de Vodka y no se dónde está", 
+	"Perdí mi botella de Vodka y no sé dónde está", 
 	"¡Esto me pasa por codear en Angular!"
 ]
 var DialogVisited = [
-	"Dale Espi, tengo sed"
+	"Dale Espi que tengo sed..."
 ]
 var DialogRescued = [
-	"Siiii\n\n ¡¡Vamos a hacer unos tragos!!"
+	"Siiii\n\n ¡¡Salen unos tragos!!"
 ]
 
 func _ready():

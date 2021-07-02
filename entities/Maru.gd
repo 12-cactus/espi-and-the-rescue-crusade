@@ -9,12 +9,12 @@ var item_needed: String = "Michis"
 
 var DialogDying = [
 	"¡Hola Espi querido!\n\n   (Q to continue ...)",
-	"Estaba haciendo masa madre y se escaparon los michis",
-	"Ayudame a encontrar a Ivar y Feli.\n¡Por favor Espi!"
+	"Estaba haciendo masa madre y se me escaparon los michis",
+	"Ayudame a encontrar a Ivar y a Feli.\n¡Por favor Espi!"
 ]
 var DialogVisited = [
 	"Ivar ¿Dónde estás?",
-	"¡Felipe! tengo pollito, Feli Feli..."
+	"¡Felipe! Tengo pollito, Feli Feli..."
 ]
 var DialogRescued = [
 	"¡Encontraste a mis chiquis, Espi!",

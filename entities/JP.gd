@@ -11,7 +11,7 @@ var DialogDying = [
 	"¡Espi!\n\n   (Q to continue ...)",
 	"¡Este juego es una porquería!",
 	"¡No me importa que sea gratis!",
-	"No me voy a mover de acá\nhasta que no me traigan el libro de quejas"
+	"No me voy a mover de acá hasta que no me traigan el libro de quejas"
 ]
 var DialogVisited = [
 	"Apura amigo, no tengo todo el día",

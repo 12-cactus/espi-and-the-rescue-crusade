@@ -72,7 +72,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 2 ), SubResource( 4 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -101,7 +101,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 7 ), SubResource( 9 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -130,7 +130,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 12 ), SubResource( 14 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -159,7 +159,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 17 ), SubResource( 19 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -188,7 +188,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 22 ), SubResource( 24 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -217,7 +217,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 27 ), SubResource( 29 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -246,7 +246,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ],
+"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 32 ), SubResource( 34 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -275,7 +275,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 37 ), SubResource( 39 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -304,7 +304,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
+"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 42 ), SubResource( 44 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -333,7 +333,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
+"frames": [ SubResource( 47 ), SubResource( 48 ), SubResource( 47 ), SubResource( 49 ) ],
 "loop": true,
 "name": "dancing",
 "speed": 5.0
@@ -689,7 +689,7 @@ position = Vector2( 947.552, 322.18 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 4
+frame = 1
 playing = true
 
 [node name="smoke12c" type="AnimatedSprite" parent="Efectos"]
@@ -697,7 +697,7 @@ position = Vector2( 1462.02, 584.145 )
 scale = Vector2( 0.638677, 0.467868 )
 frames = SubResource( 57 )
 animation = "move"
-frame = 4
+frame = 1
 playing = true
 
 [node name="DanHouseFire" type="AnimatedSprite" parent="Efectos"]
@@ -705,11 +705,9 @@ position = Vector2( 1284.81, 634.193 )
 scale = Vector2( 4.0625, 2.54167 )
 z_index = 16
 frames = SubResource( 70 )
-frame = 9
 playing = true
 
 [node name="CarFire" type="AnimatedSprite" parent="Efectos"]
 position = Vector2( 1394.77, 418.445 )
 frames = SubResource( 70 )
-frame = 9
 playing = true
