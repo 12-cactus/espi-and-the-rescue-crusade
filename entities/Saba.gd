@@ -8,14 +8,14 @@ var amount_needed: int = 1
 var item_needed: String = "Passport"
 
 var DialogDying = [
-	"¡Espi AYUDAMEEEE!\n\n   (Q to continue ...)",
-	"¡necesito que encuentres mi pasaporte,\n asi puedo Viajar a Canda y hacerme el cheto!"
+	"¡Espi por favor!\n\n   (Q to continue ...)",
+	"¡necesito que encuentres mi pasaporte,\n sino no puedo irme a Canada!"
 ]
 var DialogVisited = [
-	"Espiiiii apurateee TENGO QUE VIAJAR",
-	"Arrrgh...#!#"
+	"Se me va el vuelo",
+	"Mientras voy a ponerme otra campera"
 ]
-var DialogRescued = ["Gracias Espi, ¡Me salvaste!"]
+var DialogRescued = ["¡Ay si! Ya salgo para Ezeiza"]
 
 func _ready():
 	body.initialize(

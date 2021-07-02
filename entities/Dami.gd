@@ -9,15 +9,15 @@ var item_needed: String = "Bike"
 
 var DialogDying = [
 	"¡AIIIIIUUUUDA!\n\n   (Q to continue ...)",
-	 "Espi me pegue un palo jugando a ser BiciVolador \n y perdi la bici", 
-	  "necesito que la encuntres"
+	 "Espi me pegue un palo haciendo un truco con la bici \n", 
+	 "y la perdi"
 ]
 
 var DialogVisited = [
-	"Espiiiii apurateee QUIERO MI BICIII",
-	"Arrrgh...#!#"
+	"Traeme la bici por favor",
+	"Te prometo que no vuelvo a intentarlo"
 ]
-var DialogRescued = ["Gracias Espi, ¡ya Puedo volcer a ser un BiciVolador!"]
+var DialogRescued = ["Iupii, ya Puedo ir al hospital"]
 
 func _ready():
 	body.initialize(

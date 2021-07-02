@@ -26,16 +26,16 @@ var items: Array = [
 ]
 
 var cactus_to_save: Dictionary = {
-#	"Markis": false,
-#	"Agus": false,
-#	"Dami": false,
-#	"Saba": false,
-#	"Dan": false,
+	"Markis": false,
+	"Agus": false,
+	"Dami": false,
+	"Saba": false,
+	"Dan": false,
 	"Alan": false,
-#	"JP": false,
-#	"Pipi": false,
-#	"Anita": false,
-#	"Maru": false,
+	"JP": false,
+	"Pipi": false,
+	"Anita": false,
+	"Maru": false,
 }
 
 func _ready():
