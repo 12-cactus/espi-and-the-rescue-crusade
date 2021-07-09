@@ -9,14 +9,14 @@ var item_needed: String = "Sandwich"
 
 var DialogDying = [
 	"¡Espiiii!\n\n   (Q to continue ...)",
-	"¡Me robaron hasta las medias!",
+	"¡Me robaron hasta las medias! jajajaja",
 	"Para poder recuperarme necesito unos sanguchitos"
 ]
 var DialogVisited = [
 	"No es suficiente para recuperarme...",
 	"Arrrgh me mueroooo"
 ]
-var DialogRescued = ["Gracias Espi, ¡Me salvaste!"]
+var DialogRescued = ["Gracias Espi, ¡Me salvaste! jajajaja"]
 
 func _ready():
 	body.initialize(
